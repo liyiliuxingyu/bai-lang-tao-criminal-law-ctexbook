@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "package": {
+    "original_name": "刑法_ctexbook完整续作工程_20261120.zip",
+    "size_bytes": 138375242,
+    "sha256": "c1258632bc3fc340b5bc0af063a00e97704f3932c232a91d2536f26abf658401",
+    "top_level_directory": "criminal_law_ctexbook",
+    "file_count": 4164,
+    "checksum_file_count": 4163,
+    "uncompressed_bytes": 203714717
+  },
+  "parts": [
+    {
+      "name": "criminal-law-project.zip.part01",
+      "size_bytes": 24000000,
+      "sha256": "e9660d6628354503d87d93c8866649845ae13b285b7960e1e4d375a8810343c0"
+    },
+    {
+      "name": "criminal-law-project.zip.part02",
+      "size_bytes": 24000000,
+      "sha256": "70a9afe85f03ff3af4b3bfc79b36b1aa42fceec462d793948cdbeaf858e1f16c"
+    },
+    {
+      "name": "criminal-law-project.zip.part03",
+      "size_bytes": 24000000,
+      "sha256": "89357942edda70ddea95c80c9549e3406ae2bddfdf2399923dc3c594aa1bf699"
+    },
+    {
+      "name": "criminal-law-project.zip.part04",
+      "size_bytes": 24000000,
+      "sha256": "7ee21f6cc60ed3fc83097beff04f6b922c1adeb812f9479b1f7fb89138aaf0b3"
+    },
+    {
+      "name": "criminal-law-project.zip.part05",
+      "size_bytes": 24000000,
+      "sha256": "e9376e9f20e44e883d5861c739a11a79359d1b56c67913fd2de7d6cead9db9c7"
+    },
+    {
+      "name": "criminal-law-project.zip.part06",
+      "size_bytes": 18375242,
+      "sha256": "68224f526debb70cb0dad3f392127dd3650f871c8a58d2d9341d922ef8d2871b"
+    }
+  ]
+}
