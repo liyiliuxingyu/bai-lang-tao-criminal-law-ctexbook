@@ -21,8 +21,8 @@
 在 GitHub 使用 **Code → Download ZIP**，解压后进入仓库目录；也可以克隆：
 
 ```bash
-git clone https://github.com/liyiliuxingyu/criminal-law-ctexbook.git
-cd criminal-law-ctexbook
+git clone https://github.com/liyiliuxingyu/bai-lang-tao-criminal-law-ctexbook.git
+cd bai-lang-tao-criminal-law-ctexbook
 ```
 
 确保六片、`package-manifest.json` 和 `restore_project.py` 位于同一目录，然后运行：
