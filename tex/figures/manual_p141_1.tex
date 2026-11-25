@@ -1,0 +1,18 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=1.526cm,draw=black!65] (n1) at (0.000,1.494) {共同正犯};
+\node[text width=1.877cm,draw=black!65] (n2) at (2.720,0.287) {共同实行犯};
+\node[text width=3.700cm,draw=black!65] (n3) at (2.720,1.896) {其他起关键作用的共同正犯};
+\node[text width=3.283cm,draw=black!65] (n4) at (6.840,1.092) {物理作用型共同正犯};
+\node[text width=3.283cm,draw=black!65] (n5) at (6.840,2.298) {心理作用型共同正犯};
+\node[text width=2.229cm,draw=black!65] (n6) at (11.160,1.896) {共谋共同正犯};
+\node[text width=3.283cm,draw=black!65] (n7) at (11.160,2.701) {老大指派型共同正犯};
+\draw[edge] (n1.east)--(2.570,1.494)--(2.570,0.287)--(n2.west);
+\draw[edge] (n3.east)--(6.690,1.896)--(6.690,1.092)--(n4.west);
+\draw[edge] (n5.east)--(11.010,2.298)--(11.010,1.896)--(n6.west);
+\draw[edge] (n5.east)--(11.010,2.298)--(11.010,2.701)--(n7.west);
+\draw[edge] (n3.east)--(6.690,1.896)--(6.690,2.298)--(n5.west);
+\draw[edge] (n1.east)--(2.570,1.494)--(2.570,1.896)--(n3.west);
+\end{tikzpicture}
+

@@ -1,0 +1,27 @@
+% 核对底本 PDF 第252页：财产犯罪罪名体系图（四阶图）。
+% 保留四个分类轴与各叶节点；改用更易读的分层布局，非截图。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{9.1}{12}\selectfont,inner sep=2pt,align=left},edge/.style={draw=black!65,line width=.45pt}]
+\node[align=center] (root) at (0,1.7) {财产\\犯罪};
+\node[anchor=west] (get) at (2.25,2.7) {取得型犯罪};
+\node[anchor=west] (destroy) at (2.25,.2) {故意毁坏财物罪};
+\draw[edge] (root.east)--(1.8,1.7);\draw[edge] (1.8,.2)--(1.8,2.7);\draw[edge] (1.8,2.7)--(get.west) (1.8,.2)--(destroy.west);
+\node[align=center,fill=white,font=\fontsize{8.5}{11}\selectfont] at (1.15,2.25) {非法占有目的};
+% 最终成书核查：为分类轴预留0.7cm额外水平空间，两个标签置于连线上下。
+\node[anchor=west] (transfer) at (5.7,3.6) {转移占有};
+\node[anchor=west] (retain) at (5.7,1.6) {不转移占有：侵占罪};
+\draw[edge] (get.east)--(5.3,2.7);\draw[edge] (5.3,1.6)--(5.3,3.6);\draw[edge] (5.3,3.6)--(transfer.west) (5.3,1.6)--(retain.west);
+\node[align=center,font=\fontsize{8.5}{11}\selectfont] at (4.65,3.03) {转移};
+\node[align=center,font=\fontsize{8.5}{11}\selectfont] at (4.65,2.37) {占有};
+\node[anchor=west] (offender) at (7.85,4.6) {犯罪人转移占有};
+\node[anchor=west] (victim) at (7.85,2.8) {被害人转移占有};
+\draw[edge] (transfer.east)--(7.5,3.6);\draw[edge] (7.5,2.8)--(7.5,4.6);\draw[edge] (7.5,4.6)--(offender.west) (7.5,2.8)--(victim.west);
+\draw[edge] (offender.east)--(13.3,4.6);\draw[edge] (13.3,3.9)--(13.3,5.3);
+\node[anchor=west] at (13.6,5.3) {抢劫罪};\node[anchor=west] at (13.6,4.6) {抢夺罪};\node[anchor=west] at (13.6,3.9) {盗窃罪};
+\foreach \yy in {5.3,4.6,3.9}{\draw[edge] (13.3,\yy)--(13.6,\yy);}
+\node[align=center,fill=white,font=\fontsize{8.5}{11}\selectfont] at (12.1,4.05) {手段暴力\\程度};
+\draw[edge] (victim.east)--(12.2,2.8);\draw[edge] (12.2,2.35)--(12.2,3.25);
+\node[anchor=west] at (12.5,3.25) {诈骗罪};\node[anchor=west] at (12.5,2.35) {敲诈勒索罪};
+\draw[edge] (12.2,3.25)--(12.5,3.25) (12.2,2.35)--(12.5,2.35);
+\end{tikzpicture}
+

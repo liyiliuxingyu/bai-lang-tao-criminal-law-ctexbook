@@ -1,0 +1,18 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\draw[dashed] (3.1,0) ellipse (4.8cm and 1cm);\node[] (owner) at (-0.7,0) {主人};
+\node[draw] (p1) at (0.5,0) {物};
+\node[draw] (p2) at (4,0) {物};
+\node[] (actor) at (6,0) {犯罪人};
+\node[draw] (p3) at (11,0) {物};
+\draw[->] (p1.east)--(p2.west);
+\draw[->] (actor.east)--(p3.west) node[midway,above] {转移占有};
+\node[] (tight) at (0.5,2.0) {主人紧密占有};
+\node[] (loose) at (4,2.0) {主人松弛占有};
+\node[] (helper) at (9.7,2.0) {占有的辅助者};
+\draw[->] (tight.south)--(p1.north);
+\draw[->] (loose.south)--(p2.north);
+\draw[->] (helper.south west)--(actor.north);
+
+\end{tikzpicture}
+

@@ -1,0 +1,24 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.400cm,draw=black!65] (n1) at (0.000,1.494) {第一步：是否取得财物};
+\node[text width=1.526cm,draw=black!65] (n2) at (2.820,0.287) {已经取得};
+\node[text width=3.459cm,draw=black!65] (n3) at (5.340,0.287) {定转化型抢劫（例1）};
+\node[text width=1.526cm,draw=black!65] (n4) at (2.820,1.896) {尚未取得};
+\node[text width=3.283cm,draw=black!65] (n5) at (5.340,1.092) {只为取财而使用暴力};
+\node[text width=3.107cm,draw=black!65] (n6) at (10.860,1.092) {定正常抢劫（例2）};
+\node[text width=3.986cm,draw=black!65] (n7) at (5.340,1.896) {只为抗拒抓捕而使用暴力};
+\node[text width=3.459cm,draw=black!65] (n8) at (10.860,1.896) {定转化型抢劫（例3）};
+\node[text width=2.229cm,draw=black!65] (n9) at (5.340,2.701) {两种目的并存};
+\node[text width=3.107cm,draw=black!65] (n10) at (10.860,2.701) {定正常抢劫（例4）};
+\draw[edge] (n2.east)--(5.190,0.287)--(5.190,0.287)--(n3.west);
+\draw[edge] (n1.east)--(2.670,1.494)--(2.670,0.287)--(n2.west);
+\draw[edge] (n5.east)--(10.710,1.092)--(10.710,1.092)--(n6.west);
+\draw[edge] (n4.east)--(5.190,1.896)--(5.190,1.092)--(n5.west);
+\draw[edge] (n7.east)--(10.710,1.896)--(10.710,1.896)--(n8.west);
+\draw[edge] (n4.east)--(5.190,1.896)--(5.190,1.896)--(n7.west);
+\draw[edge] (n9.east)--(10.710,2.701)--(10.710,2.701)--(n10.west);
+\draw[edge] (n4.east)--(5.190,1.896)--(5.190,2.701)--(n9.west);
+\draw[edge] (n1.east)--(2.670,1.494)--(2.670,1.896)--(n4.west);
+\end{tikzpicture}
+

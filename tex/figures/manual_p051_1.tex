@@ -1,0 +1,34 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=1.122cm] (n1) at (0.289,1.446) {危险源};
+\node[text width=1.456cm] (n2) at (2.120,1.446) {监管义务};
+\node[text width=6.464cm] (n3) at (4.340,0.275) {1.对危险物的监管义务（自己养的狗咬人）};
+\node[text width=8.133cm] (n4) at (4.340,1.056) {2.对他人的危险行为的监管义务（自己的熊孩子打人）};
+\node[text width=4.461cm] (n5) at (4.340,2.227) {3.对自己的先行行为监管义务};
+\node[text width=4.961cm] (n6) at (9.760,1.837) {（1）先行行为：对法益创设危险};
+\node[text width=5.963cm] (n7) at (9.760,2.618) {（2）正当防卫：有防止过当结果的义务};
+\node[text width=1.456cm] (n8) at (0.122,5.831) {法益对象};
+\node[text width=1.456cm] (n9) at (2.120,5.831) {保护义务};
+\node[text width=1.789cm] (n10) at (4.340,5.215) {1.特定关系};
+\node[text width=5.629cm] (n11) at (9.760,3.818) {（1）法律规定（父亲救自己的孩子）};
+\node[text width=5.295cm] (n12) at (9.760,4.599) {（2）职务、业务（警察阻止犯罪）};
+\node[text width=4.294cm] (n13) at (9.760,5.380) {（3）合同约定（保管财物）};
+\node[text width=6.240cm] (n14) at (9.760,6.386) {（4）自愿救助行为：依赖关系（将弃婴捡回家）};
+\node[text width=9.803cm] (n15) at (4.340,7.617) {2.特定领域：第一，是特定领域的管理者；第二，形成依赖关系。\\（出租车上，男乘客强奸女乘客）};
+\draw[edge] (n2.east)--(4.190,1.446)--(4.190,0.275)--(n3.west);
+\draw[edge] (n2.east)--(4.190,1.446)--(4.190,1.056)--(n4.west);
+\draw[edge] (n5.east)--(9.610,2.227)--(9.610,1.837)--(n6.west);
+\draw[edge] (n5.east)--(9.610,2.227)--(9.610,2.618)--(n7.west);
+\draw[edge] (n2.east)--(4.190,1.446)--(4.190,2.227)--(n5.west);
+\draw[edge,<-] (n1.east)--(1.970,1.446)--(1.970,1.446)--(n2.west);
+\draw[edge] (n10.east)--(9.610,5.215)--(9.610,3.818)--(n11.west);
+\draw[edge] (n10.east)--(9.610,5.215)--(9.610,4.599)--(n12.west);
+\draw[edge] (n10.east)--(9.610,5.215)--(9.610,5.380)--(n13.west);
+\draw[edge] (n10.east)--(9.610,5.215)--(9.610,6.386)--(n14.west);
+\draw[edge] (n9.east)--(4.190,5.831)--(4.190,5.215)--(n10.west);
+\draw[edge] (n9.east)--(4.190,5.831)--(4.190,7.617)--(n15.west);
+\draw[edge,<-] (n8.east)--(1.970,5.831)--(1.970,5.831)--(n9.west);
+\draw[edge,->] (n1.south)--(n8.north);
+\end{tikzpicture}
+

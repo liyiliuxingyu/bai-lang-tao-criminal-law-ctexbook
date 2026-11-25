@@ -1,0 +1,24 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[] (briber) at (0,4) {行贿方};
+\node[] (acceptor) at (10,4) {受贿方};
+\node[] (p1) at (0,3) {个人};
+\node[] (p2) at (10,3) {个人};
+\node[] (u1) at (0,-3) {单位};
+\node[] (u2) at (10,-3) {单位};
+\draw[->] (p1.east)--(p2.west);
+\draw[->] (u1.east)--(u2.west);
+\draw[->] (p1.east)--(u2.west);
+\draw[->] (u1.east)--(p2.west);
+\node[] (pp1) at (3,3.6) {行贿罪};
+\node[] (pp2) at (7.5,3.6) {受贿罪};
+\draw (5,3)--(5,4);\node[] (uu1) at (3,-2.5) {单位行贿罪};
+\node[] (uu2) at (7.5,-2.5) {单位受贿罪};
+\node[] (uunote) at (3,-4) {对单位行贿罪、\\想象竞合};
+\draw (5,-2)--(5,-4.8);\node[rotate=-31] (pu1) at (2.7,1.9) {对单位行贿罪};
+\node[rotate=-31] (pu2) at (7.7,-1.3) {单位受贿罪};
+\node[rotate=31] (up1) at (2.7,-1.1) {单位行贿罪};
+\node[rotate=31] (up2) at (7.7,2.0) {受贿罪};
+
+\end{tikzpicture}
+

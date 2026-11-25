@@ -1,0 +1,28 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9}{11.7}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=3.200cm,draw=black!65] (n1) at (0.000,2.857) {抢劫罪与敲诈勒索罪的本质区别：\\被害人意志自由被剥夺的程度不同。\\（1）抢劫罪：完全剥夺，压制反抗，没得选，只好给。\\（2）敲诈勒索罪：部分剥夺，没压制反抗，有的选，最好给};
+\node[text width=0.753cm,draw=black!65] (n2) at (3.620,0.867) {暴力\\手段};
+\node[text width=1.069cm,draw=black!65] (n3) at (5.240,0.477) {抢劫罪};
+\node[text width=8.240cm,draw=black!65] (n4) at (7.760,0.477) {压制反抗。为此，暴力与取财要具有当场性（时间上的紧密联系）};
+\node[text width=1.702cm,draw=black!65] (n5) at (5.240,1.459) {敲诈勒索罪};
+\node[text width=3.441cm,draw=black!65] (n6) at (7.760,1.459) {没有压制反抗（情形1）};
+\node[text width=0.753cm,draw=black!65] (n7) at (3.620,3.839) {胁迫\\手段};
+\node[text width=1.069cm,draw=black!65] (n8) at (5.240,2.655) {抢劫罪};
+\node[text width=8.240cm,draw=black!65] (n9) at (7.760,2.655) {必须以暴力相胁迫：当场不给钱，当场就施加暴力。如此才能压制反抗。当场是时间概念，是指当下。抢劫罪要求：第一，威胁当场施加暴力；第二，当场取财（情形3—5）};
+\node[text width=1.702cm,draw=black!65] (n10) at (5.240,4.644) {敲诈勒索罪};
+\node[text width=8.240cm,draw=black!65] (n11) at (7.760,4.052) {以暴力相胁迫，没有达到压制反抗程度的，定敲诈勒索罪。敲诈勒索罪可以当场取财（情形2）};
+\node[text width=8.240cm,draw=black!65] (n12) at (7.760,5.236) {以非暴力的恶害（如丑闻）相通告。不会压制反抗，定敲诈勒索罪};
+\draw[edge] (n3.east)--(7.610,0.477)--(7.610,0.477)--(n4.west);
+\draw[edge] (n2.east)--(5.090,0.867)--(5.090,0.477)--(n3.west);
+\draw[edge] (n5.east)--(7.610,1.459)--(7.610,1.459)--(n6.west);
+\draw[edge] (n2.east)--(5.090,0.867)--(5.090,1.459)--(n5.west);
+\draw[edge] (n1.east)--(3.470,2.857)--(3.470,0.867)--(n2.west);
+\draw[edge] (n8.east)--(7.610,2.655)--(7.610,2.655)--(n9.west);
+\draw[edge] (n7.east)--(5.090,3.839)--(5.090,2.655)--(n8.west);
+\draw[edge] (n10.east)--(7.610,4.644)--(7.610,4.052)--(n11.west);
+\draw[edge] (n10.east)--(7.610,4.644)--(7.610,5.236)--(n12.west);
+\draw[edge] (n7.east)--(5.090,3.839)--(5.090,4.644)--(n10.west);
+\draw[edge] (n1.east)--(3.470,2.857)--(3.470,3.839)--(n7.west);
+\end{tikzpicture}
+

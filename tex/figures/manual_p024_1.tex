@@ -1,0 +1,30 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9}{11.7}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=0.753cm] (n1) at (0.000,2.817) {空间\\效力};
+\node[text width=1.702cm] (n2) at (1.420,1.445) {在中国境内\\犯罪};
+\node[text width=1.385cm] (n3) at (3.640,1.445) {属地管辖};
+\node[text width=1.702cm] (n4) at (5.860,0.665) {犯罪行为地};
+\node[text width=7.620cm] (n5) at (8.380,0.275) {共同犯罪角度：实行行为地，教唆行为地，帮助行为地};
+\node[text width=5.814cm] (n6) at (8.380,1.055) {犯罪形态角度：实行行为地，预备行为地};
+\node[text width=1.702cm] (n7) at (5.860,2.225) {犯罪结果地};
+\node[text width=7.079cm] (n8) at (8.380,1.835) {共同犯罪角度：整体结果地，部分共犯人的结果地};
+\node[text width=5.814cm] (n9) at (8.380,2.615) {犯罪形态角度：实害结果地，危险发生地};
+\node[text width=1.702cm] (n10) at (1.420,4.377) {在中国境外\\犯罪};
+\node[text width=12.360cm] (n11) at (3.640,3.395) {属人管辖：中国人在境外犯罪（犯轻罪，可以不追究；国家工作人员和军人，一律追究）};
+\node[text width=12.360cm] (n12) at (3.640,4.377) {保护管辖：外国人在境外犯罪（第一，针对中国国家或公民犯罪；第二，犯重罪；第三，双重犯罪原则）};
+\node[text width=2.967cm] (n13) at (3.640,5.359) {普遍管辖：国际犯罪};
+\draw[edge] (n4.east)--(8.230,0.665)--(8.230,0.275)--(n5.west);
+\draw[edge] (n4.east)--(8.230,0.665)--(8.230,1.055)--(n6.west);
+\draw[edge] (n3.east)--(5.710,1.445)--(5.710,0.665)--(n4.west);
+\draw[edge] (n7.east)--(8.230,2.225)--(8.230,1.835)--(n8.west);
+\draw[edge] (n7.east)--(8.230,2.225)--(8.230,2.615)--(n9.west);
+\draw[edge] (n3.east)--(5.710,1.445)--(5.710,2.225)--(n7.west);
+\draw[edge] (n2.east)--(3.490,1.445)--(3.490,1.445)--(n3.west);
+\draw[edge] (n1.east)--(1.270,2.817)--(1.270,1.445)--(n2.west);
+\draw[edge] (n10.east)--(3.490,4.377)--(3.490,3.395)--(n11.west);
+\draw[edge] (n10.east)--(3.490,4.377)--(3.490,4.377)--(n12.west);
+\draw[edge] (n10.east)--(3.490,4.377)--(3.490,5.359)--(n13.west);
+\draw[edge] (n1.east)--(1.270,2.817)--(1.270,4.377)--(n10.west);
+\end{tikzpicture}
+

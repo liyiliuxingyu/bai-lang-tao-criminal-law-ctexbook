@@ -1,0 +1,13 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[] (unitwill) at (0,1.5) {单位意志};
+\node[] (personwill) at (0,-1.5) {成员个人意志};
+\node[] (unitbenefit) at (9,1.5) {本单位利益};
+\node[] (personbenefit) at (9,-1.5) {成员个人利益};
+\draw[->] (unitwill.east)--(unitbenefit.west) node[midway,above,sloped] {单位犯罪};
+\draw[->] (personwill.east)--(personbenefit.west) node[midway,below] {个人犯罪};
+\draw[->] (unitwill.east)--(personbenefit.west) node[midway,pos=.7,above,sloped] {个人犯罪};
+\draw[->] (personwill.east)--(unitbenefit.west) node[midway,pos=.7,above,sloped] {个人犯罪};
+
+\end{tikzpicture}
+

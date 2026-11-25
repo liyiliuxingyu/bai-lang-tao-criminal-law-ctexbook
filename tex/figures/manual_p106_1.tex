@@ -1,0 +1,20 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=0.788cm,draw=black!65] (n1) at (0.000,1.672) {欺骗};
+\node[text width=3.100cm,draw=black!65] (n2) at (1.620,0.666) {甲欺骗乙，导致乙产生认识错误};
+\node[text width=3.793cm,draw=black!65] (n3) at (5.140,0.275) {事实认识错误，承诺无效};
+\node[text width=3.125cm,draw=black!65] (n4) at (5.140,1.056) {动机错误，承诺有效};
+\node[text width=3.100cm,draw=black!65] (n5) at (1.620,2.453) {乙自己产生认识错误};
+\node[text width=5.796cm,draw=black!65] (n6) at (5.140,1.837) {甲不知道乙有认识错误。乙的承诺有效};
+\node[text width=3.125cm,draw=black!65] (n7) at (5.140,2.843) {甲知道乙有认识错误};
+\node[text width=6.240cm,draw=black!65] (n8) at (9.760,2.843) {甲实施欺骗行为（作为与不作为），使乙作出承诺或强化承诺。承诺无效};
+\draw[edge] (n2.east)--(4.990,0.666)--(4.990,0.275)--(n3.west);
+\draw[edge] (n2.east)--(4.990,0.666)--(4.990,1.056)--(n4.west);
+\draw[edge] (n1.east)--(1.470,1.672)--(1.470,0.666)--(n2.west);
+\draw[edge] (n5.east)--(4.990,2.453)--(4.990,1.837)--(n6.west);
+\draw[edge] (n7.east)--(9.610,2.843)--(9.610,2.843)--(n8.west);
+\draw[edge] (n5.east)--(4.990,2.453)--(4.990,2.843)--(n7.west);
+\draw[edge] (n1.east)--(1.470,1.672)--(1.470,2.453)--(n5.west);
+\end{tikzpicture}
+

@@ -1,0 +1,16 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=1.789cm,draw=black!65] (n1) at (0.000,1.507) {敲诈勒索与\\行使权利};
+\node[text width=3.400cm,draw=black!65] (n2) at (2.720,1.507) {第一步：有无非法占有目的。看有无事实依据与法律依据};
+\node[text width=3.125cm,draw=black!65] (n3) at (6.540,0.501) {没有非法占有目的，\\则不构成敲诈勒索罪};
+\node[text width=4.200cm,draw=black!65] (n4) at (6.540,2.123) {有非法占有目的→第二步：有无恐吓行为};
+\node[text width=4.840cm,draw=black!65] (n5) at (11.160,1.732) {没有恐吓行为，则不构成敲诈勒索罪};
+\node[text width=4.794cm,draw=black!65] (n6) at (11.160,2.738) {有恐吓行为，则构成敲诈勒索罪};
+\draw[edge] (n2.east)--(6.390,1.507)--(6.390,0.501)--(n3.west);
+\draw[edge] (n4.east)--(11.010,2.123)--(11.010,1.732)--(n5.west);
+\draw[edge] (n4.east)--(11.010,2.123)--(11.010,2.738)--(n6.west);
+\draw[edge] (n2.east)--(6.390,1.507)--(6.390,2.123)--(n4.west);
+\draw[edge] (n1.east)--(2.570,1.507)--(2.570,1.507)--(n2.west);
+\end{tikzpicture}
+

@@ -1,0 +1,8 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small,inner sep=4pt},line width=.5pt]
+\node[draw] (a) at (0,.8) {行为1};\node[draw] (b) at (0,-.8) {行为2};\node[draw] (c) at (5.2,0) {结果};
+\draw[->] (a.east)--(c.west) node[midway,above,sloped]{导致};
+\draw[->] (b.east)--(c.west) node[midway,below,sloped]{导致};
+\node at (1.7,0) {竞合};
+\end{tikzpicture}
+

@@ -1,0 +1,14 @@
+% 核对底本 PDF 第13页上图：第一讲“特别提示”。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{9.3}{12}\selectfont,inner sep=2pt,align=left},edge/.style={draw=black!65,line width=.45pt}]
+\node[align=center] (root) at (0,2.8) {刑法\\总论};\draw[edge] (root.east)--(.65,2.8);\draw[edge] (.65,0)--(.65,5.4);
+\node[anchor=west] (law) at (.95,5.4) {刑法论：刑法的解释、原则、适用效力};\draw[edge] (.65,5.4)--(law.west);
+\node[anchor=west] (crime) at (.95,3.2) {犯罪论};\draw[edge] (.65,3.2)--(crime.west);\draw[edge] (crime.east)--(2.7,3.2);\draw[edge] (2.7,2.3)--(2.7,4.4);
+\node[anchor=west] (constitute) at (3,4.4) {犯罪成立问题——犯罪构成体系};\draw[edge] (2.7,4.4)--(constitute.west);
+\node[anchor=west,align=center] (after) at (3,2.3) {犯罪成立\\之后的问题};\draw[edge] (2.7,2.3)--(after.west);\draw[edge] (after.east)--(5.2,2.3);\draw[edge] (5.2,1)--(5.2,3.5);
+\node[anchor=west,text width=10.1cm] (time) at (5.5,3.5) {犯罪的时间发展问题：犯罪形态\\（预备 $\longrightarrow$ 中止 $\longrightarrow$ 未遂 $\longrightarrow$ 既遂）};\draw[edge] (5.2,3.5)--(time.west);
+\node[anchor=west,text width=10.1cm] (space) at (5.5,2.3) {犯罪的空间分布问题：共同犯罪（正犯 $\longrightarrow$ 共犯）};\draw[edge] (5.2,2.3)--(space.west);
+\node[anchor=west,text width=10.1cm] (number) at (5.5,1) {犯罪的数量计算问题：罪数（一罪 $\longrightarrow$ 数罪）};\draw[edge] (5.2,1)--(number.west);
+\node[anchor=west] (penalty) at (.95,0) {刑罚论：刑罚的体系 $\longrightarrow$ 裁量 $\longrightarrow$ 执行 $\longrightarrow$ 消灭};\draw[edge] (.65,0)--(penalty.west);
+\end{tikzpicture}
+

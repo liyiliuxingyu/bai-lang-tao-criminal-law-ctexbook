@@ -1,0 +1,11 @@
+% 核对底本 PDF 第116页：形态分布图。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small,inner sep=2pt,align=center},edge/.style={draw=black!65,line width=.5pt}]
+\draw[edge] (0,0)--(13,0);
+\foreach \xx in {0,5.5,13}{\draw[edge] (\xx,-.22)--(\xx,.22);}
+\node[above] at (2.75,.2) {预备阶段};\node[above] at (9.25,.2) {实行阶段};
+\node[below] at (0,-.27) {开始};\node[below] at (5.5,-.27) {着手};\node[below] at (13,-.27) {结果发生\\既遂};
+\node[below] at (2.75,-.7) {自动放弃：中止\\被迫放弃：预备};
+\node[below] at (9.25,-.7) {自动放弃：中止\\被迫放弃：未遂};
+\end{tikzpicture}
+

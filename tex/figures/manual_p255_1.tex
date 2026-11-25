@@ -1,0 +1,13 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=east] (label) at (1,1.6) {行为结构：};
+\node[draw,text width=6.4cm] (property) at (5,1.6) {将他人所有、自己占有的财物};
+\node[draw] (own) at (11.8,1.6) {变成自己所有};
+\draw[->] (property.east)--(own.west);
+\draw (0,-2.2) rectangle (10,0);\draw (.8,0)--(.8,-2.2);\draw (.8,-1.1)--(10,-1.1);\node[font=\fontsize{9}{11.7}\selectfont] (owner) at (0.4,-1.1) {主\\人\\所\\有};
+\node[text width=8.8cm,font=\fontsize{9}{11.7}\selectfont] (voluntary) at (5.4,-0.55) {主人自愿转移占有给行为人（委托物）};
+\node[text width=8.8cm,font=\fontsize{9}{11.7}\selectfont] (involuntary) at (5.4,-1.65) {主人非自愿脱离了占有，行为人占有（遗忘物、埋藏物）};
+\node[draw,text width=3.4cm] (actor) at (13,-1.1) {行为人自己所有\\（如：拒不退还等）};
+\draw[->] (10,-1.1)--(actor.west);
+\end{tikzpicture}
+

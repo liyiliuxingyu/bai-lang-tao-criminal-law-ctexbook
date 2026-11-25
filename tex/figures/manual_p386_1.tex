@@ -1,0 +1,24 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=0.823cm,draw=black!65] (n1) at (0.000,2.133) {代购};
+\node[text width=2.229cm,draw=black!65] (n2) at (1.620,0.524) {为贩毒者代购};
+\node[text width=1.877cm,draw=black!65] (n3) at (5.040,0.524) {贩卖毒品罪\\（帮助犯）};
+\node[text width=2.229cm,draw=black!65] (n4) at (1.620,2.773) {为吸毒者代购};
+\node[text width=0.823cm,draw=black!65] (n5) at (5.040,1.968) {收钱};
+\node[text width=4.338cm,draw=black!65] (n6) at (8.460,1.566) {有牟利目的，定贩卖毒品罪};
+\node[text width=5.040cm,draw=black!65] (n7) at (8.460,2.371) {无牟利目的，不构成贩卖毒品罪};
+\node[text width=2.229cm,draw=black!65] (n8) at (5.040,3.577) {收货\\（分点毒品）};
+\node[text width=4.338cm,draw=black!65] (n9) at (8.460,3.175) {有贩卖目的，定贩卖毒品罪};
+\node[text width=5.040cm,draw=black!65] (n10) at (8.460,3.980) {无贩卖目的，不构成贩卖毒品罪};
+\draw[edge] (n2.east)--(4.890,0.524)--(4.890,0.524)--(n3.west);
+\draw[edge] (n1.east)--(1.470,2.133)--(1.470,0.524)--(n2.west);
+\draw[edge] (n5.east)--(8.310,1.968)--(8.310,1.566)--(n6.west);
+\draw[edge] (n5.east)--(8.310,1.968)--(8.310,2.371)--(n7.west);
+\draw[edge] (n4.east)--(4.890,2.773)--(4.890,1.968)--(n5.west);
+\draw[edge] (n8.east)--(8.310,3.577)--(8.310,3.175)--(n9.west);
+\draw[edge] (n8.east)--(8.310,3.577)--(8.310,3.980)--(n10.west);
+\draw[edge] (n4.east)--(4.890,2.773)--(4.890,3.577)--(n8.west);
+\draw[edge] (n1.east)--(1.470,2.133)--(1.470,2.773)--(n4.west);
+\end{tikzpicture}
+

@@ -1,0 +1,14 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw] (rob) at (5,3) {抢劫罪};
+\node[draw] (snatch) at (3,1) {抢夺罪};
+\node[draw] (extort) at (8,1) {敲诈勒索罪};
+\node[draw] (theft) at (1.5,-0.5) {盗窃罪};
+\node[draw] (embezzle) at (0,-2) {侵占罪};
+\draw[->] (rob.south west)--(snatch.north east) node[midway,above,sloped] {暴力};
+\draw[->] (rob.south east)--(extort.north west) node[midway,above,sloped] {胁迫};
+\draw[->] (snatch.south west)--(theft.north east);
+\draw[->] (theft.south west)--(embezzle.north east);
+
+\end{tikzpicture}
+

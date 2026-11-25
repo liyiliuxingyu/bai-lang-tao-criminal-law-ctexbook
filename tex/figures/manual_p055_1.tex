@@ -1,0 +1,18 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw] (act) at (0,0) {一个行为};
+\node[draw] (base) at (3,1) {基本犯（A罪）};
+\node[draw] (resultb) at (3,-1) {加重结果（B罪）};
+\node[draw,text width=4.3cm] (charge) at (8,1) {定基本犯（A罪）};
+\node[draw,text width=4.3cm] (aggravate) at (8,-1) {B罪成为基本犯（A罪）的法定刑升格条件，加重处罚};
+\node[text width=3.1cm] (final) at (13.5,0) {结果加重犯（A+B）};
+\draw[-] (act.east)--(base.west);
+\draw[-] (act.east)--(resultb.west);
+\draw[-] (base.east)--(charge.west);
+\draw[-] (resultb.east)--(aggravate.west);
+\draw[->] (aggravate.north)--(charge.south);
+\draw[-] (charge.east)--(final.west);
+\draw[-] (aggravate.east)--(final.west);
+
+\end{tikzpicture}
+

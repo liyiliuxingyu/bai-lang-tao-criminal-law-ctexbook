@@ -1,0 +1,10 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw] (client) at (0,0) {请托人};
+\node[draw] (middle) at (5,0) {中间人（斡旋者）};
+\node[draw] (official) at (10,0) {办事人};
+\draw[double,->] (client.east)--(middle.west) node[midway,above] {送钱};
+\draw[double,->] (middle.east)--(official.west) node[midway,above] {斡旋行为};
+
+\end{tikzpicture}
+

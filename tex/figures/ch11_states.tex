@@ -1,0 +1,17 @@
+% 核对底本 PDF 第116页：终局性形态树。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small,draw=black!65,inner sep=5pt,align=center},edge/.style={draw=black!65,line width=.45pt}]
+\node (root) at (0,0) {终局性形态};
+\node (uncompleted) at (-2,-1.4) {未完成形态};
+\node (completed) at (3,-1.4) {完成形态};
+\node (prep) at (-4,-2.8) {预备};
+\node (attempt) at (-2,-2.8) {未遂};
+\node (stop) at (0,-2.8) {中止};
+\node (done) at (3,-2.8) {既遂};
+\draw[edge] (root.south)--(0,-.7)--(-2,-.7)--(uncompleted.north);
+\draw[edge] (0,-.7)--(3,-.7)--(completed.north);
+\draw[edge] (uncompleted.south)--(-2,-2.1)--(-4,-2.1)--(prep.north);
+\draw[edge] (-2,-2.1)--(attempt.north) (-2,-2.1)--(0,-2.1)--(stop.north);
+\draw[edge] (completed.south)--(done.north);
+\end{tikzpicture}
+

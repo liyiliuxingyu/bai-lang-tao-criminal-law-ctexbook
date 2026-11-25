@@ -1,0 +1,13 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=west,font=\fontsize{9.3}{12.1}\selectfont] (chainlabel) at (0,0) {行为结构：};
+\node[draw,text width=4.3cm,font=\fontsize{9.3}{12.1}\selectfont] (c0) at (4.25,0) {带着非法占有目的，实施暴力、胁迫等强制手段};
+\node[draw,text width=1.8cm,font=\fontsize{9.3}{12.1}\selectfont] (c1) at (7.800000000000001,0) {压制对方反抗};
+\draw[->] (c0.east)--(c1.west);
+\node[draw,text width=3.5cm,font=\fontsize{9.3}{12.1}\selectfont] (c2) at (10.95,0) {对方因为无法反抗而放弃财物};
+\draw[->] (c1.east)--(c2.west);
+\node[draw,text width=1.8cm,font=\fontsize{9.3}{12.1}\selectfont] (c3) at (14.1,0) {行为人取得财物};
+\draw[->] (c2.east)--(c3.west);
+
+\end{tikzpicture}
+

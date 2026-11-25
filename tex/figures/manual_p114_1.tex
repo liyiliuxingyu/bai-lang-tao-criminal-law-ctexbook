@@ -1,0 +1,22 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9}{11.7}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=3.200cm,draw=black!65] (n1) at (0.000,2.051) {第一步：事实判断。对构成要件事实有无认识错误};
+\node[text width=2.000cm,draw=black!65] (n2) at (3.620,0.477) {有事实认识错误};
+\node[text width=2.018cm,draw=black!65] (n3) at (6.040,0.477) {排除犯罪故意};
+\node[text width=2.000cm,draw=black!65] (n4) at (3.620,2.643) {没有事实认识错误};
+\node[text width=3.100cm,draw=black!65] (n5) at (6.040,2.643) {第二步：法律评价。对刑法禁止性有无认识错误};
+\node[text width=2.334cm,draw=black!65] (n6) at (9.560,2.253) {有法律认识错误};
+\node[text width=3.620cm,draw=black!65] (n7) at (12.380,1.661) {有违法性认识可能性，有责任};
+\node[text width=3.620cm,draw=black!65] (n8) at (12.380,2.845) {无违法性认识可能性，无责任};
+\node[text width=2.334cm,draw=black!65] (n9) at (9.560,3.827) {无法律认识错误};
+\draw[edge] (n2.east)--(5.890,0.477)--(5.890,0.477)--(n3.west);
+\draw[edge] (n1.east)--(3.470,2.051)--(3.470,0.477)--(n2.west);
+\draw[edge] (n6.east)--(12.230,2.253)--(12.230,1.661)--(n7.west);
+\draw[edge] (n6.east)--(12.230,2.253)--(12.230,2.845)--(n8.west);
+\draw[edge] (n5.east)--(9.410,2.643)--(9.410,2.253)--(n6.west);
+\draw[edge] (n5.east)--(9.410,2.643)--(9.410,3.827)--(n9.west);
+\draw[edge] (n4.east)--(5.890,2.643)--(5.890,2.643)--(n5.west);
+\draw[edge] (n1.east)--(3.470,2.051)--(3.470,2.643)--(n4.west);
+\end{tikzpicture}
+

@@ -1,0 +1,66 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=0.500cm,draw=black!65] (n1) at (0.000,5.861) {共\\同\\去\\犯\\罪};
+\node[text width=1.456cm,draw=black!65] (n2) at (1.320,0.275) {本质原理};
+\node[text width=2.791cm,draw=black!65] (n3) at (4.340,0.275) {一起制造违法事实};
+\node[text width=0.788cm,draw=black!65] (n4) at (1.320,1.446) {正犯};
+\node[text width=1.456cm,draw=black!65] (n5) at (4.340,1.056) {共同正犯};
+\node[text width=2.791cm,draw=black!65] (n6) at (8.260,1.056) {一起实施实行行为};
+\node[text width=1.456cm,draw=black!65] (n7) at (4.340,1.837) {间接正犯};
+\node[text width=1.789cm,draw=black!65] (n8) at (8.260,1.837) {引起＋支配};
+\node[text width=1.789cm,draw=black!65] (n9) at (1.320,2.843) {正犯与共犯\\的关系};
+\node[text width=1.789cm,draw=black!65] (n10) at (4.340,2.843) {共犯从属性};
+\node[text width=2.457cm,draw=black!65] (n11) at (8.260,2.843) {犯罪形态从属性};
+\node[text width=0.788cm,draw=black!65] (n12) at (1.320,4.239) {共犯};
+\node[text width=1.122cm,draw=black!65] (n13) at (4.340,3.849) {教唆犯};
+\node[text width=4.127cm,draw=black!65] (n14) at (8.260,3.849) {故意引起正犯制造违法事实};
+\node[text width=1.122cm,draw=black!65] (n15) at (4.340,4.630) {帮助犯};
+\node[text width=4.127cm,draw=black!65] (n16) at (8.260,4.630) {故意促进正犯制造违法事实};
+\node[text width=1.456cm,draw=black!65] (n17) at (1.320,5.801) {参与时间};
+\node[text width=1.456cm,draw=black!65] (n18) at (4.340,5.411) {中途参与};
+\node[text width=1.789cm,draw=black!65] (n19) at (8.260,5.411) {承继的共犯};
+\node[text width=1.456cm,draw=black!65] (n20) at (4.340,6.191) {中途退出};
+\node[text width=2.457cm,draw=black!65] (n21) at (8.260,6.191) {共犯关系的脱离};
+\node[text width=1.789cm,draw=black!65] (n22) at (1.320,6.972) {片面的共犯};
+\node[text width=5.128cm,draw=black!65] (n23) at (4.340,6.972) {你以为你在单干，我知道我在帮你};
+\node[text width=1.789cm,draw=black!65] (n24) at (1.320,7.753) {共犯与身份};
+\node[text width=3.125cm,draw=black!65] (n25) at (4.340,7.753) {分别分析，想象竞合};
+\node[text width=1.122cm,draw=black!65] (n26) at (1.320,8.759) {共犯与\\不作为};
+\node[text width=2.457cm,draw=black!65] (n27) at (4.340,8.759) {作为义务的判断};
+\node[text width=1.456cm,draw=black!65] (n28) at (1.320,9.990) {共犯与实\\行过限};
+\node[text width=3.793cm,draw=black!65] (n29) at (4.340,9.990) {是否超出共同故意的范围};
+\node[text width=1.456cm,draw=black!65] (n30) at (1.320,11.222) {共犯与认\\识错误};
+\node[text width=3.793cm,draw=black!65] (n31) at (4.340,11.222) {先分析正犯，再分析共犯};
+\draw[edge] (n2.east)--(4.190,0.275)--(4.190,0.275)--(n3.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,0.275)--(n2.west);
+\draw[edge] (n5.east)--(8.110,1.056)--(8.110,1.056)--(n6.west);
+\draw[edge] (n4.east)--(4.190,1.446)--(4.190,1.056)--(n5.west);
+\draw[edge] (n7.east)--(8.110,1.837)--(8.110,1.837)--(n8.west);
+\draw[edge] (n4.east)--(4.190,1.446)--(4.190,1.837)--(n7.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,1.446)--(n4.west);
+\draw[edge] (n10.east)--(8.110,2.843)--(8.110,2.843)--(n11.west);
+\draw[edge] (n9.east)--(4.190,2.843)--(4.190,2.843)--(n10.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,2.843)--(n9.west);
+\draw[edge] (n13.east)--(8.110,3.849)--(8.110,3.849)--(n14.west);
+\draw[edge] (n12.east)--(4.190,4.239)--(4.190,3.849)--(n13.west);
+\draw[edge] (n15.east)--(8.110,4.630)--(8.110,4.630)--(n16.west);
+\draw[edge] (n12.east)--(4.190,4.239)--(4.190,4.630)--(n15.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,4.239)--(n12.west);
+\draw[edge] (n18.east)--(8.110,5.411)--(8.110,5.411)--(n19.west);
+\draw[edge] (n17.east)--(4.190,5.801)--(4.190,5.411)--(n18.west);
+\draw[edge] (n20.east)--(8.110,6.191)--(8.110,6.191)--(n21.west);
+\draw[edge] (n17.east)--(4.190,5.801)--(4.190,6.191)--(n20.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,5.801)--(n17.west);
+\draw[edge] (n22.east)--(4.190,6.972)--(4.190,6.972)--(n23.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,6.972)--(n22.west);
+\draw[edge] (n24.east)--(4.190,7.753)--(4.190,7.753)--(n25.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,7.753)--(n24.west);
+\draw[edge] (n26.east)--(4.190,8.759)--(4.190,8.759)--(n27.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,8.759)--(n26.west);
+\draw[edge] (n28.east)--(4.190,9.990)--(4.190,9.990)--(n29.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,9.990)--(n28.west);
+\draw[edge] (n30.east)--(4.190,11.222)--(4.190,11.222)--(n31.west);
+\draw[edge] (n1.east)--(1.170,5.861)--(1.170,11.222)--(n30.west);
+\end{tikzpicture}
+

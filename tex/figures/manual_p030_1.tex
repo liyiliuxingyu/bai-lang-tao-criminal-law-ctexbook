@@ -1,0 +1,17 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=west] (t) at (0,1) {T：大前提};
+\node[anchor=west] (t1) at (0,0) {T1：小前提};
+\node[anchor=west] (conclusion) at (0,-1) {结论：T1是否符合T};
+\node[] (law) at (6,1) {（法律规定）};
+\node[] (fact) at (6,0) {（案件事实）};
+\node[] (result) at (6,-1) {（有罪无罪）};
+\node[] (interpret) at (9,1) {解释};
+\node[] (identify) at (9,0) {认定};
+\node[] (deduce) at (9,-1) {推导};
+\draw[->] (interpret.west)--(law.east);
+\draw[->] (identify.west)--(fact.east);
+\draw[->] (deduce.west)--(result.east);
+
+\end{tikzpicture}
+

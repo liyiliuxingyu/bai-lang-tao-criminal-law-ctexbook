@@ -1,0 +1,26 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=1.526cm,draw=black!65] (n1) at (0.000,2.298) {共同犯罪};
+\node[text width=0.823cm,draw=black!65] (n2) at (2.520,1.494) {正犯};
+\node[text width=1.174cm,draw=black!65] (n3) at (4.440,0.689) {数量上};
+\node[text width=1.526cm,draw=black!65] (n4) at (6.860,0.287) {单独正犯};
+\node[text width=1.526cm,draw=black!65] (n5) at (6.860,1.092) {共同正犯};
+\node[text width=1.174cm,draw=black!65] (n6) at (4.440,2.298) {方式上};
+\node[text width=1.526cm,draw=black!65] (n7) at (6.860,1.896) {直接正犯};
+\node[text width=1.526cm,draw=black!65] (n8) at (6.860,2.701) {间接正犯};
+\node[text width=0.823cm,draw=black!65] (n9) at (2.520,3.907) {共犯};
+\node[text width=1.400cm,draw=black!65] (n10) at (4.440,3.505) {教唆犯};
+\node[text width=1.400cm,draw=black!65] (n11) at (4.440,4.310) {帮助犯};
+\draw[edge] (n3.east)--(6.710,0.689)--(6.710,0.287)--(n4.west);
+\draw[edge] (n3.east)--(6.710,0.689)--(6.710,1.092)--(n5.west);
+\draw[edge] (n2.east)--(4.290,1.494)--(4.290,0.689)--(n3.west);
+\draw[edge] (n6.east)--(6.710,2.298)--(6.710,1.896)--(n7.west);
+\draw[edge] (n6.east)--(6.710,2.298)--(6.710,2.701)--(n8.west);
+\draw[edge] (n2.east)--(4.290,1.494)--(4.290,2.298)--(n6.west);
+\draw[edge] (n1.east)--(2.370,2.298)--(2.370,1.494)--(n2.west);
+\draw[edge] (n9.east)--(4.290,3.907)--(4.290,3.505)--(n10.west);
+\draw[edge] (n9.east)--(4.290,3.907)--(4.290,4.310)--(n11.west);
+\draw[edge] (n1.east)--(2.370,2.298)--(2.370,3.907)--(n9.west);
+\end{tikzpicture}
+

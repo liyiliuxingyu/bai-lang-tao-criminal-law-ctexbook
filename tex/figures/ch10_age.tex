@@ -1,0 +1,13 @@
+% 核对底本 PDF 第107页：责任年龄轴。横向间距按类别布置，不代表年龄比例。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{9.5}{12}\selectfont,inner sep=3pt,align=center},edge/.style={draw=black!65,line width=.45pt},box/.style={draw=black!65,minimum height=.6cm}]
+\draw[edge,->] (0,0)--(15.3,0);
+\foreach \xx/\age in {3.1/12,5.25/14,7.4/16,9.55/18,13.8/75}{\draw[edge] (\xx,0)--(\xx,.22);\node[above] at (\xx,.22) {\age};}
+\node[box,minimum width=3.0cm] at (1.55,-.65) {完全无责任年龄};
+\node[box,minimum width=4.15cm] at (5.25,-.65) {相对责任年龄};
+\node[box,minimum width=7.3cm] at (11.2,-.65) {完全责任年龄};
+\node[box,minimum width=2cm] at (4.17,-1.5) {两种罪};\node[box,minimum width=2cm] at (6.32,-1.5) {八种罪};
+\node[box,minimum width=6.3cm] at (6.33,-2.35) {减轻责任年龄};
+\node[box,text width=1.6cm] at (14,-2.35) {减轻责任\\年龄};
+\end{tikzpicture}
+

@@ -1,0 +1,16 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=4.200cm,draw=black!65] (n1) at (0.000,1.401) {第一步：器官提供者有无有效承诺。\\考察：是否满18周岁，是否受到强迫、欺骗};
+\node[text width=2.229cm,draw=black!65] (n2) at (4.620,0.524) {没有有效承诺};
+\node[text width=2.229cm,draw=black!65] (n3) at (9.140,0.524) {故意伤害罪、\\故意杀人罪};
+\node[text width=4.100cm,draw=black!65] (n4) at (4.620,2.041) {具有有效承诺。\\第二步：非法买卖还是合法捐献};
+\node[text width=6.095cm,draw=black!65] (n5) at (9.140,1.638) {非法买卖，则构成组织出卖人体器官罪};
+\node[text width=2.932cm,draw=black!65] (n6) at (9.140,2.443) {合法捐献，则无罪};
+\draw[edge] (n2.east)--(8.990,0.524)--(8.990,0.524)--(n3.west);
+\draw[edge] (n1.east)--(4.470,1.401)--(4.470,0.524)--(n2.west);
+\draw[edge] (n4.east)--(8.990,2.041)--(8.990,1.638)--(n5.west);
+\draw[edge] (n4.east)--(8.990,2.041)--(8.990,2.443)--(n6.west);
+\draw[edge] (n1.east)--(4.470,1.401)--(4.470,2.041)--(n4.west);
+\end{tikzpicture}
+

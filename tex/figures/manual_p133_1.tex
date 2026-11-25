@@ -1,0 +1,12 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw] (co) at (0,0) {教唆犯/帮助犯};
+\node[draw] (principal) at (6,0) {实行犯};
+\node[] (legal) at (12,0) {法益};
+\draw[->] (co.east)--(principal.west) node[midway,above] {间接性侵害法益};
+\draw[->] (principal.east)--(legal.west) node[midway,above] {直接性、支配性侵害};
+\node[] (colabel) at (0,-0.85) {共犯};
+\node[] (prlabel) at (6,-0.85) {正犯};
+
+\end{tikzpicture}
+

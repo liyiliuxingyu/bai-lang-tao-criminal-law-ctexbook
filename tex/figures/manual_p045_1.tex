@@ -1,0 +1,18 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.500cm] (n1) at (0.000,1.958) {第一步：判断危险的实行者是谁？};
+\node[text width=2.600cm] (n2) at (2.920,0.726) {被害人是危险的实行者\\第二步};
+\node[text width=6.464cm] (n3) at (5.940,0.336) {有无认识能力。范例：甲赠送毒品给小孩。};
+\node[text width=8.467cm] (n4) at (5.940,1.116) {有无控制能力。范例：甲放火烧乙家，乙冲进去救小孩。};
+\node[text width=2.600cm] (n5) at (2.920,2.799) {行为人是危险的实行者\\第二步};
+\node[text width=10.060cm] (n6) at (5.940,2.183) {有无认识能力。范例：甲让醉酒的男友开车送自己回家。男友答应，开车不慎致甲死亡。};
+\node[text width=10.060cm] (n7) at (5.940,3.414) {有无控制能力。范例：警察甲命令醉酒的摩托车司机乙载自己去派出所，乙驾驶不慎致甲死亡。};
+\draw[edge,->] (n2.east)--(5.790,0.726)--(5.790,0.336)--(n3.west);
+\draw[edge,->] (n2.east)--(5.790,0.726)--(5.790,1.116)--(n4.west);
+\draw[edge] (n1.east)--(2.770,1.958)--(2.770,0.726)--(n2.west);
+\draw[edge,->] (n5.east)--(5.790,2.799)--(5.790,2.183)--(n6.west);
+\draw[edge,->] (n5.east)--(5.790,2.799)--(5.790,3.414)--(n7.west);
+\draw[edge] (n1.east)--(2.770,1.958)--(2.770,2.799)--(n5.west);
+\end{tikzpicture}
+

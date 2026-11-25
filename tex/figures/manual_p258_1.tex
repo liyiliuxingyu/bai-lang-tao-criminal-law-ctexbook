@@ -1,0 +1,11 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=east] (label) at (-2.7,0) {行为结构：};
+\node[draw] (object) at (0,0) {将他人占有的财物};
+\node[draw] (method) at (5,0) {通过平和手段};
+\node[draw] (occupy) at (10,0) {转移为自己占有};
+\draw[->] (object.east)--(method.west);
+\draw[->] (method.east)--(occupy.west);
+
+\end{tikzpicture}
+

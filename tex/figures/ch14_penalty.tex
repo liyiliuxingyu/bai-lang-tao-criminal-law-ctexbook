@@ -1,0 +1,17 @@
+% 核对底本 PDF 第181页：刑事责任承担方式树。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,draw=black!65,inner sep=5pt,align=center},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2cm] (root) at (0,0) {刑事责任的\\承担方式};
+\node[text width=3cm] (penalty) at (4,2) {刑罚措施};
+\node[text width=3cm] (nonpenalty) at (4,0) {非刑罚处罚措施};
+\node[text width=3cm] (declaration) at (4,-1.8) {单纯宣告有罪};
+\node (main) at (7.3,2.8) {主刑};
+\node (additional) at (7.3,1.35) {附加刑};
+\node[text width=4cm] (mainlist) at (11,2.8) {管制、拘役、有期徒刑、\\无期徒刑、死刑};
+\node[text width=4cm] (additionallist) at (11,1.35) {罚金、没收财产、\\剥夺政治权利};
+\node[text width=4cm] (nonlist) at (9,0) {赔偿损失、从业禁止等};
+\draw[edge] (root.east)--(penalty.west) (root.east)--(nonpenalty.west) (root.east)--(declaration.west);
+\draw[edge] (penalty.east)--(main.west) (penalty.east)--(additional.west);
+\draw[edge] (main.east)--(mainlist.west) (additional.east)--(additionallist.west) (nonpenalty.east)--(nonlist.west);
+\end{tikzpicture}
+
