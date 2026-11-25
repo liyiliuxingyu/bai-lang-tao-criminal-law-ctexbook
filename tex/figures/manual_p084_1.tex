@@ -1,0 +1,16 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.580cm,draw=black!65] (n1) at (0.000,1.092) {前行为是否着手};
+\node[text width=1.526cm,draw=black!65] (n2) at (3.420,0.287) {尚未着手};
+\node[text width=8.555cm,draw=black!65] (n3) at (6.840,0.287) {故意杀人罪（犯罪预备）与过失致人死亡罪，想象竞合};
+\node[text width=1.526cm,draw=black!65] (n4) at (3.420,1.494) {已经着手};
+\node[text width=3.986cm,draw=black!65] (n5) at (6.840,1.092) {多数说：故意杀人罪既遂};
+\node[text width=8.555cm,draw=black!65] (n6) at (6.840,1.896) {少数说：故意杀人罪未遂与过失致人死亡罪，想象竞合};
+\draw[edge] (n2.east)--(6.690,0.287)--(6.690,0.287)--(n3.west);
+\draw[edge] (n1.east)--(3.270,1.092)--(3.270,0.287)--(n2.west);
+\draw[edge] (n4.east)--(6.690,1.494)--(6.690,1.092)--(n5.west);
+\draw[edge] (n4.east)--(6.690,1.494)--(6.690,1.896)--(n6.west);
+\draw[edge] (n1.east)--(3.270,1.092)--(3.270,1.494)--(n4.west);
+\end{tikzpicture}
+

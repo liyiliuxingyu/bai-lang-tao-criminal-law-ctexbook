@@ -1,0 +1,14 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[] (upper) at (0,1) {上限};
+\node[] (lower) at (0,-1.5) {下限};
+\node[] (three) at (3,1) {三种情形};
+\node[] (maximum) at (3.7,-1.5) {数刑中最高刑};
+\node[] (u1) at (8.9,2) {总和刑期$\geq$35年，上限是25年};
+\node[] (u2) at (8.9,1) {20年$\leq$总和刑期<35年，上限是20年};
+\node[] (u3) at (8.9,0) {总和刑期<20年，上限是总和刑期};
+\draw[-] (upper.east)--(three.west);
+\draw[-] (lower.east)--(maximum.west);
+\draw (1,1)--(1,-1.5);\draw (three.east)--(5,1);\draw (5,2)--(5,0);\draw (5,2)--(u1.west);\draw (5,1)--(u2.west);\draw (5,0)--(u3.west);
+\end{tikzpicture}
+

@@ -1,0 +1,115 @@
+{
+  "edition": "2026-11-25",
+  "archive_sha256": "c1258632bc3fc340b5bc0af063a00e97704f3932c232a91d2536f26abf658401",
+  "archive_file_count": 4164,
+  "archive_file_hashes_verified": 4163,
+  "artifacts": [
+    {
+      "path": "criminal-law-retypeset.pdf",
+      "sha256": "f89ac82876063aad9b169b1e5fb4105bed8dd81293393b928794ffb65f29874a",
+      "pages": 355
+    },
+    {
+      "path": "criminal-law-mathematical.pdf",
+      "sha256": "d0649988829fdf59a1b4a15c1545bef7a7b65ac3567084ab1ac6bd7a98f7fcb2",
+      "pages": 39
+    },
+    {
+      "path": "study-detailed/guide.pdf",
+      "sha256": "b45522240930e218a0210d7cd1af4c8ce06ed6f1b05db462c91c2bdb8ecd505a",
+      "pages": 208
+    }
+  ],
+  "guide_index": {
+    "lectures": 25,
+    "named_sections": 106,
+    "detailed_rules": 307,
+    "cross_lecture_cases": 5
+  },
+  "source_notes": {
+    "total": 360,
+    "page_footnotes": 342,
+    "table_notes": 16,
+    "linked_extended_notes": 2,
+    "additional_editorial_footnotes": 1,
+    "resolved_pdf_footnote_targets": 343
+  },
+  "opening_panel_pdf_pages": [
+    10,
+    20,
+    26,
+    27,
+    32,
+    41,
+    44,
+    52,
+    67,
+    83,
+    91,
+    105,
+    136,
+    144,
+    152,
+    166,
+    173,
+    177,
+    204,
+    255,
+    270,
+    294,
+    325,
+    349,
+    353
+  ],
+  "continuation_heading_and_first_header_pdf_pages": [
+    79,
+    85,
+    100,
+    129,
+    143,
+    172,
+    178,
+    192,
+    244,
+    245,
+    287,
+    288,
+    316,
+    328
+  ],
+  "arithmetic_erratum_pdf_page": 150,
+  "verified_term_corrections": "已对照底本改正 48 处“谴责”及同批逐行核实的邻近错字，定位见 data/editorial/terms.json。",
+  "edition_checks": {
+    "retypeset": {
+      "overfull_hbox": 0,
+      "overfull_vbox": 0,
+      "missing_characters": 0,
+      "unresolved_references": 0,
+      "rerun_required": 0,
+      "pages": 355,
+      "characters": 497733,
+      "raster_images": 0
+    },
+    "mathematical": {
+      "overfull_hbox": 0,
+      "overfull_vbox": 0,
+      "missing_characters": 0,
+      "unresolved_references": 0,
+      "rerun_required": 0,
+      "pages": 39,
+      "characters": 46994,
+      "raster_images": 0
+    },
+    "continued_tables_checked": true,
+    "model_checks": [
+      "verify_math_models.py",
+      "verify_derivation_models.py",
+      "verify_derivations.py"
+    ],
+    "regenerated_tex_matches": true
+  },
+  "limits": [
+    "正文尚未逐字独立校对。",
+    "未逐例核查全书所有法律结论、地域标准及法源更新。"
+  ]
+}

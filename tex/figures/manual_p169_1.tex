@@ -1,0 +1,23 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=0.788cm] (n1) at (0.000,1.056) {主犯};
+\node[text width=2.791cm] (n2) at (2.220,0.275) {犯罪集团首要分子};
+\node[text width=3.793cm] (n3) at (2.220,1.446) {共同犯罪中起主要作用者};
+\node[text width=5.796cm] (n4) at (7.140,1.056) {犯罪集团中除首要分子外起主要作用者};
+\node[text width=4.461cm] (n5) at (7.140,1.837) {一般共同犯罪中起主要作用者};
+\node[text width=1.456cm] (n6) at (0.000,3.818) {首要分子};
+\node[text width=2.791cm] (n7) at (2.220,3.038) {犯罪集团首要分子};
+\node[text width=2.791cm] (n8) at (2.220,4.209) {聚众犯罪首要分子};
+\node[text width=3.125cm] (n9) at (7.140,3.818) {一个人，不存在主犯};
+\node[text width=2.791cm] (n10) at (7.140,4.599) {多个人，存在主犯};
+\draw[edge] (n1.east)--(2.070,1.056)--(2.070,0.275)--(n2.west);
+\draw[edge] (n3.east)--(6.990,1.446)--(6.990,1.056)--(n4.west);
+\draw[edge] (n3.east)--(6.990,1.446)--(6.990,1.837)--(n5.west);
+\draw[edge] (n1.east)--(2.070,1.056)--(2.070,1.446)--(n3.west);
+\draw[edge] (n6.east)--(2.070,3.818)--(2.070,3.038)--(n7.west);
+\draw[edge] (n8.east)--(6.990,4.209)--(6.990,3.818)--(n9.west);
+\draw[edge] (n8.east)--(6.990,4.209)--(6.990,4.599)--(n10.west);
+\draw[edge] (n6.east)--(2.070,3.818)--(2.070,4.209)--(n8.west);
+\end{tikzpicture}
+

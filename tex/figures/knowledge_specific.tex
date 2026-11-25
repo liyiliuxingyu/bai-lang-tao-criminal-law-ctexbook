@@ -1,0 +1,24 @@
+% 核对底本 PDF 第11页：知识体系·分论。人工逐节点转写，连线重新绘制。
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{9.3}{12}\selectfont,inner sep=2pt,align=left},edge/.style={draw=black!65,line width=.45pt}]
+\node[align=center] (root) at (0,4.5) {分\\论};
+\draw[edge] (root.east)--(.5,4.5);\draw[edge] (.5,.6)--(.5,7.5);
+\node[anchor=west] (personal) at (.8,7.5) {侵犯个人法益};\draw[edge] (.5,7.5)--(personal.west);\draw[edge] (personal.east)--(3.4,7.5);
+\draw[edge] (3.4,6.85)--(3.4,8.2);
+\node[anchor=west,text width=11.7cm] (person) at (3.7,8.2) {人身犯罪：生命，身体，性权利，自由，名誉，民主权利，婚姻家庭权利};\draw[edge] (3.4,8.2)--(person.west);
+\node[anchor=west] (property) at (3.7,6.85) {财产犯罪};\draw[edge] (3.4,6.85)--(property.west);\draw[edge] (property.east)--(5.7,6.85);
+\draw[edge] (5.7,6.1)--(5.7,7.6);
+\foreach \yy/\txt in {7.6/侵占罪与盗窃罪,6.85/抢夺罪与抢劫罪,6.1/敲诈勒索罪与诈骗罪}{\node[anchor=west] at (6,\yy) {\txt};\draw[edge] (5.7,\yy)--(6,\yy);}
+\node[anchor=west] (social) at (.8,4.5) {侵犯社会法益};\draw[edge] (.5,4.5)--(social.west);\draw[edge] (social.east)--(3.4,4.5);
+\draw[edge] (3.4,3.75)--(3.4,5.25);
+\foreach \yy/\txt in {5.25/危害公共安全犯罪,4.5/破坏经济秩序犯罪,3.75/妨害社会管理犯罪}{\node[anchor=west] at (3.7,\yy) {\txt};\draw[edge] (3.4,\yy)--(3.7,\yy);}
+\node[anchor=west] (state) at (.8,1.4) {侵犯国家法益};\draw[edge] (.5,1.4)--(state.west);\draw[edge] (state.east)--(3.4,1.4);
+\draw[edge] (3.4,.6)--(3.4,2.4);
+\node[anchor=west] (function) at (3.7,2.4) {侵害国家职能的犯罪};\draw[edge] (3.4,2.4)--(function.west);\draw[edge] (function.east)--(7.5,2.4);
+\draw[edge] (7.5,1.85)--(7.5,2.95);
+\node[anchor=west,text width=7.7cm] (corruption) at (7.8,2.95) {贪污贿赂犯罪：贪污罪、挪用公款罪、受贿罪};\draw[edge] (7.5,2.95)--(corruption.west);
+\node[anchor=west] (malfeasance) at (7.8,1.85) {渎职犯罪};\draw[edge] (7.5,1.85)--(malfeasance.west);
+\node[anchor=west] (exist) at (3.7,.6) {危害国家存立的犯罪};\draw[edge] (3.4,.6)--(exist.west);
+\node[anchor=west] (security) at (8.4,.6) {危害国家安全罪};\draw[edge] (exist.east)--(security.west);
+\end{tikzpicture}
+

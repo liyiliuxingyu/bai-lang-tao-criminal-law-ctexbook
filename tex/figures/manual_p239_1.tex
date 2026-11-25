@@ -1,0 +1,13 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw,text width=6cm] (purpose1) at (0,1) {目的一（实力控制A的目的）};
+\node[draw,text width=6cm] (purpose2) at (8,1) {目的二（出卖目的）};
+\node[draw,text width=6cm] (act1) at (0,-1) {行为一（实力控制A的行为）};
+\node[draw,densely dotted,text width=6cm] (act2) at (8,-1) {行为二（出卖行为）};
+\draw[->] (purpose1.east)--(purpose2.west);
+\draw[->] (purpose1.south)--(act1.north);
+\draw[->] (purpose2.south)--(act2.north);
+\draw[->] (act1.east)--(act2.west);
+
+\end{tikzpicture}
+

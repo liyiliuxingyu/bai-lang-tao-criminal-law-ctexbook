@@ -1,0 +1,14 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{10}{13.0}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=1.877cm,draw=black!65] (n1) at (0.000,1.092) {行为对法益\\有无危险};
+\node[text width=5.040cm,draw=black!65] (n2) at (2.720,0.287) {主观说：以行为人主观认识为准};
+\node[text width=3.986cm,draw=black!65] (n3) at (2.720,1.494) {客观说：以客观情况为准};
+\node[text width=4.338cm,draw=black!65] (n4) at (8.540,1.092) {客观危险说：事后专家角度};
+\node[text width=5.040cm,draw=black!65] (n5) at (8.540,1.896) {具体危险说：行为时一般人角度};
+\draw[edge] (n1.east)--(2.570,1.092)--(2.570,0.287)--(n2.west);
+\draw[edge] (n3.east)--(8.390,1.494)--(8.390,1.092)--(n4.west);
+\draw[edge] (n3.east)--(8.390,1.494)--(8.390,1.896)--(n5.west);
+\draw[edge] (n1.east)--(2.570,1.092)--(2.570,1.494)--(n3.west);
+\end{tikzpicture}
+

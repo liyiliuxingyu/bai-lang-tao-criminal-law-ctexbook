@@ -1,0 +1,13 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw] (out) at (0,0) {挪出行为};
+\node[draw,text width=3.4cm] (use) at (4.3,0) {归个人使用行为};
+\draw[->] (out.east)--(use.west);
+\draw[dashed] (2.4,-.6) rectangle (6.2,.6);\draw (6.2,0)--(8.1,0);\draw (8.1,-1.2)--(8.1,1.2);\node[] (label1) at (7.1,0.4) {使用};
+\node[] (label2) at (7.1,-0.4) {方式};
+\node[anchor=west] (illegal) at (8.4,1.2) {非法活动（3万元）};
+\node[anchor=west] (profit) at (8.4,0) {营利活动（5万元）};
+\node[anchor=west,text width=6cm,align=left] (ordinary) at (8.4,-1.2) {一般活动，超过三个月未还（5万元）};
+\draw (8.1,1.2)--(illegal.west);\draw (8.1,0)--(profit.west);\draw (8.1,-1.2)--(ordinary.west);
+\end{tikzpicture}
+

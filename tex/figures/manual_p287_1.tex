@@ -1,0 +1,15 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=west,font=\fontsize{9.3}{12.1}\selectfont] (chainlabel) at (0,0) {行为结构：};
+\node[draw,text width=2.8cm,font=\fontsize{9.3}{12.1}\selectfont] (c0) at (3.5,0) {带着非法占有目的，实施欺骗行为};
+\node[draw,text width=2.8cm,font=\fontsize{9.3}{12.1}\selectfont] (c1) at (6.699999999999999,0) {对方产生或维持认识错误};
+\draw[->] (c0.east)--(c1.west);
+\node[draw,text width=2.8cm,font=\fontsize{9.3}{12.1}\selectfont] (c2) at (9.9,0) {对方基于认识错误处分财物};
+\draw[->] (c1.east)--(c2.west);
+\node[draw,text width=1.8cm,font=\fontsize{9.3}{12.1}\selectfont] (c3) at (12.6,0) {行为人取得财物};
+\draw[->] (c2.east)--(c3.west);
+\node[draw,text width=2.0cm,font=\fontsize{9.3}{12.1}\selectfont] (c4) at (14.899999999999999,0) {对方遭受财产损失};
+\draw[->] (c3.east)--(c4.west);
+
+\end{tikzpicture}
+

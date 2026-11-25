@@ -1,0 +1,8 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small,inner sep=4pt},line width=.5pt]
+\node[draw] (a) at (0,.8) {行为1};\node[draw] (b) at (0,-.8) {行为2};\node at (0,0) {$+$};\node[draw] (c) at (5.2,0) {结果};
+\draw (a.east)--(2.2,.8)--(2.2,-.8)--(b.east);
+\node at (1.6,0) {叠加};
+\draw[->] (2.2,0)--(c.west) node[midway,above]{一起同时} node[midway,below]{发挥作用};
+\end{tikzpicture}
+

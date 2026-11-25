@@ -1,0 +1,22 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9}{11.7}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.100cm,draw=black!65] (n1) at (0.000,1.875) {第一步：介入因素是否异常};
+\node[text width=2.200cm,draw=black!65] (n2) at (2.520,0.477) {少数说：不异常};
+\node[text width=4.865cm,draw=black!65] (n3) at (5.140,0.477) {二因一果；最终定故意杀人罪既遂};
+\node[text width=2.018cm,draw=black!65] (n4) at (2.520,2.467) {多数说：异常};
+\node[text width=3.100cm,draw=black!65] (n5) at (5.140,2.467) {第二步：前行为与后行为，谁的作用更大？};
+\node[text width=3.300cm,draw=black!65] (n6) at (8.660,1.875) {少数说：后行为作用更大};
+\node[text width=3.620cm,draw=black!65] (n7) at (12.380,1.875) {后因一果；故意杀人罪未遂与过失致人死亡罪，并罚};
+\node[text width=3.300cm,draw=black!65] (n8) at (8.660,3.272) {多数说：前后行为作用一样大};
+\node[text width=3.620cm,draw=black!65] (n9) at (12.380,3.272) {二因一果；最终定故意杀人罪既遂};
+\draw[edge] (n2.east)--(4.990,0.477)--(4.990,0.477)--(n3.west);
+\draw[edge] (n1.east)--(2.370,1.875)--(2.370,0.477)--(n2.west);
+\draw[edge] (n6.east)--(12.230,1.875)--(12.230,1.875)--(n7.west);
+\draw[edge] (n5.east)--(8.510,2.467)--(8.510,1.875)--(n6.west);
+\draw[edge] (n8.east)--(12.230,3.272)--(12.230,3.272)--(n9.west);
+\draw[edge] (n5.east)--(8.510,2.467)--(8.510,3.272)--(n8.west);
+\draw[edge] (n4.east)--(4.990,2.467)--(4.990,2.467)--(n5.west);
+\draw[edge] (n1.east)--(2.370,1.875)--(2.370,2.467)--(n4.west);
+\end{tikzpicture}
+

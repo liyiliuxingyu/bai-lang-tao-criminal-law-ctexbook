@@ -1,0 +1,15 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=east] (label) at (-1.3,0) {帮助行为：};
+\node[draw,text width=4.1cm] (conduct) at (1.2,0) {促进正犯实施违法行为};
+\node[draw,text width=4.1cm] (result) at (11.2,0) {促进正犯制造违法结果};
+\draw[->] (conduct.east)--(result.west);
+\draw (6.6,0)--(6.6,.55);\node[] (start) at (6.6,0.9) {正犯着手};
+\node[text width=2.65cm,font=\fontsize{9}{11.7}\selectfont] (m0) at (0,-2.2) {帮助行为要有可能的帮助作用\\（模型1）};
+\draw[->] (m0.north)--(0,-.5);\node[text width=2.65cm,font=\fontsize{9}{11.7}\selectfont] (m1) at (3,-2.2) {帮助行为要连接到正犯行为\\（模型2）};
+\draw[->] (m1.north)--(3,-.5);\node[text width=2.65cm,font=\fontsize{9}{11.7}\selectfont] (m2) at (6,-2.2) {帮助行为促进到预备阶段，是犯罪预备\\（模型3）};
+\draw[->] (m2.north)--(6,-.5);\node[text width=2.65cm,font=\fontsize{9}{11.7}\selectfont] (m3) at (9,-2.2) {帮助行为促进到实行阶段，是未遂\\（模型4）};
+\draw[->] (m3.north)--(9,-.5);\node[text width=2.65cm,font=\fontsize{9}{11.7}\selectfont] (m4) at (12,-2.2) {帮助犯是既遂\\（模型5）};
+\draw[->] (m4.north)--(12,-.5);
+\end{tikzpicture}
+

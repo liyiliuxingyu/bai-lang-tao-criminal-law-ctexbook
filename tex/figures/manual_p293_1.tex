@@ -1,0 +1,22 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=3.000cm,draw=black!65] (n1) at (0.000,2.348) {处分意识的判断：\\关键看是否意识到财物的现实存在};
+\node[text width=1.456cm,draw=black!65] (n2) at (3.420,0.501) {种类错误};
+\node[text width=10.160cm,draw=black!65] (n3) at (5.840,0.501) {定盗窃罪。因为没有意识到财物的现实存在。（例如，调包案、邮票案）};
+\node[text width=1.456cm,draw=black!65] (n4) at (3.420,2.964) {数量错误};
+\node[text width=2.123cm,draw=black!65] (n5) at (5.840,1.732) {整体处分财物\\（论斤卖）};
+\node[text width=6.640cm,draw=black!65] (n6) at (9.360,1.732) {定诈骗罪。因为意识到财物的现实存在。（例如，米店短斤少两案，多放一把米案）};
+\node[text width=2.123cm,draw=black!65] (n7) at (5.840,3.579) {单个处分财物\\（论个卖）};
+\node[text width=6.640cm,draw=black!65] (n8) at (9.360,2.964) {被害人意识到财物的现实存在。定诈骗罪。（例如，调换价签案）};
+\node[text width=6.640cm,draw=black!65] (n9) at (9.360,4.195) {被害人没有意识到财物的现实存在。定盗窃罪。（例如，包装盒加塞案）};
+\draw[edge] (n2.east)--(5.690,0.501)--(5.690,0.501)--(n3.west);
+\draw[edge] (n1.east)--(3.270,2.348)--(3.270,0.501)--(n2.west);
+\draw[edge] (n5.east)--(9.210,1.732)--(9.210,1.732)--(n6.west);
+\draw[edge] (n4.east)--(5.690,2.964)--(5.690,1.732)--(n5.west);
+\draw[edge] (n7.east)--(9.210,3.579)--(9.210,2.964)--(n8.west);
+\draw[edge] (n7.east)--(9.210,3.579)--(9.210,4.195)--(n9.west);
+\draw[edge] (n4.east)--(5.690,2.964)--(5.690,3.579)--(n7.west);
+\draw[edge] (n1.east)--(3.270,2.348)--(3.270,2.964)--(n4.west);
+\end{tikzpicture}
+

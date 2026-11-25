@@ -1,0 +1,17 @@
+% The scan places “续表” at the right edge of the continuation table.
+% Box the heading with its measured TikZ table to keep them on one page.
+\newsavebox{\ContinuationTableBox}
+\newcommand{\ContinuedTable}[1]{%
+  \par\smallskip
+  \begingroup
+    \sbox{\ContinuationTableBox}{%
+      \begin{adjustbox}{max width=\linewidth,max totalheight=.78\textheight}%
+        \input{#1}%
+      \end{adjustbox}}%
+    \noindent\makebox[\linewidth][c]{%
+      \vbox{%
+        \hbox to \wd\ContinuationTableBox{\hfil\small\bfseries 续表}%
+        \kern 2pt
+        \hbox{\usebox{\ContinuationTableBox}}}}\par
+  \endgroup
+  \smallskip}

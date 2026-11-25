@@ -1,0 +1,24 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9}{11.7}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=0.753cm,draw=black!65] (n1) at (0.000,2.265) {走私};
+\node[text width=3.300cm,draw=black!65] (n2) at (1.620,0.477) {国家允许进出口的货物：偷逃关税};
+\node[text width=3.283cm,draw=black!65] (n3) at (5.340,0.477) {走私普通货物、物品罪};
+\node[text width=3.300cm,draw=black!65] (n4) at (1.620,2.857) {国家禁止进出口的货物：侵犯海关制度};
+\node[text width=3.100cm,draw=black!65] (n5) at (5.340,2.857) {走私国家禁止进出口的货物、物品罪};
+\node[text width=1.385cm,draw=black!65] (n6) at (8.860,1.875) {双向禁止};
+\node[text width=4.720cm,draw=black!65] (n7) at (11.280,1.875) {走私武器、弹药罪；走私核材料罪；走私假币罪；走私珍贵动物、珍贵动物制品罪；走私淫秽物品罪};
+\node[text width=1.385cm,draw=black!65] (n8) at (8.860,3.662) {单向禁止};
+\node[text width=4.720cm,draw=black!65] (n9) at (11.280,3.272) {只禁止出口：走私文物罪；走私贵重金属罪};
+\node[text width=3.599cm,draw=black!65] (n10) at (11.280,4.254) {只禁止进口：走私废物罪};
+\draw[edge] (n2.east)--(5.190,0.477)--(5.190,0.477)--(n3.west);
+\draw[edge] (n1.east)--(1.470,2.265)--(1.470,0.477)--(n2.west);
+\draw[edge] (n6.east)--(11.130,1.875)--(11.130,1.875)--(n7.west);
+\draw[edge] (n5.east)--(8.710,2.857)--(8.710,1.875)--(n6.west);
+\draw[edge] (n8.east)--(11.130,3.662)--(11.130,3.272)--(n9.west);
+\draw[edge] (n8.east)--(11.130,3.662)--(11.130,4.254)--(n10.west);
+\draw[edge] (n5.east)--(8.710,2.857)--(8.710,3.662)--(n8.west);
+\draw[edge] (n4.east)--(5.190,2.857)--(5.190,2.857)--(n5.west);
+\draw[edge] (n1.east)--(1.470,2.265)--(1.470,2.857)--(n4.west);
+\end{tikzpicture}
+

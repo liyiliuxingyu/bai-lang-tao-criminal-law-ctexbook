@@ -1,0 +1,26 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.457cm] (n1) at (0.000,1.446) {伪造金融票证罪};
+\node[text width=0.788cm] (n2) at (4.120,0.275) {票据};
+\node[text width=1.789cm] (n3) at (10.740,0.275) {票据诈骗罪};
+\node[text width=5.128cm] (n4) at (4.120,1.056) {金融凭证（收款凭证、汇款凭证）};
+\node[text width=2.457cm] (n5) at (10.740,1.056) {金融凭证诈骗罪};
+\node[text width=1.122cm] (n6) at (4.120,1.837) {信用证};
+\node[text width=2.123cm] (n7) at (10.740,1.837) {信用证诈骗罪};
+\node[text width=1.122cm] (n8) at (4.120,2.618) {信用卡};
+\node[text width=2.123cm] (n9) at (10.740,2.618) {信用卡诈骗罪};
+\node[text width=3.125cm] (n10) at (0.000,3.818) {伪造国家有价证券罪};
+\node[text width=2.457cm] (n11) at (4.120,3.818) {有价证券诈骗罪};
+\draw[edge,->] (n2.east)--(10.590,0.275)--(10.590,0.275)--(n3.west);
+\draw[edge] (n1.east)--(3.970,1.446)--(3.970,0.275)--(n2.west);
+\draw[edge,->] (n4.east)--(10.590,1.056)--(10.590,1.056)--(n5.west);
+\draw[edge] (n1.east)--(3.970,1.446)--(3.970,1.056)--(n4.west);
+\draw[edge,->] (n6.east)--(10.590,1.837)--(10.590,1.837)--(n7.west);
+\draw[edge] (n1.east)--(3.970,1.446)--(3.970,1.837)--(n6.west);
+\draw[edge,->] (n8.east)--(10.590,2.618)--(10.590,2.618)--(n9.west);
+\draw[edge] (n1.east)--(3.970,1.446)--(3.970,2.618)--(n8.west);
+\draw[edge,->] (n10.east)--(3.970,3.818)--(3.970,3.818)--(n11.west);
+\draw[edge] (n1.west)--(-.25,1.4464943960149441)--(-.25,3.818362391033624)--(n10.west);
+\end{tikzpicture}
+

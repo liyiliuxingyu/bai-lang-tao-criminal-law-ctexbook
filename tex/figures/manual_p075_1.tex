@@ -1,0 +1,28 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.300cm] (n1) at (0.000,2.227) {有没有认识到会发生危害结果};
+\node[text width=0.500cm] (n2) at (2.720,1.446) {有};
+\node[text width=2.791cm] (n3) at (3.640,1.446) {对发生结果的态度};
+\node[text width=2.457cm] (n4) at (7.060,0.275) {希望：直接故意};
+\node[text width=2.457cm] (n5) at (7.060,1.056) {放任：间接故意};
+\node[text width=0.788cm] (n6) at (7.060,2.227) {反对};
+\node[text width=5.462cm] (n7) at (10.180,1.837) {有结果避免可能性：过于自信的过失};
+\node[text width=4.794cm] (n8) at (10.180,2.618) {没有结果避免可能性：不可抗力};
+\node[text width=0.500cm] (n9) at (2.720,3.789) {无};
+\node[text width=3.000cm] (n10) at (3.640,3.789) {有无结果预见可能性};
+\node[text width=5.462cm] (n11) at (7.060,3.398) {有结果预见可能性：疏忽大意的过失};
+\node[text width=4.794cm] (n12) at (7.060,4.179) {没有结果预见可能性：意外事件};
+\draw[edge] (n3.east)--(6.910,1.446)--(6.910,0.275)--(n4.west);
+\draw[edge] (n3.east)--(6.910,1.446)--(6.910,1.056)--(n5.west);
+\draw[edge] (n6.east)--(10.030,2.227)--(10.030,1.837)--(n7.west);
+\draw[edge] (n6.east)--(10.030,2.227)--(10.030,2.618)--(n8.west);
+\draw[edge] (n3.east)--(6.910,1.446)--(6.910,2.227)--(n6.west);
+\draw[edge] (n2.east)--(3.490,1.446)--(3.490,1.446)--(n3.west);
+\draw[edge] (n1.east)--(2.570,2.227)--(2.570,1.446)--(n2.west);
+\draw[edge] (n10.east)--(6.910,3.789)--(6.910,3.398)--(n11.west);
+\draw[edge] (n10.east)--(6.910,3.789)--(6.910,4.179)--(n12.west);
+\draw[edge] (n9.east)--(3.490,3.789)--(3.490,3.789)--(n10.west);
+\draw[edge] (n1.east)--(2.570,2.227)--(2.570,3.789)--(n9.west);
+\end{tikzpicture}
+

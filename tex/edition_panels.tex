@@ -1,0 +1,30 @@
+% Reproduce the original section tags and the boundary of each chapter-opening panel.
+% Save inserts made inside the framed box, then place them at the page foot.
+\usepackage{footnotehyper}
+\usetikzlibrary{shapes.arrows}
+\definecolor{EditionPanelGreen}{HTML}{007F68}
+\newsavebox{\EditionPanelBody}
+\newenvironment{EditionOpeningPanel}{%
+  \par\addvspace{9pt}\begin{savenotes}%
+  \setbox\EditionPanelBody=\vbox\bgroup
+  \hsize=\dimexpr\linewidth-18pt\relax\linewidth=\hsize
+  \setlength{\parindent}{2em}%
+  \renewcommand{\InsertDiagram}[1]{%
+    \par\smallskip\noindent\makebox[\linewidth][c]{%
+      \begin{adjustbox}{max width=\linewidth,max totalheight=.75\textheight}%
+        \input{##1}%
+      \end{adjustbox}}\par\smallskip}%
+  \ignorespaces
+}{%
+  \par\unskip\egroup
+  \noindent\begin{tikzpicture}
+    \node[anchor=south west,inner xsep=8pt,inner ysep=10pt,outer sep=0pt,
+          draw=EditionPanelGreen,rounded corners=6pt,line width=.55pt,
+          dash pattern=on 1.2pt off 1.1pt] (panel) at (0,0) {\phantom{\copy\EditionPanelBody}};
+    % Paint the label before the contents so text extraction retains reading order.
+    \node[single arrow,single arrow head extend=0pt,anchor=west,
+          fill=EditionPanelGreen,text=white,font=\small\bfseries,
+          inner xsep=3pt,inner ysep=.5pt,outer sep=0pt] at (panel.north west) {特别提示};
+    \node[anchor=center,inner sep=0pt,outer sep=0pt] at (panel.center) {\box\EditionPanelBody};
+  \end{tikzpicture}\par\end{savenotes}\addvspace{6pt}\ignorespacesafterend
+}

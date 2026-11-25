@@ -1,0 +1,18 @@
+% Required packages; load this file before \begin{document}.
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{longtable,booktabs,array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\usepackage{hyperref}
+\renewcommand{\proofname}{证明}
+\newtheorem{modelprop}{模型命题}[chapter]
+\newtheorem{modeldef}{模型定义}[chapter]
+\newcommand{\lawref}[2]{\textsuperscript{\hyperlink{#1}{[#1：#2]}}}
+\newcommand{\lawinput}[1]{\par\noindent\textbf{法律前提。}#1\par}
+\newcommand{\modelbound}[1]{\par\noindent\textbf{适用边界。}#1\par}
+\newcommand{\memorycard}[1]{\par\noindent\textbf{闭卷检索卡。}#1\par}
+\newcommand{\caseinput}[1]{\par\noindent\textbf{教学设例。}#1\par}
+\newcommand{\formalstatus}{\par\noindent\textbf{版本与范围：}依据上传书目录的二十五讲建立核心学习模型；这是独立编写的形式化研习稿，不能据此声称原书每一段、每一道例题均已完成法律校订或形式证明。法律核验记录日期为2026年11月20日，具体核验范围见本册末尾。}
+
+\providecommand{\llbracket}{\mathopen{[\![}}
+\providecommand{\rrbracket}{\mathclose{]\!]}}

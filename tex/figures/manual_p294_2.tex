@@ -1,0 +1,17 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[anchor=east] (l1) at (0,1) {三角诈骗：};
+\node[anchor=east] (l2) at (0,-1) {盗窃罪的间接正犯：};
+\node[draw] (a1) at (1.5,1) {行为人};
+\node[draw] (a2) at (1.5,-1) {行为人};
+\node[draw,text width=5.2cm] (b1) at (6.5,1) {受骗人（同时是处分人）};
+\node[draw,text width=5.2cm] (b2) at (6.5,-1) {受骗人（不是处分人）};
+\node[draw] (c1) at (11.5,1) {受害人};
+\node[draw] (c2) at (11.5,-1) {受害人};
+\draw[->] (a1.east)--(b1.west);
+\draw[->] (b1.east)--(c1.west);
+\draw[->] (a2.east)--(b2.west);
+\draw[->] (b2.east)--(c2.west);
+
+\end{tikzpicture}
+

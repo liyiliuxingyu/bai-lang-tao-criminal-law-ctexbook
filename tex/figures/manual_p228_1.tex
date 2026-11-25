@@ -1,0 +1,22 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=2.791cm,draw=black!65] (n1) at (0.000,2.678) {14至16周岁的少女};
+\node[text width=2.791cm,draw=black!65] (n2) at (3.220,1.672) {负有照护职责的人};
+\node[text width=7.132cm,draw=black!65] (n3) at (6.840,0.275) {少女同意性交，对方定负有照护职责人员性侵罪};
+\node[text width=9.160cm,draw=black!65] (n4) at (6.840,1.281) {少女不同意性交，对方强制性交，同时触犯负有照护职责人员性侵罪和强奸罪，最终定强奸罪};
+\node[text width=3.793cm,draw=black!65] (n5) at (6.840,2.288) {少女同意猥亵，对方无罪};
+\node[text width=7.132cm,draw=black!65] (n6) at (6.840,3.068) {少女不同意猥亵，对方强制猥亵，定强制猥亵罪};
+\node[text width=1.122cm,draw=black!65] (n7) at (3.220,4.465) {一般人};
+\node[text width=4.794cm,draw=black!65] (n8) at (6.840,3.849) {少女同意性交、猥亵，对方无罪};
+\node[text width=9.160cm,draw=black!65] (n9) at (6.840,4.855) {少女不同意性交、猥亵，对方强制实施，定强奸罪、强制猥亵罪};
+\draw[edge] (n2.east)--(6.690,1.672)--(6.690,0.275)--(n3.west);
+\draw[edge] (n2.east)--(6.690,1.672)--(6.690,1.281)--(n4.west);
+\draw[edge] (n2.east)--(6.690,1.672)--(6.690,2.288)--(n5.west);
+\draw[edge] (n2.east)--(6.690,1.672)--(6.690,3.068)--(n6.west);
+\draw[edge] (n1.east)--(3.070,2.678)--(3.070,1.672)--(n2.west);
+\draw[edge] (n7.east)--(6.690,4.465)--(6.690,3.849)--(n8.west);
+\draw[edge] (n7.east)--(6.690,4.465)--(6.690,4.855)--(n9.west);
+\draw[edge] (n1.east)--(3.070,2.678)--(3.070,4.465)--(n7.west);
+\end{tikzpicture}
+

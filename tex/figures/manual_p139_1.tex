@@ -1,0 +1,15 @@
+
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\fontsize{10}{13}\selectfont,align=center,inner sep=3pt},line width=.5pt]
+\node[draw,text width=3.6cm] (fact) at (0,0) {甲乙一起制造违法事实};
+\node[draw,text width=4.1cm] (name) at (5.2,0) {甲乙构成共同犯罪（共同正犯）};
+\node[draw,text width=4.2cm] (rule) at (10.8,0) {“部分实行、全部负责”原则};
+\node[] (real) at (0,1.5) {“实”};
+\node[] (middle) at (5.2,1.5) {“名”（中间商）};
+\draw[double,->] (real.south)--(fact.north);
+\draw[double,->] (middle.south)--(name.north);
+\draw[double,->] (fact.east)--(name.west) node[midway,above] {结论};
+\draw[double,->] (name.east)--(rule.west) node[midway,above] {结论};
+\draw[double,->] (fact.south) .. controls (2,-1.8) and (8,-1.8) .. (rule.south);\node[text width=14.5cm] (note) at (5.4,-2.5) {放弃“名”，追求“实”，不因“名”而废“实”，不让“中间商”赚差价};
+
+\end{tikzpicture}
+

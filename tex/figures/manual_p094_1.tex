@@ -1,0 +1,24 @@
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={font=\fontsize{9.5}{12.4}\selectfont,align=center,inner sep=3pt},line width=.45pt]
+\node[draw,text width=1.5cm] at (4,0) {防卫认识\\不要说};
+\node[text width=3.8cm] at (8,0) {故意型偶然防卫\\（坏心办好事）};
+\node[draw,text width=1.5cm] at (12.4,0) {防卫认识\\必要说};
+\node (jia) at (7,.62) {甲};\node (yi) at (8,.62) {乙};\node (bing) at (9,.62) {丙};
+\draw[->] (jia)--(yi);\draw[->] (yi)--(bing);
+\node[draw,text width=1.45cm] (root) at (.2,2.35) {制止\\不法侵害};
+\node[draw] (obj) at (2,1.45) {客观层面};
+\node[draw] (sub) at (2,3.25) {主观层面};
+\node at (2,3.75) {（防卫认识）};
+\draw (root.east)--(obj.west);\draw (root.east)--(sub.west);
+\foreach \x in {4,8,12.4}{\node at (\x,1.45) {$\surd$};}
+\node (unreq) at (4,3.25) {不要求};\node (no) at (8,3.25) {$\times$};\node (yes) at (12.4,3.25) {$\surd$};
+\node[text width=3.1cm] (ok) at (5.4,4.3) {成立正当防卫};
+\node[text width=5.7cm] (bad) at (11.2,4.3) {不成立正当防卫，构成故意杀人罪未遂};
+\draw (unreq.south)--(ok.north);\draw (no.south)--(ok.north);\draw (no.south)--(bad.north);\draw (yes.south)--(bad.north);
+\node[text width=3.1cm] (result) at (7.0,6.1) {故意杀人罪\CJKunderwave{既遂结果}};
+\node[anchor=west,align=left,text width=4.0cm] (fact) at (10,5.55) {事实判断：要求是死亡结果};
+\node[anchor=west,align=left,text width=4.0cm] (value) at (10,6.7) {价值评价：要求是坏结果};
+\draw (result.east)--(fact.west);\draw (result.east)--(value.west);
+\node[text width=7.6cm] at (9.5,7.65) {乙死亡是好结果，所以不属于既遂结果};
+\end{tikzpicture}
+

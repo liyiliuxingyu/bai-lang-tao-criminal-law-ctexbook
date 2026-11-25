@@ -1,0 +1,26 @@
+% 人工对照底本逐节点转写；独立TikZ重绘。
+
+\begin{tikzpicture}[x=1cm,y=-1cm,every node/.style={anchor=west,align=left,inner sep=2pt,font=\fontsize{9.5}{12.3}\selectfont},edge/.style={draw=black!65,line width=.45pt}]
+\node[text width=1.456cm,draw=black!65] (n1) at (0.000,1.897) {销售药品};
+\node[text width=0.788cm,draw=black!65] (n2) at (2.220,1.281) {药品};
+\node[text width=0.788cm,draw=black!65] (n3) at (4.040,0.275) {假药};
+\node[text width=2.123cm,draw=black!65] (n4) at (9.960,0.275) {定销售假药罪};
+\node[text width=0.788cm,draw=black!65] (n5) at (4.040,1.056) {劣药};
+\node[text width=4.461cm,draw=black!65] (n6) at (9.960,1.056) {造成实害结果，定销售劣药罪};
+\node[text width=5.500cm,draw=black!65] (n7) at (4.040,2.062) {黑药（未取得药品批准文件生产、进口的药品）};
+\node[text width=5.128cm,draw=black!65] (n8) at (9.960,2.062) {造成具体危险，定妨害药品管理罪};
+\node[text width=0.788cm,draw=black!65] (n9) at (2.220,3.294) {销售};
+\node[text width=5.500cm,draw=black!65] (n10) at (4.040,3.294) {单纯的开黑药店（无药品经营许可证而销售药品）};
+\node[text width=2.791cm,draw=black!65] (n11) at (9.960,3.294) {不再定非法经营罪};
+\draw[edge] (n3.east)--(9.810,0.275)--(9.810,0.275)--(n4.west);
+\draw[edge] (n2.east)--(3.890,1.281)--(3.890,0.275)--(n3.west);
+\draw[edge] (n5.east)--(9.810,1.056)--(9.810,1.056)--(n6.west);
+\draw[edge] (n2.east)--(3.890,1.281)--(3.890,1.056)--(n5.west);
+\draw[edge] (n7.east)--(9.810,2.062)--(9.810,2.062)--(n8.west);
+\draw[edge] (n2.east)--(3.890,1.281)--(3.890,2.062)--(n7.west);
+\draw[edge] (n1.east)--(2.070,1.897)--(2.070,1.281)--(n2.west);
+\draw[edge] (n10.east)--(9.810,3.294)--(9.810,3.294)--(n11.west);
+\draw[edge] (n9.east)--(3.890,3.294)--(3.890,3.294)--(n10.west);
+\draw[edge] (n1.east)--(2.070,1.897)--(2.070,3.294)--(n9.west);
+\end{tikzpicture}
+

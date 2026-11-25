@@ -1,0 +1,41 @@
+% ctexbook defaults are retained; only page geometry and technical support are added.
+\usepackage[a4paper,inner=18mm,outer=16mm,top=18mm,bottom=19mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,tikz,adjustbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,shapes.geometric,decorations.pathreplacing,decorations.pathmorphing}
+\usepackage{array,longtable,booktabs,multirow,tabularx}
+\usepackage[normalem]{ulem}
+\usepackage{xeCJKfntef}
+\xeCJKDeclareCharClass{CJK}{"2460 -> "2473}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{unicode=true,hidelinks,bookmarksnumbered=true,pdfcreator={XeLaTeX / ctexbook}}
+\usepackage{bookmark}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+\let\cleardoublepage\clearpage
+% Large nonbreaking TikZ figures may move to the next page. Keep ordinary
+% paragraph spacing instead of stretching the preceding page vertically.
+\raggedbottom
+\setlength{\emergencystretch}{3em}
+\newcommand{\SourceTag}[1]{\textbf{【#1】}}
+\newcommand{\SourceFootnote}[1]{\par\smallskip\noindent{\footnotesize #1}\par\smallskip}
+\newcommand{\InsertDiagram}[1]{\par\smallskip\begin{center}\begin{adjustbox}{max width=\linewidth,max totalheight=.78\textheight}\input{#1}\end{adjustbox}\end{center}\smallskip}
+\newcommand{\OriginalPanel}[1]{\par\smallskip\noindent\textbf{#1}\par}
+\newcommand{\BookEditionDate}{2026 年 11 月 20 日}
+\newcommand{\BookCover}[4]{%
+  \begin{titlepage}\centering
+  \vspace*{20mm}
+  {\zihao{2}\bfseries #1\par}
+  \vspace{10mm}
+  {\zihao{-0}\bfseries 刑法\par}
+  \vspace{8mm}
+  {\zihao{2}#2\par}
+  \vspace{12mm}
+  {\zihao{4}#3\par}
+  \vfill
+  {\zihao{-4}#4\par}
+  \vspace{9mm}
+  {\zihao{-4}\BookEditionDate\par}
+  \vspace*{14mm}
+  \end{titlepage}}
