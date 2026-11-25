@@ -1,0 +1,3799 @@
+\chapter{逐讲扩展规则}
+
+本章供查阅。每节沿用相应讲次较细的条件、例外和争议模型。符号在各节内单独定义。法条、解释及教材规则应结合各条标明的范围使用。
+
+\section{第一讲\quad 刑法论}
+
+\label{ref:lecture:01}
+
+\noindent\hyperref[lecture:01]{返回本讲的逐节推导与闭卷记忆}
+
+本讲涉及的现行法条，以国家税务总局政策法规库公布、整合至修正案十二并标为全文有效的刑法核对，核对日期为2026年11月4日。\footnote{\url{https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html}}本讲覆盖解释、原则、效力的核心规则；并未将原书全部例题逐一编码。以下字母均有类型：$x\in P$为自然人，$u\in U$为单位，$e\in E$为行为或案件，$k\in K$为罪名，$r\in R$为结果，$t\in T$为时间，$v\in V$为法律版本。英文谓词只是下述中文条件的缩写，不自动包含未经说明的法律评价。
+
+\subsection{解释结论的集合表达}
+\paragraph{规则 A01：扩大、缩小与语义边界。}
+对一个具体条文中的用语$w$，令$L_v(w)$为该语境下通常字面含义的对象集合，$M_v(w)$为在文理、体系与可预测性约束下可能含义的对象集合，$I_v(w)$为拟采用的解释结果。这里的集合必须附着于具体条文；不能把一种罪名中的词义直接搬到另一罪名。
+\[
+\begin{aligned}
+\operatorname{Plain}(I,w)&:\!\iff I_v(w)=L_v(w),\\
+\operatorname{Narrow}(I,w)&:\!\iff I_v(w)\subsetneq L_v(w),\\
+\operatorname{Extend}(I,w)&:\!\iff L_v(w)\subsetneq I_v(w)
+                         \subseteq M_v(w).
+\end{aligned}
+\]
+以上是工作定义，不是计算机已经获得了词义边界的宣告。$M_v(w)$本身需要法律论证。当解释结果包含$M_v(w)$之外的对象，并据此增加被告人的入罪或加重处罚范围时，不能仅因结果似乎合理就采纳。原书将这一区别作为扩大解释与不利类推的边界。
+
+\paragraph{规则 A02：解释技术与理由分别审查。}
+令$B(I)$表示结论未越过不利解释的语义边界，$J(I)$表示该解释具有足够的文理、体系、目的等支持，$A(I)$表示该解释在本案中可采用。可采用性的必要条件写作
+\[
+\begin{aligned}
+A(I)&\Longrightarrow B(I)\land J(I),\\
+J(I)\land\neg B(I)&\Longrightarrow\neg A(I)
+\quad\text{（拟对被告人不利时）。}
+\end{aligned}
+\]
+不能倒写为$B(I)\land J(I)\Rightarrow A(I)$，因为还可能存在更高位规范、具有约束力的解释或其他适用障碍。“有利类推是否允许”与“不利类推禁止”也不是同一命题；本书允许有利类推的立场，应作为解释论立场保留，而不把它扩写成任何有利结论都可自由采用。
+
+\paragraph{规则 A03：同类解释以共同特征限制兜底条款。}
+条文列举对象$a_1,\ldots,a_n$后使用“其他”时，先论证共同特征$C$。令$Q(w)$为该条款保护目的所允许的对象范围，则兜底对象集合$D$至少受下式限制：
+\[
+D\subseteq\{a:C(a)\}\cap M_v(w)\cap Q(w).
+\]
+这不是“列举对象具有任何共同点都能作为同类”的算法。例如，抢劫手段的“其他方法”不能以“都是获取财物的方法”为共同点无限扩张；应结合暴力、胁迫压制反抗的性质判断。$C$的选择是必须公开论证的步骤，不能藏在符号后面。
+
+\paragraph{规则 A04：当然解释不替代罪刑法定。}
+令$a\preceq_C b$表示在\emph{相同保护法益、相同评价维度}下，$b$的侵害程度不低于$a$。这一关系只能为结论提供支持，不能凭空创设罪名。用$\leadsto$表示论证支持而非演绎蕴涵，则有
+\[
+\begin{aligned}
+\operatorname{Punishable}(a)\land a\preceq_C b
+&\leadsto\operatorname{Punishable}(b),\\
+\operatorname{Convict}(b,k)&\Longrightarrow
+\operatorname{StatutoryBasis}(b,k,v).
+\end{aligned}
+\]
+若$a,b$性质不同，$\preceq_C$根本未定义；不能把两种行为简单排成轻重后推出另一罪成立。即使轻重可比，也必须另行证明$b$落入法定构成范围。
+
+\paragraph{规则 A05：反面解释不等于否定前件。}
+从$A\Rightarrow B$，在经典逻辑中只能推出$\neg B\Rightarrow\neg A$，不能推出$\neg A\Rightarrow\neg B$。原书以盗窃罪的年龄责任为例，若要得到“不满十六周岁不负该罪的刑事责任”，所依赖的是完整年龄规范对盗窃罪的限制，而不是仅凭“已满十六周岁的人犯罪应负责任”这一句话。形式化时应先证明
+\[
+\operatorname{AgeResponsible}(x,\text{盗窃},t)
+\Longrightarrow\operatorname{Age}(x,t)\ge16,
+\]
+再作逆否推理。这里的“盗窃”仅指该罪本身；不能据此否定同一事实中可能另行成立的抢劫等其他罪名。
+
+\subsection{基本原则与适用范围}
+\paragraph{规则 A06：罪刑法定提供禁止性约束。}
+以$\operatorname{Defined}(e,k,v)$表示适用版本的法律明文规定了有关犯罪及处罚依据，而非“某行为很坏”。依刑法第3条，可以写出
+\[
+\neg\operatorname{Defined}(e,k,v)
+\Longrightarrow\mathsf{Must}(\neg\operatorname{Convict}(e,k)).
+\]
+反方向不成立：有某罪规定，并不意味着任何看似相似的案件都符合该罪。还要审查全部构成事实、违法阻却、责任、时间和空间适用条件。该式同时提醒：道德谴责、行政违法、民事侵权分别不构成刑事定罪的充分前提。
+
+\paragraph{规则 A07：平等与罪责刑相适应不是线性打分。}
+依第4、5条，令$F(e)$包括依法相关的罪行事实、责任与情节，$Z(e)$表示不得作为特权依据的身份，$\Pi(e)$表示合法可选刑罚集合。平等约束可表达为：若两案依法相关的条件相同，仅$Z$不同，则不能仅因此改变适用标准。罪责刑相适应要求最终刑罚处在$\Pi(e)$并具有理由：
+\[
+\begin{aligned}
+F(e_1)=F(e_2)&\Longrightarrow
+\operatorname{SameLegalStandard}(e_1,e_2),\\
+\operatorname{Sentence}(e,s)&\Longrightarrow
+s\in\Pi(e)\land\operatorname{Proportionate}(e,s).
+\end{aligned}
+\]
+尚无经法律确定的通用函数能把生命、财产、过错和预防需要相加为一个数。若人为规定“杀人=100分、盗窃=10分”，得到的是自创评价模型，不能冒充现行法的数学结论。
+
+\paragraph{规则 A08：属地适用与行为地、结果地。}
+依第6条，定义$\operatorname{InCN}(e)$为行为或犯罪结果至少一项发生在我国领域内；$\operatorname{FlagCN}(e)$为在我国船舶、航空器内犯罪。$\operatorname{Special}(e)$表示存在特别规定。于是
+\[
+\begin{aligned}
+\operatorname{InCN}(e)&:\!\iff
+\operatorname{ActInCN}(e)\lor\operatorname{ResultInCN}(e),\\
+(\operatorname{InCN}(e)\lor\operatorname{FlagCN}(e))
+\land\neg\operatorname{Special}(e)
+&\Longrightarrow\operatorname{ApplicableCN}(e).
+\end{aligned}
+\]
+这是法律适用规则，不是“飞机或船舶在地理上变成领土”的命题。外交特权和豁免的处理依第11条另行审查。管辖与适用本国刑法也不等于现已具备逮捕、引渡或执行判决的事实条件。
+
+\paragraph{规则 A09：属人与保护适用保留裁量差别。}
+第7条对我国公民境外犯罪规定适用我国刑法；对最高刑为三年以下有期徒刑者，保留可以不予追究的空间。国家工作人员和军人的特别规则不得被普通公民的宽缓条件覆盖。第8条的外国人境外犯罪规则则以对我国国家或公民犯罪、我国法定最低刑至少三年、犯罪地法律不排除处罚为条件，后果为\emph{可以}适用：
+\[
+\begin{aligned}
+&\operatorname{Foreigner}(x)\land\operatorname{OutsideCN}(e)
+\land\operatorname{AgainstCN}(e)\\
+&\land\operatorname{MinTermCN}(k)\ge3
+\land\operatorname{PunishableAtPlace}(e)\\
+&\Longrightarrow\mathsf{May}(\operatorname{ApplicableCN}(e)).
+\end{aligned}
+\]
+此处不得把“可以适用”改为“必须追诉”。第9条的条约管辖还须独立满足条约规定罪行及我国承担条约义务的范围，不能仅凭行为严重就套用普遍管辖。
+
+\paragraph{规则 A10：境外裁判与从旧兼从轻。}
+依第10条，外国审判不当然排除我国依法追究；已在国外受刑罚处罚，可以免除或减轻处罚。依第12条，旧法不认为犯罪的，不能因新法入罪而追溯定罪；旧法认为犯罪且依法应追诉时，原则依旧法，新法不认为犯罪或处刑较轻则适用新法。对待决案件可记为
+\[
+\operatorname{Choose}(v_o,v_n,e)=
+\begin{cases}
+v_o,&\neg\operatorname{Crime}_{v_o}(e),\\
+v_n,&\operatorname{Crime}_{v_o}(e)\land
+(\neg\operatorname{Crime}_{v_n}(e)\lor\operatorname{Lighter}(v_n,v_o,e)),\\
+v_o,&\text{其余依法应追诉的情形。}
+\end{cases}
+\]
+$\operatorname{Lighter}$必须按适用于具体行为的刑罚规定及相应比较规则认定，不能对两个法条的全部刑期取平均数，也不能从新旧法分别摘取最有利部分拼成第三部法律。已生效判决的继续有效是另一个规则，不能忽略第12条第2款。
+
+\paragraph{例：错误的反面推理。}
+“已满十六周岁的人犯罪应负刑责；甲不满十六周岁；所以甲任何犯罪都不负刑责”，形式为$A\Rightarrow B,\neg A\therefore\neg B$，推理结构本身无效，且遗漏第17条第2、3款。正确做法是先固定罪名、行为时年龄和全部条件，再选择对应责任分支。这个例子同时展示了逻辑有效性与法源完整性必须同时满足。
+
+\section{第二讲\quad 犯罪构成}
+
+\label{ref:lecture:02}
+
+\noindent\hyperref[lecture:02]{返回本讲的逐节推导与闭卷记忆}
+
+原书采用“改良版四要件”并在其后分别审查排除违法、排除责任事由；以下重建这一\emph{教材体系}，不宣称它是刑法条文唯一规定的理论体系。
+
+\subsection{层次化的要件模型}
+\paragraph{规则 A11：构成要件符合性与最终定罪分开。}
+令$B_k(e)$表示行为侵害的法益落入$k$的保护范围，$S_k(x,e)$表示行为主体及必要身份合格，$O_k(e)$表示客观要件齐备，$M_k(x,e)$表示所需主观要件齐备。定义$C_k$为四要件层面的符合性；$J(e)$表示合法化事由，$R(x,e)$表示责任条件具备。
+\[
+\begin{aligned}
+C_k(x,e)&:\!\iff B_k(e)\land S_k(x,e)\land O_k(e)\land M_k(x,e),\\
+\operatorname{Liable}_k(x,e)&\Longrightarrow
+C_k(x,e)\land\neg J(e)\land R(x,e).
+\end{aligned}
+\]
+第二行先写为必要条件，因为实际裁判仍涉及规范适用与证据标准。只有预先声明全部事实确定、法律版本适用、体系中的例外审查已封闭，才可在该\emph{工作模型内部}将整套条件作为定罪判定式。不能看见四项“都有”便跳过正当防卫等判断。
+
+\paragraph{规则 A12：年龄和责任能力不塞回主体概念。}
+按原书的层次，$S_k$首先询问谁实施行为及其定罪身份；年龄、辨认控制能力等在$R$中判断。因此，未达责任年龄的人可以在这一教材术语下制造违法事实，却不因此负刑事责任。其逻辑关系是
+\[
+\begin{aligned}
+C_k(x,e)\land\neg R(x,e)
+&\Longrightarrow\neg\operatorname{Liable}_k(x,e),\\
+\neg\operatorname{Liable}_k(x,e)
+&\nRightarrow\neg C_k(x,e).
+\end{aligned}
+\]
+这一安排影响共同犯罪与间接正犯的讨论。不同体系会给“犯罪主体”设置不同范围，所以必须先固定术语，再比较结论；不能把不同教材对同一名称的定义混用后宣布矛盾。
+
+\paragraph{规则 A13：各要件内部是合取，不是多数表决。}
+若$k$有客观要件$q_1,\ldots,q_m$，则$O_k(e):\!\iff\bigwedge_{i=1}^{m}q_i(e)$。只要一个必要要件确认为不成立，就不能依该完成形态定罪：
+\[
+\exists i\ \neg q_i(e)\Longrightarrow\neg O_k(e).
+\]
+这并不直接排除未遂、预备或其他罪名。若一个要件尚未查明，则应记录为未确定，而不是把“多数要件已证实”当作总体要件已证实。法考中常见的“客观事实很严重，所以不必审查主观认识”正是越过这一合取结构。
+
+\paragraph{规则 A14：三段论应显示规范前提与事实前提。}
+对规则$\forall z\,[Q(z)\Rightarrow D(z)]$，与个案事实$Q(a)$，可以由全称实例化和肯定前件推出$D(a)$。审查表为
+\[
+\underbrace{\forall z(Q(z)\Rightarrow D(z))}_{\text{规范前提}}
+,\quad\underbrace{Q(a)}_{\text{已认定事实}}
+\quad\vdash\quad D(a).
+\]
+形式有效不保证前提正确。把“单位不能构成某罪”偷换成“单位成员一律不能构成某罪”，会得到形式上整齐、实质上错误的结论。法律解释决定大前提的范围，证据认定决定小前提，两者都不能由符号自动代替。
+
+\paragraph{规则 A15：构成要件分类是交叉坐标。}
+客观/主观、记述/规范、成文/不成文、积极/消极是不同分类轴。令一个要素$q$带类型向量
+\[
+\tau(q)=(\tau_1(q),\tau_2(q),\tau_3(q),\tau_4(q)).
+\]
+“国家工作人员”属于主体身份要素，认定时包含规范评价；不能因需要评价便说它是行为人的主观心理要素。“被害人基于错误处分财产”虽须通过解释明确，仍描述客观交易链。多个标签可以并存，而同一分类轴上的对立标签不能不加说明地并置。
+
+\paragraph{规则 A16：全面评价与最终处罚分别计数。}
+本段固定行为人$x$，令$K(e)=\{k:C_k(x,e)\land\neg J(e)\land R(x,e)\}$为该行为人就行为$e$触犯的罪名集合；$\operatorname{CountAct}(e)$为依法评价后的行为数量。原书关于想象竞合的模型要求先全面显示$K(e)$，再依罪数规则处理处罚。对于一个行为的通常想象竞合，
+\[
+\begin{aligned}
+&\operatorname{CountAct}(e)=1\land |K(e)|\ge2\\
+&\Longrightarrow\operatorname{SelectHeavier}(K(e))
+\quad\text{（无特别处理规定时）。}
+\end{aligned}
+\]
+不能为避免重复处罚而故意漏掉某一被侵害法益；也不能把“符合两个罪名”机械写成“两份刑罚相加”。“重罪”的判断还依具体可适用法定刑等规则，不能只依罪名名称排序。
+
+\paragraph{例：单位实施纯正自然人犯罪。}
+设$k$依法只能由自然人构成，某单位的负责人员$x$决定并实施有关行为。由$\neg S_k(u,e)$只能排除\emph{单位}对$k$的主体符合性；对$x$仍须另查$S_k(x,e),O_k(e),M_k(x,e)$及违法、责任。把$u$替换成$x$是重新建立事实命题，不是从单位有罪或无罪直接演算出个人结论。
+
+\section{第三讲\quad 犯罪客体}
+
+\label{ref:lecture:03}
+
+\noindent\hyperref[lecture:03]{返回本讲的逐节推导与闭卷记忆}
+
+\subsection{对象、法益与保护范围}
+\paragraph{规则 A17：对象与法益分属不同类型。}
+令$D$为人、物等行为对象的集合，$B$为法律保护利益的集合，$\operatorname{Bear}(d,b)$表示对象$d$承载利益$b$，$\operatorname{Protect}(k,b,v)$表示罪名$k$保护$b$。财物是对象，财产权是相应利益；人身是对象，生命、身体等是利益。因此
+\[
+\operatorname{Target}(e,d)\land\operatorname{Bear}(d,b)
+\land\operatorname{Protect}(k,b,v)
+\]
+只是建立分析关联，不能单独推出犯罪。以他人财物为对象可能是盗窃，也可能是借用、修理、紧急救助；必须继续审查控制关系、行为方式、主观目的与合法化事由。
+
+\paragraph{规则 A18：实际损害必须落入规范保护范围。}
+用$\operatorname{Affected}(e,b)$表示行为影响某利益，$\operatorname{Scope}(k,b,e)$表示该影响属于该罪保护范围。某损害能作为$k$的法益侵害事实，至少要求
+\[
+\operatorname{RelevantHarm}_k(e,b)
+\Longrightarrow\operatorname{Affected}(e,b)
+\land\operatorname{Protect}(k,b,v)\land\operatorname{Scope}(k,b,e).
+\]
+不能把“造成任何损失”改写为“侵害所有可能有关的罪名”。例如，违法取走物品造成失主精神不快，并不当然满足以精神损害为中心的另一犯罪。保护范围要结合条文的行为、对象、结果与体系位置论证。
+
+\paragraph{规则 A19：保护法益观点须作为参数公开。}
+对争议罪名，设$h_1,h_2$分别表示两种法益解释。可以出现
+\[
+\begin{aligned}
+\Gamma\cup\{h_1\}&\vdash D_1,\\
+\Gamma\cup\{h_2\}&\vdash D_2,\qquad D_1\ne D_2.
+\end{aligned}
+\]
+这不构成同一理论内部的逻辑矛盾，因为前提不同。原书以非法侵入住宅等问题展示不同保护法益可能改变入罪范围。形式化应说明各结论依赖何种解释，不将“多数说”写成永恒数学公理，也不把“有争议”误写为任何答案均可。
+
+\paragraph{规则 A20：法益保护受到人权保障约束。}
+设$\operatorname{UsefulProtection}(e,k)$为定罪可能增进某法益保护。由此不能推出定罪合法。应并列保留
+\[
+\operatorname{Convict}(e,k)
+\Longrightarrow\operatorname{StatutoryBasis}(e,k,v)
+\land\operatorname{AllRequiredConditions}(e,k).
+\]
+法益解释帮助确定构成范围，人权保障则要求国家的刑罚权受该范围拘束。两者不能被设成“只要保护利益更多，就允许跳过法定条件”的优化问题。
+
+\paragraph{例：空置房屋争议。}
+对进入无人实际居住的房屋，若$h_1$把保护重点设为居住安宁，$h_2$把重点设为居住者决定进入者的权利，两套模型可能对同一进入行为作出不同评价。应先写$h_i$及其理由，再适用事实；不能仅将“房屋”设为布尔变量便宣布罪名成立。即使不成立非法侵入住宅，也不自动否定同时存在的盗窃、毁坏财物等其他事实。
+
+\section{第四讲\quad 犯罪主体}
+
+\label{ref:lecture:04}
+
+\noindent\hyperref[lecture:04]{返回本讲的逐节推导与闭卷记忆}
+
+责任年龄、责任能力的完整规则在原书第十讲；本讲仅处理主体和身份及单位归属。
+
+\subsection{身份与行为归属}
+\paragraph{规则 A21：定罪身份具有罪名与时间参数。}
+若$k$为真正身份犯，$\operatorname{Id}_k(x,t)$表示在相应实行行为时已具备法定身份。将单独正犯限定为$\operatorname{SolePrincipal}_k$，则
+\[
+\operatorname{SolePrincipal}_k(x,e)
+\Longrightarrow\operatorname{Id}_k(x,t_e).
+\]
+行为过程中由犯罪行为本身形成的地位，不能未经论证便倒算成行为开始前已具有的定罪身份。该式不扩张至一切共同正犯：无身份者能否与有身份者成立共同正犯，须另按第十二讲的学说分支审查；无身份者也可能承担教唆、帮助等责任。定罪身份与量刑身份的作用位置必须区分：后者原则上改变刑罚评价，不能自行创造该罪主体资格。
+
+\paragraph{规则 A22：国家工作人员按法定职能关系认定。}
+第93条的国家工作人员包括国家机关中从事公务者及条文列明的其他从事公务人员。将四类法定来源具体记为：$G_1$为国家机关中从事公务；$G_2$为国有公司、企业、事业单位、人民团体中从事公务；$G_3$为国家机关、国有公司、企业、事业单位委派到非国有公司、企业、事业单位、社会团体从事公务；$G_4$为其他依照法律从事公务。则
+\[
+\operatorname{StateStaff}(x,t)
+\Longleftrightarrow\bigvee_{i=1}^{4}G_i(x,t)
+\quad\text{（将各类法定条件完整展开之后）。}
+\]
+不能以“有正式编制”替代$G_i$，也不能以“在公立单位上班”替代“从事公务”。同一个人在不同事务中可能分别从事公共管理与技术劳动，身份评价应附着于收钱、处置财物等具体行为所关联的职能。此处还需避免把教材的概括标准当作穷尽所有立法解释的清单。
+
+\subsection{单位犯罪的必要条件与处罚}
+\paragraph{规则 A23：法律专门授权单位入罪。}
+依第30条，令$L_U(k,v)$为法律规定该罪可由单位构成，$Q(u)$为单位主体资格合格，$W(u,e)$为该行为体现依法认定的单位意志，$C^U_k(u,e)$为客观、主观条件满足。则
+\[
+\operatorname{UnitCrime}_k(u,e)
+\Longrightarrow L_U(k,v)\land Q(u)\land W(u,e)\land C^U_k(u,e).
+\]
+“单位领导决定了”不能补足$L_U$；“行为有利于公司”不能补足$W$。单位行为仍由自然人实施，并不意味着每个实际出场的员工都构成应处罚的责任人员。
+
+\paragraph{规则 A24：单位意志与利益归属不能单项替代。}
+在原书区分单位犯罪与内部成员个人犯罪的语境，令$W$为单位意志，$I$为利益依法归属于单位整体而非特定成员。$W\land I$支持单位归属；$\neg W$或仅为特定成员谋利会阻碍该归属。但不能把这一简表提升成所有单位犯罪的普遍充分条件：
+\[
+W(u,e)\land I(u,e)\nRightarrow
+\operatorname{UnitCrime}_k(u,e).
+\]
+还须检查法律允许单位构成、具体罪名是否要求非法获利目的、资格等。原书特别指出：当受益者是单位之外的第三方时，不能机械地以“未为本单位谋利”排除单位犯罪。因此$I$必须标明讨论语境，不能全书一式通用。
+
+\paragraph{规则 A25：个人犯罪不能由单位不入罪直接推出。}
+单位实施法律仅规定自然人构成的危害行为时，依据2014年关于刑法第30条的立法解释，应依法审查组织、策划、实施者个人的刑责。\footnote{该解释通过于2014年4月24日，官方转载：\url{https://www.jsjc.gov.cn/jianwugongkai/falvfguizhang/sfjsh/201405/t20140516_197040_1.shtml}}逻辑写为
+\[
+\neg L_U(k,v)\land\operatorname{OrganizeOrExecute}(x,e)
+\Longrightarrow\operatorname{ReviewIndividual}_k(x,e),
+\]
+而非直接推出$\operatorname{Liable}_k(x,e)$。对依法同时存在单位与个人形态且有不同数额标准的罪，不能仅因单位未达单位数额门槛，就绕回个人较低门槛处罚同一单位行为。必须先确定行为本来的归属类型，再适用对应门槛。
+
+\paragraph{规则 A26：双罚与责任人员个别化。}
+第31条规定的通常模式是单位罚金加法定责任人员处罚，分则和其他法律另有规定时从其规定。记$D(u,e)$为直接负责的主管人员，$O(u,e)$为其他直接责任人员，$X(k)$为特别规定，则
+\[
+\begin{aligned}
+&\operatorname{UnitCrime}_k(u,e)\land\neg X(k)\\
+&\Longrightarrow\mathsf{Must}(\operatorname{Fine}(u)),\\
+&\operatorname{PunishMember}(x,u,e)\\
+&\Longrightarrow x\in D(u,e)\cup O(u,e)
+\land\operatorname{PersonalGround}(x,e).
+\end{aligned}
+\]
+$\operatorname{PersonalGround}$要求实际责任事实，不能由职位高低自动生成。单位处罚与责任人员处罚属于单位犯罪制度的归责安排，不宜简单解释为单位和所有员工“二人以上共同犯罪”。
+
+\paragraph{例：公司帮助私人杀人。}
+即使董事会决议提供工具，故意杀人罪没有因此增加单位主体。应先排除单位以该罪入罪，再分别审查提供工具的自然人是否明知并故意帮助以及对实行犯罪的贡献。决议存在是事实证据，不是能够变更罪名主体范围的立法行为。
+
+\section{第五讲\quad 客观要件一：行为}
+
+\label{ref:lecture:05}
+
+\noindent\hyperref[lecture:05]{返回本讲的逐节推导与闭卷记忆}
+
+下述危险判断主要重建原书采纳的解释论框架；涉及救助义务的具体来源，仍须由适用法律和案件事实确立。
+
+\subsection{行为与风险的分类}
+\paragraph{规则 A27：思想、动作与刑法行为分开。}
+令$\operatorname{Bodily}(e)$为身体动静，$\operatorname{WillControlled}(x,e)$为可受意志支配，$\operatorname{LegalRisk}(e)$为对法益制造法律上相关危险。原书的危害行为模型是三者合取；其中自然的反射、睡眠中的无意识动作不能仅因客观损害严重就视作自主实行行为。可表达必要条件
+\[
+\operatorname{HarmfulAct}(x,e)
+\Longrightarrow\operatorname{Bodily}(e)
+\land\operatorname{WillControlled}(x,e)
+\land\operatorname{LegalRisk}(e).
+\]
+这不排除更早的有意识行为可能另受审查。例如先前明知不能安全驾驶仍上路，与后来失去意识的瞬间，不是同一时间切片。
+
+\paragraph{规则 A28：降低旧危险不等于开创新危险。}
+用$R_0$表示既有危险，$R_e$表示行为介入后的危险。若行为仅降低同一危险的发展程度，原书据此排除危害行为；若创造另一类型危险，即使其总体损失较小，仍需在紧急避险等阶段判断。可以分列
+\[
+\begin{aligned}
+\operatorname{OnlyReduce}(e,R_0)&\Longrightarrow
+\neg\operatorname{CreateRisk}(e),\\
+\operatorname{ReplaceRisk}(e,R_0,R_1)&\Longrightarrow
+\operatorname{ReviewJustification}(e).
+\end{aligned}
+\]
+“危险较小”没有自然给定的通用数值尺度；必须说明相同法益、相同受害对象及风险改变方式，不能把任意损失相减之后得出行为当然合法。
+
+\paragraph{规则 A29：自陷风险要求自主认识和控制。}
+令$v$为受害人。其自己实施、支配危险，记为$\operatorname{SelfExecute}(v,e)$；
+对该危险具有认识，记为$\operatorname{Understand}(v,R)$；
+具有自由决定并控制、消除、避免危险的能力，记为$\operatorname{FreeControl}(v,R)$。
+在原书自我答责模型中，
+\[
+\begin{aligned}
+&\operatorname{SelfResponsible}(v,R)\\
+&\Longrightarrow\operatorname{SelfExecute}(v,e)
+\land\operatorname{Understand}(v,R)\\
+&\qquad\land\operatorname{FreeControl}(v,R).
+\end{aligned}
+\]
+这是限定模型的必要条件，不是“受害人有一点过错，其他人全免责”。欺骗、强迫、儿童或精神障碍者、为救助亲属而被迫面对风险等，均可能破坏自主性。是否仍有他人独立制造的风险和特别保护义务，必须分别审查。
+
+\paragraph{规则 A30：作为与不作为按同一危险切片比较。}
+对于危险流$R$，$\operatorname{Create}(x,R)$与$\operatorname{FailBlock}(x,R)$分别表示制造危险和未阻断危险；后一情形的刑法评价还要求阻断义务。二者是分析描述，不必对一段复杂生活事实作永远唯一的标签。一个人移除医疗装置，可能同时描述为积极移除与停止维持治疗；需要说明究竟评价哪一行为、哪一义务及哪个结果，不能从标签选择直接推出有罪或无罪。
+
+\subsection{不作为的完整条件链}
+\paragraph{规则 A31：义务存在、履行能力、未履行分别设变量。}
+令$D(x,r,t)$为对结果$r$负有特定刑法作为义务，$C(x,a,t)$为当时能够实施救助行为$a$，$N(x,a,t)$为未实施。纯粹未救助不等于刑事不作为：
+\[
+\operatorname{RelevantOmission}(x,a,r,t)
+\Longrightarrow D(x,r,t)\land C(x,a,t)\land N(x,a,t).
+\]
+这些条件互不替代。有道德上值得称赞的救助机会，不当然有刑法义务；有义务却客观无法履行，不当然成立可处罚的不作为。何为“能够”，要按当时可利用的时间、手段和自身能力判断，不用事后理想条件倒推。
+
+\paragraph{规则 A32：保证人地位以关系为基础。}
+原书将实质根据归纳为对危险源的监管义务和对法益对象的保护义务。可把候选来源记作$S_1,\ldots,S_n$，但从来源名目到具体义务仍须证明关联性：
+\[
+S_i(x)\land\operatorname{LinkedToRisk}(x,r,t)
+\land\operatorname{DutyScope}_i(r)
+\Longrightarrow D(x,r,t).
+\]
+不能从“父母”“医生”“先前行为”这些词直接推导无限责任。特别是先前行为，需考察它是否对相关危险具有法律上应监管的关联；不能因一个人先前与事件有任何接触，就要求其对以后所有结果负责。
+
+\paragraph{规则 A33：结果避免可能性与实行等价性。}
+对结果犯的不纯正不作为，除$D,C,N$外，还须论证依法履行义务与避免$r$之间的联系及其与积极实行的等价性。令$A(x,a,r)$为结果避免联系达到所用理论与证明标准，$E_k(x,a,r)$为对于罪名$k$与实行行为等价，则
+\[
+\operatorname{OmissionResult}_k(x,r)
+\Longrightarrow D\land C\land N\land A\land E_k\land M_k.
+\]
+该式是审查条件列表，不自行设定“避免概率超过50\%即可”的门槛。若不作为与结果的关系无法达到必要的证明程度，不能用义务存在补足因果证明；是否另有危险犯、行为犯或其他责任另行判断。
+
+\paragraph{规则 A34：行为方式与罪过形式交叉组合。}
+作为/不作为是一组行为方式；故意/过失是另一组主观罪过。其可能类型是笛卡尔积
+\[
+\{\text{作为},\text{不作为}\}\times\{\text{故意},\text{过失}\}.
+\]
+故意不救助和疏忽未救助的法定评价可能不同；不能把“不作为”定义成“过失”，也不能把“主动出手”定义成“故意犯罪”。对持有型犯罪也不应仅因持续维持状态就自动套入不作为保证人义务模型，应先按相应罪名的实行行为结构审查。
+
+\paragraph{例：看见溺水。}
+甲偶然看见与自己无特定义务关系的成年人乙落水，和依法承担看护职责且具备安全施救条件的甲看见被看护儿童落水，是两个不同模型。后者仍需证明危险范围、能力、未履行、避免联系和主观罪过；“父母身份”不是完整的定罪式。若同时有不可克服的现实危险导致甲无法履行，不能跳过$C$的否定。
+
+\section{第六讲\quad 客观要件二：结果}
+
+\label{ref:lecture:06}
+
+\noindent\hyperref[lecture:06]{返回本讲的逐节推导与闭卷记忆}
+
+\subsection{构成结构决定要证明的事实}
+\paragraph{规则 A35：实害、具体危险、抽象危险分别编码。}
+对罪名$k$，令类型$\operatorname{Type}(k)$取实害、具体危险、抽象危险；$H_k(e)$为法定实害结果，$D_k(e)$为具体危险，$A_k(e)$为符合立法所选行为类型。所需客观事实分别至少包括
+\[
+\begin{array}{c|c}
+\operatorname{Type}(k)&\text{所需事实}\\\hline
+\text{实害}&H_k(e)\text{及结果归属}\\
+\text{具体危险}&D_k(e)\text{及该危险与行为的联系}\\
+\text{抽象危险}&A_k(e)\text{及相应法定限定条件}
+\end{array}
+\]
+这不是说三类犯罪只需表中一个变量就足够，还需主观、主体等条件。未发生实际伤亡不当然否定危险犯；但被标为“抽象危险”也不意味着可以取消条文中的对象、行为方式、数量等边界。
+
+\paragraph{规则 A36：判断完成形态先固定条文版本。}
+同一罪名的法定结构可能因修法变化。形式化的类型应写为$\operatorname{Type}(k,v)$。若教材提及的旧题在旧法下为一种结构，不应在改法后仍机械沿用旧要件。识别$H,D,A$时还须区分基本构成、加重构成与量刑情节，不能因都出现“造成严重后果”便当作同一类型。
+
+\paragraph{规则 A37：结果加重犯必须有特别法定结构。}
+令$B_k(e)$为基本犯罪成立，$R^+(e)$为法定加重结果，$C^+(e)$为基本行为与加重结果的规范归属关系，$F^+(x,e)$为对加重结果至少具备该条要求的罪过，$L^+(k,v)$为法律设置结果加重结构。则
+\[
+\operatorname{AggravatedResult}_k(x,e)
+\Longrightarrow B_k(e)\land L^+(k,v)
+\land R^+(e)\land C^+(e)\land F^+(x,e).
+\]
+“基本罪+严重后果”本身不足以创设结果加重犯。加重结果也不能从基本行为的故意自动推定：对伤害故意并不等于对死亡有故意，至少过失等要求必须逐项查明。
+
+\paragraph{规则 A38：基本犯特有危险须在加重结果中实现。}
+结果加重的归属通常要求加重结果体现基本犯罪行为的特有危险。设$\rho_k$为基本犯所创造的相关危险，则
+\[
+C^+(e)\Longrightarrow\operatorname{Created}(e,\rho_k)
+\land\operatorname{Realized}(\rho_k,R^+(e)).
+\]
+不能把与基本行为偶然同一时间出现的死亡一律并入结果加重。例如违法行为之后发生完全独立的新危险，应另外检查是否打断原风险联系。反过来，有第三人医疗救助等介入，也不当然中断归属，仍须说明具体介入怎样作用。
+
+\paragraph{例：有实害不等于所有危险犯都成立。}
+某商品确实导致伤害，仍要确认其是否属于所评价罪名的对象、生产销售行为是否符合规定、危险或损害标准如何界定。某商品没有导致实际伤害，也不能仅据此排除以法定危险或特定行为为中心的罪名。正确推导取决于$\operatorname{Type}(k,v)$，而不是“有人受伤”这一单变量。
+
+\section{第七讲\quad 客观要件三：因果关系}
+
+\label{ref:lecture:07}
+
+\noindent\hyperref[lecture:07]{返回本讲的逐节推导与闭卷记忆}
+
+以下是原书危险创设—危险实现思路的重建，不把刑法因果关系等同于统计相关或单一反事实检验。
+
+\subsection{先确认原因、结果，再判断联系}
+\paragraph{规则 A39：结果归属具有三个独立关口。}
+令$\operatorname{RiskAct}(e,\rho)$为行为创设法律上相关危险，$\operatorname{RequiredResult}(k,r)$为结果符合该构成所需类型，$\operatorname{Realized}(\rho,r)$为该危险实现于该结果。结果归属至少要求
+\[
+\operatorname{Attr}_k(e,r)
+\Longrightarrow\exists\rho\,[\operatorname{RiskAct}(e,\rho)
+\land\operatorname{RequiredResult}(k,r)
+\land\operatorname{Realized}(\rho,r)].
+\]
+原书要求依次审查“因”“果”“关系”。一旦未创设法律危险，就不能仅因事件事实上发生在行为之后而归责；若出现的结果不是条文要求的结果，也不能用一般因果联系代替特定结果要件。
+
+\paragraph{规则 A40：条件关系提供信息，但不独自决定归责。}
+在适当因果模型$\mathcal M$中，反事实条件可写为
+\[
+\operatorname{ButFor}_{\mathcal M}(e,r)
+:\!\iff r\text{发生且}\mathcal M\models[\operatorname{do}(e=0)](r=0).
+\]
+这是给定因果模型后的反事实语义，不是根据观察即可可靠计算的自然事实。多因一果、择一原因和超定因果等情况可能使简单检验失效；即使满足条件关系，还须审查法定保护范围与危险实现。故
+\[
+\operatorname{ButFor}_{\mathcal M}(e,r)
+\nRightarrow\operatorname{Attr}_k(e,r).
+\]
+模型中的“除去行为后其他条件如何变化”必须说明；不能只写一句“没有甲就没有结果”便当作全部论证。
+
+\paragraph{规则 A41：介入因素不是自动断链开关。}
+设$z$为第三人行为、被害人行为、自然事件或救助行为等介入因素。要论证中断，须考察其独立性、异常性、对结果的支配程度以及原危险是否仍在实现。可记为
+\[
+\begin{aligned}
+\operatorname{Intervene}(z,e,r)&\nRightarrow
+\neg\operatorname{Attr}_k(e,r),\\
+\operatorname{Break}(z,e,r)&\Longrightarrow
+\neg\operatorname{Realized}(\rho_e,r)
+\quad\text{（在采用的归属理论下）。}
+\end{aligned}
+\]
+第二式的关键是证明后件背后的风险变化，不能把$\operatorname{Break}$仅定义成“我认为应断链”而循环论证。正常救助中出现的轻微过失与完全独立的致命行为，应按各自事实分析。
+
+\paragraph{规则 A42：提前发生的相同结果仍有意义。}
+如果被害人本来数日后会因疾病死亡，行为却使其在今天死亡，实际结果应带时间参数$r=(\text{死亡},t)$。于是
+\[
+r_{t_1}\ne r_{t_2}\quad(t_1\ne t_2).
+\]
+不能因“人反正会死”否定行为对实际死亡的原因作用。反之，若死亡在行为之前已经发生，事后动作不可能成为该已发生死亡的原因；是否成立其他犯罪或未遂，应另行审查。
+
+\paragraph{规则 A43：不可查明的原因与不存在的原因分开。}
+设$\mathcal H$为与已证据事实相容的候选因果过程集合。若有的$h\in\mathcal H$支持甲造成死亡，另有相容$h'$否定该结论，而未达到排除合理怀疑的程度，便不能把结果归属标记为已经证明。可以记录
+\[
+\operatorname{Status}(\operatorname{Attr}_k(e,r))=\mathsf U.
+\]
+$\mathsf U$意为未确定，不等于数学上$\operatorname{Attr}$为假。法律处理还需区分结果犯是否能证明、其他形态是否能证明以及有无共同犯罪归责根据，不能将所有不明情况统一按“共同造成”填补。
+
+\paragraph{规则 A44：共同场景不等于共同归属。}
+两人同时攻击导致被害人死亡，并不单凭“二人都在场”推出二人均对死亡负责。需要分别设定各行为贡献、共同故意与行为联系；共同犯罪成立后是否按整体归属处理，是第十二讲的规范问题。没有这一前提时，不能用整体结果掩盖个别原因无法证明的问题。
+
+\paragraph{例：独立的第三人行为。}
+甲致乙轻伤后，乙在医院被与甲无关的丙故意杀害。甲的行为是乙来到医院的事实条件之一，但这并不自动证明甲所创设的轻伤危险实现为死亡。要区分甲对轻伤的责任与丙对杀人的责任；若事实改为伤害引发医疗风险，再出现治疗过失，则需要新的风险实现分析，不能照搬同一结论。
+
+\section{第八讲\quad 主观要件}
+
+\label{ref:lecture:08}
+
+\noindent\hyperref[lecture:08]{返回本讲的逐节推导与闭卷记忆}
+
+第14—16条提供故意、过失及意外事件的法律基准；对象、打击和因果过程错误的分类与处理，另含教材解释论立场。
+
+\subsection{认识因素与意志因素}
+\paragraph{规则 A45：故意不是只要“故意做动作”。}
+令$K(x,e,r)$为认识到行为会发生相关危害结果，$H(x,r)$为希望该结果，$A(x,r)$为放任该结果。依第14条，对所评价结果的故意可表为
+\[
+\begin{aligned}
+\operatorname{Intent}(x,e,r)
+&:\!\iff K(x,e,r)\land[H(x,r)\lor A(x,r)]\\
+&\qquad\text{（依法条内容作的模型定义）。}
+\end{aligned}
+\]
+必须把$r$固定为构成要件所要求的危害结果或危险，而不是“动作发生”。明知自己打火，不等于明知且希望或放任火灾结果；明知违反行政规定，也不等于当然具有某一故意犯罪的主观要件。
+
+\paragraph{规则 A46：直接、间接故意不按发生概率机械切割。}
+本段固定同一行为人$x$、行为$e$及结果$r$，$K,H,A$分别省写相应三元认识谓词与二元意志谓词的当前实例。原书用$H$表示追求结果，用$A$表示容认可能结果发生。两类故意可写作
+\[
+\begin{aligned}
+\operatorname{DirectIntent}(x,e,r)&:\!\iff K\land H,\\
+\operatorname{IndirectIntent}(x,e,r)&:\!\iff K_{\mathrm{possible}}\land A.
+\end{aligned}
+\]
+“可能”是行为人的具体认识内容，不是统计学规定的固定概率区间。不能自行规定“知道概率超过50\%就是故意”。对行为人确信必然发生的危害结果，教材认为不能再用“结果不发生也无所谓”的放任来减弱评价，应据其行为选择和所知必然结果分析。
+
+\paragraph{规则 A47：过失的两种模式及其限缩。}
+令$O$为依法应当预见，$C$为在当时具有预见能力，$P$为实际预见，$L$为轻信能够避免，$r$为实际发生且可归属的法定危害结果。依第15条，在模型中可列为
+\[
+\begin{aligned}
+\operatorname{Negligent}(x,e,r)
+&\Longrightarrow O\land C\land\neg P\land\operatorname{Attr}(e,r),\\
+\operatorname{RecklessConfidence}(x,e,r)
+&\Longrightarrow P\land L\land\operatorname{Attr}(e,r).
+\end{aligned}
+\]
+保持三元参数，定义总的过失为
+\[
+\begin{aligned}
+\operatorname{Negligence}(x,e,r)
+&:\!\iff\operatorname{Negligent}(x,e,r)\\
+&\qquad\lor\operatorname{RecklessConfidence}(x,e,r).
+\end{aligned}
+\]
+两式还必须联结具体犯罪的注意义务、结果和其他要件。尤其$L$不是单纯不希望结果；它要求存在行为人所依赖的避免因素及其轻信错误，不能把事后一句“我没想让他死”自动认定为过于自信的过失。
+
+\paragraph{规则 A48：法律规定才处罚过失。}
+本段固定罪名$k$所评价的结果$r$。即使第15条意义上的过失心理和损害均能证明，还须存在具体过失犯罪依据：
+\[
+\begin{aligned}
+&\operatorname{NegligentLiability}_k(x,e,r)\\
+&\Longrightarrow\operatorname{Negligence}(x,e,r)\\
+&\qquad\land\operatorname{NegligenceOffenseDefined}(k,v)\\
+&\qquad\land\operatorname{OtherElements}_k(x,e,r).
+\end{aligned}
+\]
+不能从“有损害而无故意”直接推出“按过失犯罪处罚”。在某罪没有过失形态时，不成立该罪的故意不等于可以自行创设同名过失罪。民事或行政上的过失责任也不能直接替代刑法的法定条件。
+
+\paragraph{规则 A49：意外与不可抗拒原因不等于没有损害。}
+依第16条，客观上虽造成损害，但非出于故意或过失，而因不能抗拒或不能预见原因引起的，不以该意外或不可抗拒原因造成的损害归罪。令$\operatorname{LiableForResult}(x,e,r)$表示因本行为的该结果而负刑事责任，保留结果参数写为
+\[
+\begin{aligned}
+&\operatorname{Damage}(e,r)\land\neg\operatorname{Intent}(x,e,r)
+\land\neg\operatorname{Negligence}(x,e,r)\\
+&\land[\operatorname{UnforeseeableCause}(e)\lor
+\operatorname{IrresistibleCause}(e)]\\
+&\Longrightarrow\neg\operatorname{LiableForResult}(x,e,r).
+\end{aligned}
+\]
+这里的“不能”必须按法律要求和具体能力认定，不能仅凭行为人自称不知道。结论仅排除对该结果的归罪；同一行为中另有故意或过失的其他危害事实，仍须独立审查，不能据此推出整个行为在任何罪名下均无罪。若更早行为已经故意或过失制造危险，需把评价时间窗口扩展到该行为，不能只截取最后一瞬间来规避罪过审查。
+
+\subsection{主客观一致与错误分类}
+\paragraph{规则 A50：认识对象是要件事实，不是法条编号。}
+设$Q_k^M$为该故意罪依法需要认识的客观要件事实集合，$\widehat f_x$为行为人在实行时的事实认识。令$\operatorname{Intent}_k(x,e)$表示罪名$k$要求的故意要素总体符合性，区别于规则A45对单个结果$r$的故意谓词。该罪的故意要求$\widehat f_x$在相应层次上覆盖$Q_k^M$；不要求行为人能背出罪名或条文号。形式写为
+\[
+\operatorname{Intent}_k(x,e)
+\Longrightarrow\operatorname{Covers}(\widehat f_x,Q_k^M).
+\]
+对于规范性要素，认识程度未必等于法律专业人员的精确判断，但也不能一概取消。例如是否认识物品的基本性质，与是否知道刑法给它的规范名称，是不同问题。违法性认识错误又属于后续责任论问题，应与本讲事实认识错误分开。
+
+\paragraph{规则 A51：不能犯与无故意分别在不同关口。}
+依原书的顺序，先看客观上有无法益危险，再看行为人对事实的认识。如果对根本无人承载的对象实施行为且没有现实法益危险，可能在客观行为层即受阻；如果有真实被害人和危险，但行为人误以为对象不是人，则进入故意缺失及过失审查。不能把两种情况都简化为“认错，所以未遂”。
+\[
+\neg O_k(e)\quad\text{与}\quad O_k(e)\land\neg M_k(x,e)
+\]
+是两个不同的失败位置，对后续未遂、过失及其他罪名的判断有不同意义。
+
+\paragraph{规则 A52：同类对象错误固定现实对象与所知属性。}
+令$d$为被行为实际指向的人，$\widehat d$为行为人误以为的姓名或身份。当$d$与$\widehat d$在罪名$k$所要求的法定属性上相同，单纯姓名误认通常不排除对现实人的相应故意；原书在故意杀人的同类对象错误中采用这一立场：
+\[
+\operatorname{SameRelevantType}_k(d,\widehat d)
+\land\operatorname{DirectedAt}(e,d)
+\leadsto\operatorname{RetainIntent}_k(x,d).
+\]
+用$\leadsto$是为提醒还要检查具体罪名要素。若身份本身决定不同犯罪或加重条件，不能以“都是人”抹平该法定差异。是否知道目标姓名与是否知道其为人，属于不同认识层次。
+
+\paragraph{规则 A53：打击错误应把目标与实际结果分别建模。}
+设预定目标为$a$，实际误中对象为$b$，对$a$所预想的危害结果为$r_a$，实际发生于$b$的结果为$r_b$。先分别记录$\operatorname{Intent}(x,e,r_a)$、$\operatorname{Hit}(e,b)$及$\operatorname{Result}(b,r_b)$，再选择具体符合说或法定符合说等理论参数$h$：
+\[
+\Gamma\cup\{h_{\rm concrete}\}\vdash D_c,
+\qquad
+\Gamma\cup\{h_{\rm statutory}\}\vdash D_s.
+\]
+不能把$D_c$与$D_s$合并成一个无条件结论。若对实际误中的人已有希望或放任，则可能根本不是“对该人缺乏故意的打击错误”，应先依其真实罪过分析。原书强调这一顺序以防止仅看命中对象不同就机械套错误理论。
+
+\paragraph{规则 A54：因果历程偏离不取消全部故意。}
+若行为人认识的因果历程为$\widehat\gamma$，实际历程为$\gamma$，两者不同并不当然排除故意既遂。需要分别审查实际结果是否可归属原危险，以及偏离是否超出故意在法律上覆盖的范围：
+\[
+\operatorname{IntentCompleted}_k(x,e,r)
+\Longrightarrow\operatorname{Attr}_k(e,r)
+\land\operatorname{CoveredDeviation}_k(\widehat\gamma,\gamma).
+\]
+$\operatorname{CoveredDeviation}$必须结合具体偏离解释，不能定义成“所有偏离均不重要”。例如原本希望溺死却在推落时撞击致死，与独立第三人另行杀害，具有不同的风险实现结构。
+
+\paragraph{规则 A55：提前、推迟结果须逐行为确定罪过。}
+行为序列$e_1,e_2$中，不能把对$e_1$的故意无条件移植到$e_2$。先为每一步记录$(t_i,\widehat f_i,M_i)$，再判定哪个行为造成法定结果。结果提前发生时，要查前一步在当时是否已具备实行危险及相应罪过；结果推迟发生时，要查后一步的事实认识及因果联系。原书相关案例的结论不能被压缩成“最后都死了，所以一律故意既遂”。
+
+\paragraph{规则 A56：抽象事实错误以共同要件求交集。}
+当行为人所认识的罪名$k_1$与客观符合的罪名$k_2$不同，先分别列出要件集合$Q_{k_1},Q_{k_2}$。如果存在可依法包容评价的较轻构成$k_0$，并且客观事实与主观认识均覆盖其要件，则可在$k_0$范围讨论主客观一致：
+\[
+\begin{aligned}
+Q_{k_0}&\subseteq Q_{k_1}\cap Q_{k_2},\\
+\operatorname{ObjectiveCovers}(e,Q_{k_0})
+\land\operatorname{SubjectiveCovers}(x,Q_{k_0})
+&\Longrightarrow\operatorname{Review}_{{k_0}}(x,e).
+\end{aligned}
+\]
+这里“集合包含”只是共同法定要件的形式表达，不能从两罪量刑一重一轻便断定具有包容关系。即便共同部分满足，仍须审查其他罪名的未遂、过失及罪数，不能把共同部分外的一切事实直接删除。
+
+\paragraph{例：把人误认成动物与把甲误认成乙。}
+向真实的人射击，若行为人确实以为是动物，需先否定其对“人”这一要件的认识，再查有无应当且能够预见的过失及相应过失罪规定。若行为人瞄准现实中站立的人，只是把其姓名甲误认成乙，对同类生命法益的杀人故意一般不因姓名错误而消失。这两个案件的区别位于所认识的法定属性，不是“认错”这个日常词本身。
+
+\subsection{第1—8讲的证明义务清单}
+上述规则重建了八讲的核心框架，尚不等于原书每道案例和每一争议已经形式化。对任一实际推导，应同时保留六项材料：所用法条版本；教材解释立场；全部条件的中文展开；事实的证据状态；排除事由与反例；结论的精确范围。任一项缺失时，公式只能作为待检验的分析框架，不能被写成已经完成的法律证明。
+
+
+% 第9—16讲；本片段使用 amsmath、amssymb、hyperref。
+
+\section{第九讲\quad 排除犯罪事由I：排除违法事由}
+
+\label{ref:lecture:09}
+
+\noindent\hyperref[lecture:09]{返回本讲的逐节推导与闭卷记忆}
+
+本讲重建正当防卫、紧急避险与承诺的核心判断结构，不把法条中的评价性概念假装变成已经测量出来的数。法条依据为《刑法》第20、21条；承诺的体系位置和有效范围属于解释论问题。\footnote{《中华人民共和国刑法》，国家税务总局政策法规库，整合至修正案（十二），\url{https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html}，2026年11月4日核对。以下第10—16讲涉及总则条文，亦以该文本核对。}
+
+\subsection{正当防卫：对象、时间和限度分别判断}
+\paragraph{规则 G09.01：防卫的事实框架。}
+设 $d$ 为防卫行为，$a$ 为侵害行为，$x$ 为防卫人，$y$ 为侵害人，$t$ 为防卫时点。$\operatorname{Unlawful}(a)$ 表示侵害不受法律允许，$\operatorname{Ongoing}(a,t)$ 表示侵害正在进行，$\operatorname{Against}(d,y)$ 表示损害针对侵害人，$\operatorname{Protect}(x,d)$ 表示具有保护法益、制止侵害的防卫意思。在本模型采用防卫意思必要说的前提下，先定义基本条件：
+\[
+\begin{aligned}
+\operatorname{BaseDef}(d,a,x,y,t)\;:\!\!\iff{}&
+\operatorname{Unlawful}(a)\land\operatorname{Ongoing}(a,t)\\
+&\land\operatorname{Actor}(a,y)\land\operatorname{Against}(d,y)\\
+&\land\operatorname{Protect}(x,d)\land\operatorname{StopAct}(d,a).
+\end{aligned}
+\]
+原书同时列出防卫认识必要说与不要说。若采用不要说，应另定义删去保护认识条件的 $\operatorname{BaseDef}^{-}$，并将有关结论标记为依赖该规则集；不能把两种学说不加区分地合并。这个双向箭头只给出本模型的缩写定义。是否存在不法侵害、是否已经开始或者终止、行为有没有防卫性质，仍须根据证据和法律解释认定。不能用一个人最后受伤，反推他在受伤时必然是不法侵害人。
+
+\paragraph{规则 G09.02：一般防卫与过当的双重门槛。}
+令 $\operatorname{ManifestExcess}(d)$ 表示明显超过必要限度，$\operatorname{MajorHarm}(d)$ 表示造成重大损害。防卫过当的限度要件为
+\[
+\begin{aligned}
+\operatorname{ExcessDef}(d)\;:\!\!\iff{}&
+\operatorname{BaseDef}(d)\land\operatorname{ManifestExcess}(d)\\
+&\land\operatorname{MajorHarm}(d)\land\neg\operatorname{SpecialDef}(d).
+\end{aligned}
+\]
+其中省略的参数沿用上一式。两个限度条件是合取关系：仅有重大损害，不能推出明显超过限度；仅有明显超过限度，也不能省略损害程度的审查。一般正当防卫可写为
+\[
+\operatorname{BaseDef}(d)\land\neg\operatorname{ExcessDef}(d)
+\ \Longrightarrow\ \neg\operatorname{Wrongful}(d).
+\]
+这里的否定违法评价针对本次防卫造成的相应损害，不当然消除行为人在其他独立行为中的违法性。
+
+\paragraph{规则 G09.03：防卫过当与刑事责任分层。}
+过当不等于自动有罪。还须确认相应罪名的客观、主观和责任条件。以 $\operatorname{OtherReq}(x,d,k)$ 表示罪名 $k$ 的其余条件，以 $\operatorname{Reduce}(x,k)$、$\operatorname{Exempt}(x,k)$ 分别表示减轻、免除处罚，则
+\[
+\begin{aligned}
+\operatorname{ExcessDef}(d)\land\operatorname{OtherReq}(x,d,k)
+&\Longrightarrow\operatorname{Liable}(x,d,k),\\
+\operatorname{Liable}(x,d,k)\land\operatorname{ExcessDef}(d)
+&\Longrightarrow\mathsf{Must}\bigl(\operatorname{Reduce}(x,k)
+\lor\operatorname{Exempt}(x,k)\bigr).
+\end{aligned}
+\]
+法条要求在减轻与免除之间依法选择，不能改写成必须同时减轻和免除。故意或者过失也须个别认定，不能从损害结果倒推。
+
+\paragraph{规则 G09.04：特殊防卫并非仅凭罪名触发。}
+\mbox{}\par
+设 $\operatorname{Violent}(a)$ 表示暴力侵害，$\operatorname{SeriousPersonalDanger}(a,t)$ 表示严重危及人身安全。对第20条第3款所述侵害，条件结构为
+\[
+\begin{aligned}
+&\operatorname{BaseDef}(d,a,x,y,t)\land\operatorname{Violent}(a)\\
+&\quad\land\operatorname{SeriousPersonalDanger}(a,t)\\
+&\quad\Longrightarrow\operatorname{SpecialDef}(d).
+\end{aligned}
+\]
+在这一适用范围内，造成不法侵害人伤亡不按防卫过当处理。法条列举的行凶、杀人、抢劫、强奸、绑架，须与正在进行的严重人身危险一并判断。历史上犯过抢劫罪、侵害已经终止或者行为仅侵犯轻微财产利益，均不能只靠一个罪名标签触发本规则。
+
+\paragraph{规则 G09.05：假想防卫与防卫不适时。}
+令 $B_x(P)$ 表示 $x$ 相信命题 $P$。假想防卫包含
+\[
+B_x(\operatorname{Unlawful}(a)\land\operatorname{Ongoing}(a,t))
+\land\neg\bigl(\operatorname{Unlawful}(a)\land\operatorname{Ongoing}(a,t)\bigr).
+\]
+客观上没有相应现实侵害时，不能据第20条直接认定正当防卫；但也不能立即推出故意犯罪，须进入事实认识错误与过失的判断。对事前防卫、事后报复，需先确认侵害确实尚未开始或已经结束。侵害结束后的抢救、救助等其他行为，另有相应评价，不因时间在后就等同报复。
+
+\subsection{紧急避险：危险转移的条件}
+\paragraph{规则 G09.06：避险的基础结构。}
+设 $h$ 为现实危险，$e$ 为避险行为，$I$ 为受保护利益，$J$ 为被牺牲利益。$\operatorname{NoAlternative}(e,h)$ 表示在具体情境下没有足以避免危险的其他合理方式，$\operatorname{WithinNec}(e,I,J)$ 表示损害未超过必要限度。则
+\[
+\begin{aligned}
+&\operatorname{CurrentDanger}(h,t)\land\operatorname{EligibleDanger}(h,I)\\
+&\quad\land\operatorname{Avert}(e,h,I)\\
+&\quad\land\operatorname{NoAlternative}(e,h)
+\land\operatorname{WithinNec}(e,I,J)\land\operatorname{RescuePurpose}(x,e)\\
+&\quad\land\neg\operatorname{DutyException}(x,h,I)
+\Longrightarrow\neg\operatorname{Wrongful}(e).
+\end{aligned}
+\]
+$\operatorname{EligibleDanger}(h,I)$ 要求属于法律允许通过避险保护的危险及利益，例如犯罪人不能把依法逮捕本人的危险当作抢夺第三人车辆逃跑的免责根据。与一般防卫不同，避险要保留“不得已”这一条件。模型中的利益比较是法律评价关系，不能把生命、身体、财产直接换算为一个任意货币分数，再据分数机械决定合法性。
+
+\paragraph{规则 G09.07：利益比较与职务义务的限制。}
+记 $J\prec_L I$ 为依适用法律和具体情势，牺牲 $J$ 相对于保全 $I$ 具有必要性和相当性；这不是普通实数的大小关系。教材中的一般结构是保全利益应优于牺牲利益，但生命冲突等争议案件不能据此省略专门论证。第21条第3款的例外可表达为
+\[
+\begin{aligned}
+&\operatorname{SpecificDuty}(x,h)\land\operatorname{OwnDangerOnly}(I,x)\\
+&\qquad\Longrightarrow\operatorname{DutyException}(x,h,I).
+\end{aligned}
+\]
+这限制的是负有特定职务、业务责任的人以逃避本人所应承担危险为由主张该款避险，并不等于其保护其他重大利益的一切行为都被排除。
+
+\paragraph{规则 G09.08：避险过当。}
+若避险超出必要限度并造成不应有损害，仍须结合罪名其余条件决定责任：
+\[
+\begin{aligned}
+&\operatorname{ExcessEscape}(e)\land\operatorname{OtherReq}(x,e,k)\\
+&\quad\Longrightarrow\operatorname{Liable}(x,e,k)
+\land\mathsf{Must}\bigl(\operatorname{Reduce}(x,k)\lor\operatorname{Exempt}(x,k)\bigr).
+\end{aligned}
+\]
+不要把“防卫过当要求重大损害”的文字条件不加说明移植到避险过当；两条的条文表述不同。
+
+\subsection{承诺：权限、意思与行为范围}
+\paragraph{规则 G09.09：有效承诺的合取条件。}
+对被害人 $v$、利益 $I$、侵害行为 $a$，定义
+\[
+\begin{aligned}
+&\operatorname{ValidConsent}(v,a,I)\;:\!\!\iff\\
+&\operatorname{Disposable}(I)\land\operatorname{Holder}(v,I)\\
+&\land\operatorname{ConsentCapacity}(v,I)
+\land\operatorname{FreeGenuine}(v,a)\\
+&\land\operatorname{BeforeAffectedAct}(v,a)
+\land\operatorname{WithinScope}(a,v,I)\\
+&\land\neg\operatorname{Withdrawn}(v,a)
+\land\neg\operatorname{MandatoryBar}(I,a).
+\end{aligned}
+\]
+$\operatorname{BeforeAffectedAct}$ 要求在相应侵害行为前已有有效承诺；事中作出同意只就此后尚未实施的部分审查，不使此前侵害自动溯及合法。这是一组有待具体化的条件，不是“有一句同意就不违法”。处分权限不属于本人、同意受到实质性欺骗或者胁迫、超出同意范围、同意已被撤回，都不能依此免责。生命、严重身体伤害等利益的可处分范围须单独说明；不能从财产权可以处分推出生命也可以任意处分。推定承诺和假想承诺分别涉及客观可推知的真实意愿与行为人的认识错误，不能混同。
+
+\paragraph{规则 G09.10：欺骗、动机落空与公共利益。}
+教材将法益关联事实错误与单纯动机错误分开。在这一解释模型下，设 $F$ 为法益关联事实，$M$ 为背后目的，须区分
+\[
+\operatorname{Error}(v,F)\qquad\text{与}\qquad
+\operatorname{Error}(v,M)\land\neg\operatorname{Error}(v,F).
+\]
+前者可能使承诺无效；后者不能仅因动机落空就一律否定承诺。究竟哪些事实与该项法益实质相关，本身仍是解释问题，不能把“受到任何欺骗”设为无效的充分条件。同意处分本人财产，也不意味着可以一并处分不特定公众安全：经房主同意烧房，仍须另审查放火行为是否侵害公共安全。对行为人误信存在承诺，还须区分真实承诺的客观有效性与认识错误的主观效果，不能只凭信赖便宣布客观上真实同意存在。
+
+\paragraph{本讲例子与检验。}
+甲正遭乙持刀连续攻击，甲为制止攻击推倒乙，乙重伤。仅知道“重伤”不足以判断过当，尚须查正在进行的危险、行为方式和当时条件。如果严重危及人身安全的暴力侵害成立，还须审查特殊防卫规则。若乙早已离开，甲追上去报复，$\operatorname{Ongoing}(a,t)$ 不成立，原防卫公式即缺少必要输入。这个例子说明，形式化的作用是暴露缺少的条件，而不是把未知条件自动填成真。
+
+\section{第十讲\quad 排除犯罪事由II：排除责任事由}
+
+\label{ref:lecture:10}
+
+\noindent\hyperref[lecture:10]{返回本讲的逐节推导与闭卷记忆}
+
+责任评价以已经讨论构成要件与违法性为前提。本讲的“不负刑事责任”不意味着客观行为必然合法；正当防卫与精神障碍排责在体系上有不同位置。
+
+\subsection{责任年龄采用行为时周岁}
+\paragraph{规则 G10.01：年龄是资格条件，不是有罪充分条件。}
+设 $a(x,t)$ 是 $x$ 在行为时 $t$ 的法定周岁，$\operatorname{AgeGate}(x,b,k)$ 是罪名 $k$ 的年龄门槛已经满足。则
+\[
+a(x,t)\ge16\Longrightarrow\operatorname{AgeGate}(x,b,k),
+\]
+而完整责任判断仍须
+\[
+\operatorname{AgeGate}(x,b,k)\land\operatorname{OtherReq}(x,b,k)
+\Longrightarrow\operatorname{Liable}(x,b,k).
+\]
+这里的 $\operatorname{OtherReq}$ 必须包括适用罪名、行为归属、主观要素、责任能力和不存在相应排除事由等已经展开的条件。不能把年龄门槛误写为“满16岁的人有罪”。
+
+\paragraph{规则 G10.02：十四至十六周岁的特别范围。}
+令 $K_{14}$ 表示第17条第2款规定的行为范围：故意杀人，故意伤害致人重伤或者死亡，强奸，抢劫，贩卖毒品，放火，爆炸，投放危险物质。则
+\[
+14\le a(x,t)<16\land\operatorname{Within}(b,K_{14})
+\Longrightarrow\operatorname{AgeGate}(x,b,k).
+\]
+这里的范围以法定行为及解释为准。某一行为同时符合其他罪名，不能只按最终罪名名称进行字符串匹配；也不能把所有毒品犯罪都归入“贩卖毒品”，或把轻微故意伤害纳入重伤、死亡这一结果条件。若行为不在此范围，不得仅因社会危害严重而自行扩大年龄责任范围。
+
+\paragraph{规则 G10.03：十二至十四周岁保留全部法定条件。}
+设 $\operatorname{KillOrInjure}(b)$ 为故意杀人、故意伤害的法定行为，$D(b)$ 为致人死亡，$R(b)$ 为以特别残忍手段致人重伤并造成严重残疾，$E(x,b)$ 为就该参与人认定情节恶劣，$A(x,b)$ 为对该参与人的行为经最高人民检察院核准追诉。则
+\[
+\begin{aligned}
+&12\le a(x,t)<14\land\operatorname{KillOrInjure}(b)\\
+&\qquad\land\bigl(D(b)\lor R(b)\bigr)\land E(x,b)\land A(x,b)\\
+&\qquad\Longrightarrow\operatorname{AgeGate}(x,b,k).
+\end{aligned}
+\]
+$R$ 中的手段、重伤、严重残疾是合取关系，不能只剩“重伤”。核准追诉是明确的程序条件，也不能用办案人员主观认为应追诉替代。2026年7月18日印发的相关规定第12条要求结合共同犯罪各参与人的地位、作用，分别判断情节恶劣，因而此处使用 $E(x,b)$，不能只给整个案件一个统一布尔值。\footnote{最高人民检察院、公安部《关于办理已满十二周岁不满十四周岁未成年人严重暴力犯罪核准追诉案件若干问题的规定》，安徽省人民检察院官方全文，\url{https://www.ah.jcy.gov.cn/jwgk/fgsd/202608/t20260803_7845099.shtml}，第1、6、12条。}这个公式只说明年龄方面得以进入追责，其他定罪条件仍独立审查。
+
+\paragraph{规则 G10.04：未成年人从宽与替代处遇。}
+在依据第17条前三款追究刑事责任的范围内，
+\[
+\operatorname{Liable}(x,b,k)\land a(x,t)<18
+\Longrightarrow\mathsf{Must}\bigl(\operatorname{Light}(x,k)\lor\operatorname{Reduce}(x,k)\bigr).
+\]
+$\operatorname{Light}$ 表示在适用法定刑幅度内从轻，$\operatorname{Reduce}$ 表示依法减轻，两者不等价。不满十六周岁而不予刑事处罚的，仍存在父母或其他监护人的管教义务，必要时依法专门矫治教育；不能从“刑罚不适用”推出“法律完全不处理”。具体措施另受实体和程序法律约束。
+
+\paragraph{规则 G10.05：老年人规则与时点。}
+第17条之一的从宽以犯罪时年龄为基准，而第49条关于老年人死刑限制以审判时年龄为基准。前一规则可写为
+\[
+\begin{aligned}
+&a(x,t_b)\ge75\land\operatorname{Intentional}(b)\land\operatorname{Liable}(x,b,k)\\
+&\quad\Longrightarrow\mathsf{May}\bigl(\operatorname{Light}(x,k)\lor\operatorname{Reduce}(x,k)\bigr),\\
+&a(x,t_b)\ge75\land\operatorname{Negligent}(b)\land\operatorname{Liable}(x,b,k)\\
+&\quad\Longrightarrow\mathsf{Must}\bigl(\operatorname{Light}(x,k)\lor\operatorname{Reduce}(x,k)\bigr).
+\end{aligned}
+\]
+相同年龄数字出现在不同规则中，不意味着时间参数可以共用。
+
+\subsection{责任能力与事实鉴定}
+\paragraph{规则 G10.06：完全无责任能力。}
+令 $\operatorname{MentalDisease}(x,t)$ 为精神病状态，$\operatorname{NoRecognize}(x,b,t)$、$\operatorname{NoControl}(x,b,t)$ 分别为不能辨认、不能控制自己的行为，$\operatorname{Verified}(x,b)$ 为经法定程序鉴定确认。第18条第1款的结构为
+\[
+\begin{aligned}
+&\operatorname{MentalDisease}(x,t)
+\land\bigl(\operatorname{NoRecognize}(x,b,t)\lor\operatorname{NoControl}(x,b,t)\bigr)\\
+&\qquad\land\operatorname{Verified}(x,b)
+\Longrightarrow\neg\operatorname{Responsible}(x,b).
+\end{aligned}
+\]
+辨认不能与控制不能是析取，不能擅自改为必须两者全部丧失。诊断名称、日常表现和行为时能力并非同一命题；精神病人也并非在所有时段一概没有刑事责任能力。
+
+\paragraph{规则 G10.07：间歇性精神病与限制责任能力。}
+若精神病人在行为时处于精神正常状态，不能仅因既往诊断排责。若尚未完全丧失辨认或者控制能力，行为仍满足责任条件，则
+\[
+\begin{aligned}
+&\operatorname{PartialCapacity}(x,b)\land\operatorname{Liable}(x,b,k)\\
+&\qquad\Longrightarrow\mathsf{May}\bigl(\operatorname{Light}(x,k)\lor\operatorname{Reduce}(x,k)\bigr).
+\end{aligned}
+\]
+其裁量后果是“可以”，并非与未成年规则相同的“应当”。对醉酒者，第18条第4款排除仅凭醉酒否认责任的推论；仍须证明具体犯罪的故意、过失和其他要件，不能从醉酒本身推出有罪。
+
+\paragraph{规则 G10.08：聋哑、失明与能力评价不可混同。}
+在已构成犯罪的前提下，第19条可写为
+\[
+\begin{aligned}
+&\operatorname{Liable}(x,b,k)
+\land\bigl(\operatorname{DeafAndMute}(x)\lor\operatorname{Blind}(x)\bigr)\\
+&\qquad\Longrightarrow\mathsf{May}\bigl(\operatorname{Light}(x,k)
+\lor\operatorname{Reduce}(x,k)\lor\operatorname{Exempt}(x,k)\bigr).
+\end{aligned}
+\]
+“又聋又哑”在法条中是合取，不能误写为聋或哑中的任一项。这项特殊从宽规则也不等于认定行为人完全没有责任能力。
+
+\subsection{违法性认识与期待可能性}
+\paragraph{规则 G10.09：认识错误有不同对象。}
+以 $B_x(F)$ 表示对构成要件事实的认识，以 $B_x(L)$ 表示对行为违法性的认识。则
+\[
+\neg B_x(F)\quad\text{与}\quad\neg B_x(L)
+\]
+不能交换使用。前者可能影响故意的事实认识，后者涉及违法性认识可能性及其错误的可避免性。教材采用的解释框架下，不可避免的违法性认识错误可以形成排责根据；但现行《刑法》没有一条把任何“不知法”一律规定为免责的总括条款。因此形式化必须注明解释论前提：
+\[
+\begin{aligned}
+&\operatorname{NormError}(x,b)\land\operatorname{Unavoidable}(x,b)
+\land\operatorname{AcceptedTheory}(\theta)\\
+&\qquad\Longrightarrow_{\theta}\neg\operatorname{Responsible}(x,b).
+\end{aligned}
+\]
+下标 $\theta$ 提醒读者，该结论依赖已说明的学说及个案认定，不能冒称法条原句。
+
+\paragraph{规则 G10.10：期待可能性不是主观不愿意。}
+令 $\operatorname{ExpectLawful}(x,c)$ 表示在情境 $c$ 中可合理期待行为人采取合法行为。此条件应综合危险、行为选择、义务、行为人处境等因素判断。教材的责任理论可写成
+\[
+\begin{aligned}
+&\operatorname{Responsible}_{\theta}(x,b,c)\\
+&\quad\Longrightarrow\operatorname{Capacity}(x,b)
+\land\operatorname{PossKnowWrong}(x,b)\\
+&\qquad\qquad\land\operatorname{ExpectLawful}(x,c).
+\end{aligned}
+\]
+“不愿遵法”“遵法会损失收入”和“已无法合理期待其他选择”不是同一事实。对具体胁迫，应首先查明法定的避险、胁从犯等规则，再讨论超法规排责，不能把期待可能性当作绕过法定条件的万能开关。
+
+\paragraph{本讲例子与检验。}
+甲13周岁，实施故意伤害，造成重伤，但现有材料尚不能证明严重残疾、特别残忍手段或核准追诉。模型中的 $R(b)$ 与 $A(x,b)$ 尚未被确认，不能从“重伤”直接推出年龄门槛已经满足。这里应写“信息不足，需继续核查”，而不是写“已经证明不符合全部条件”。若甲17周岁且罪责成立，则年龄从宽是应当规则；若甲成年但有尚未完全丧失的责任能力，则第18条相应从宽属于可以规则。
+
+\section{第十一讲\quad 犯罪形态}
+
+\label{ref:lecture:11}
+
+\noindent\hyperref[lecture:11]{返回本讲的逐节推导与闭卷记忆}
+
+以下以一个可分阶段实施的故意犯罪计划记录 $\pi=(x,b,k,t_*)$ 为对象，分别绑定行为人、行为、罪名与终局观察时点；不同罪名、故意形态是否允许未完成形态，须结合分则构成与教材讨论另行确定，不能把同一时间线无差别套到所有犯罪。本讲在固定该记录后，$\operatorname{Start}(x,b,k)$、$\operatorname{Complete}(x,b,k)$ 分别是将第4个参数设为 $t_*$ 的缩写；$\operatorname{Complete}(\pi)$ 表示同一既遂命题，$\operatorname{Desist}(x,\pi)$ 所属罪名就是记录中的 $k$。这些缩写不改变谓词的原始类型。
+
+\subsection{先规定观察时间和既遂标准}
+\paragraph{规则 G11.01：既遂不是主观愿望全部满足。}
+在相应故意与可罚形态范围已限定的前提下，设 $E_k=\{e_1,\ldots,e_m\}$ 为罪名 $k$ 的既遂所需客观要件及归责要求集合，包含实行行为这一基础，$\operatorname{Sat}(e_i,x,b,t)$ 表示第 $i$ 个要件在时点 $t$ 已满足并可归属行为人。则工作定义是
+\[
+\operatorname{Complete}(x,b,k,t)\;:\!\!\iff
+\bigwedge_{e_i\in E_k}\operatorname{Sat}(e_i,x,b,t).
+\]
+$E_k$ 不能由行为人自行决定，必须从适用罪名及解释中确定。这里的完成评价不单独推出行为人已经有罪；个人责任仍须另行满足。预备行为偶然提前造成实害结果，不能只因有损害就跳过实行行为和结果归责，直接认定该目的犯罪既遂。行为人觉得“没有得到预想收益”，不等于法律上未遂；犯罪已经既遂，也不代表持续侵害必然终了。既遂时点与行为终了时点分别记作 $t_c$、$t_f$，继续犯可能有 $t_c<t_f$。
+
+\paragraph{规则 G11.02：着手是独立的法律评价。}
+$\operatorname{Start}(x,b,k,t)$ 表示已进入实行行为并达到该罪要求的现实危险程度。判断不能仅据心理决心或是否已经携带工具。模型保留
+\[
+\operatorname{Resolve}(x,\pi)\ \not\Longrightarrow\ \operatorname{Start}(x,b,k,t),
+\]
+并要求对接近侵害、行为直接性、对象与具体构成要件说明理由。关于着手的学说差异会改变边界个案，所以应把采用的标准作为规则集参数，而非悄悄写进一个未解释谓词。
+
+\subsection{预备与未遂}
+\paragraph{规则 G11.03：预备行为的目的和内容。}
+第22条规定的行为结构是
+\[
+\begin{aligned}
+&\operatorname{PrepAct}(x,b,k)\;:\!\!\iff\\
+&\operatorname{StartPurpose}(x,k)\land\operatorname{PrepDanger}(b,k)\\
+&\quad\land\bigl(\operatorname{PrepareTools}(x,b,k)
+\lor\operatorname{CreateConditions}(x,b,k)\bigr).
+\end{aligned}
+\]
+$\operatorname{StartPurpose}$ 指为了着手实行该罪，$\operatorname{PrepDanger}$ 指已经给法益造成相应危险；为后续准备行为再作遥远准备，不能无限前推为犯罪预备。购买普通工具本身可能是中性行为；须有证据证明与具体犯罪计划的联系。要将最终停止形态归为预备，还须审查未着手、未既遂以及停止原因，排除已经成立犯罪中止等特别评价。不能一见工具就认定可罚的预备犯。
+
+\paragraph{规则 G11.04：预备犯的处罚是裁量授权。}
+对于依法成立并需要处理的预备犯，
+\[
+\begin{aligned}
+&\operatorname{PreparatoryOffender}(x,k)\\
+&\quad\Longrightarrow\mathsf{May}\bigl(
+\operatorname{LightByComplete}(x,k)\lor\operatorname{ReduceByComplete}(x,k)\\
+&\qquad\qquad\lor\operatorname{Exempt}(x,k)\bigr).
+\end{aligned}
+\]
+“比照既遂犯”给出比较基准，不等于先假装已经既遂。此处保留免除处罚这一选项，与未遂犯的选项不同。
+
+\paragraph{规则 G11.05：未遂的三个独立条件。}
+对已确认属于该罪可罚未遂范围的故意行为，第23条的核心结构为
+\[
+\begin{aligned}
+\operatorname{Attempt}(x,b,k)\;:\!\!\iff{}&
+\operatorname{Start}(x,b,k)\land\neg\operatorname{Complete}(x,b,k)\\
+&\land\operatorname{ExternalStop}(x,b,k)
+\land\operatorname{AttemptDomain}(x,b,k).
+\end{aligned}
+\]
+$\operatorname{ExternalStop}$ 表示未得逞由于行为人意志以外的原因；$\operatorname{AttemptDomain}$ 保留故意类型、犯罪类型及可罚性限制。没有结果只是其中一项，不等于未遂的充分条件。行为尚未着手、自动有效中止或者本来不属于该罪可罚未遂领域的，都不能仅据“未得逞”作出结论。
+
+\paragraph{规则 G11.06：未遂的处罚与不能犯问题。}
+\[
+\begin{aligned}
+&\operatorname{Attempt}(x,b,k)\\
+&\quad\Longrightarrow\mathsf{May}\bigl(
+\operatorname{LightByComplete}(x,k)\lor\operatorname{ReduceByComplete}(x,k)\bigr).
+\end{aligned}
+\]
+与预备犯不同，第23条没有把“免除处罚”列为本款当然授权。不能犯的处罚边界涉及危险判断与学说：手段、对象客观不能完成，不能单凭此一事实统一推出无罪或未遂。应明确采用的危险标准、判断时点与基础事实；迷信犯等没有相应法益危险的行为尤其不能只靠犯罪意思定罪。
+
+\subsection{中止的自动性与有效性}
+\paragraph{规则 G11.07：犯罪过程中的自动放弃。}
+设 $\operatorname{Voluntary}(x)$ 表示在认为仍有继续实施可能时，基于自身意志终止，$\operatorname{Abandon}(x,\pi)$ 表示真实放弃本次犯罪，而非仅改换工具、时间或对象继续同一计划。则在尚不需要积极防止结果的场景，先用强调防止效果可归于本人行为的工作规则集 $\theta_E$ 表达：
+\[
+\begin{aligned}
+&\operatorname{InProcess}(\pi)\land\neg\operatorname{Complete}(\pi)
+\land\operatorname{Voluntary}(x)\\
+&\qquad\land\operatorname{Abandon}(x,\pi)
+\land\operatorname{NoFurtherPreventionNeeded}(\pi)
+\Longrightarrow\operatorname{Desist}(x,\pi).
+\end{aligned}
+\]
+自动性以行为人的具体认识和支配情况判断，不应仅以客观上还剩多少体力判断。因自认为已经无法得逞而停止，一般不能仅靠口头表示后悔转成自动放弃。
+
+\paragraph{规则 G11.08：实行终了后须有效防止结果。}
+已经启动能够导致结果的危险过程时，只停止后续动作可能不足。对需要积极防止结果的场景，
+\[
+\begin{aligned}
+&\operatorname{InProcess}(\pi)\land\neg\operatorname{Complete}(\pi)
+\land\operatorname{Voluntary}(x)\\
+&\qquad\land\operatorname{PreventAct}(x,\pi)
+\land\operatorname{EffectivePrevent}(x,\pi)
+\Longrightarrow_{\theta_E}\operatorname{Desist}(x,\pi).
+\end{aligned}
+\]
+在 $\theta_E$ 下，有效性需要说明本人的行为与防止犯罪结果的联系；原书对有效性与未发生结果因果贡献的不同处理，另见规则 G12.14，不能将两套规则不加条件同时使用。仅打了电话、仅表示后悔或仅尝试救助，均不必然满足；另一方面，不能把最终没有发生结果完全与其救助行为无关的案件，不经论证就当作有效中止。
+
+\paragraph{规则 G11.09：中止处罚是应当，损害不等于犯罪结果。}
+设 $H(\pi)$ 表示本次犯罪过程中已经造成的可评价损害，$H=0$ 为未造成损害。第24条第2款的结构为
+\[
+\begin{aligned}
+\operatorname{Desist}(x,\pi)\land H(\pi)=0
+&\Longrightarrow\mathsf{Must}(\operatorname{Exempt}(x,k)),\\
+\operatorname{Desist}(x,\pi)\land H(\pi)>0
+&\Longrightarrow\mathsf{Must}(\operatorname{Reduce}(x,k)).
+\end{aligned}
+\]
+这里的 $H$ 是损害有无的分类记号，不要求把生命、身体和财产合成同一个数值。免除处罚与不构成犯罪仍是不同结论。某罪未发生既遂结果，并不排除途中已经有其他损害。
+
+\paragraph{规则 G11.10：形态结论必须绑定具体罪名。}
+一个犯罪计划可能包含数个不同罪名，不能用一个总标签覆盖全部行为。允许
+\[
+\operatorname{Complete}(x,b,k_1)\land\operatorname{Desist}(x,\pi_{k_2}),
+\qquad k_1\ne k_2.
+\]
+例如在实施某后续犯罪前停止，不会自动消除先前已经既遂的另一犯罪。对同一个既遂结果，原则上不能在既遂以后再通过补救倒置成该罪的犯罪中止；退赔、救助、修复仍可能产生其他法定或者酌定量刑效果。
+
+\paragraph{本讲例子与检验。}
+甲为投毒杀人备好毒物但尚未实施，可能处于预备阶段；甲已经投毒，乙尚未饮用，甲出于自身意志取回毒物，须判断是否有效消除了本次危险；乙已饮用，甲自动送医并有效防止死亡，可进一步讨论杀人罪中止及已经造成的损害。若乙死亡并可归属甲的故意行为，事后后悔通常不能把故意杀人既遂改写为中止。每一步都要分别填入着手、既遂、自动性和有效性的事实，不能只看最后一句“后悔了”。
+
+\section{第十二讲\quad 共同犯罪}
+
+\label{ref:lecture:12}
+
+\noindent\hyperref[lecture:12]{返回本讲的逐节推导与闭卷记忆}
+
+本讲采用原书强调的分层方法：先分析共同制造违法事实，再分别判断各参与人的责任。必须区分“共同违法事实”“每个人的罪责成立”与“最后适用何种罪名”，不可在形式上把三者强行合并。
+
+\subsection{从共同事实到个人罪责}
+\paragraph{规则 G12.01：人数不是共同犯罪的充分条件。}
+设 $P$ 为参与人集合，$b$ 为相关行为过程，$\operatorname{SharedIntent}(P,b)$ 表示共同故意，$\operatorname{JointAct}(P,b)$ 表示共同犯罪行为。第25条的核心结构写为
+\[
+\operatorname{JointIntentCrime}(P,b)
+\Longrightarrow |P|\ge2\land\operatorname{SharedIntent}(P,b)
+\land\operatorname{JointAct}(P,b).
+\]
+这里只给必要结构，实际认定须展开共同故意与共同实行、教唆、帮助等具体形态。两人同处现场、具有亲属关系、事后同时获利，均不单独推出共同犯罪。共同过失不按第25条的共同犯罪论处；应负刑事责任的，各按本人所犯罪处理。这不意味着对同一结果绝不可能有两人分别承担过失责任。
+
+\paragraph{规则 G12.02：违法共同，责任个别。}
+按原书采用的理论，设 $\operatorname{JointWrong}(P,b)$ 为共同制造违法事实，$\operatorname{Rel}(x,b,r)$ 为参与人 $x$ 对结果 $r$ 的归责联系。则个人责任入口为
+\[
+\begin{aligned}
+&\operatorname{JointWrong}(P,b)\land x\in P
+\land\operatorname{Rel}(x,b,r)\\
+&\qquad\land\operatorname{AgeGate}(x,b,k)
+\land\operatorname{Capacity}(x,b)
+\land\operatorname{CulpReq}(x,b,k)\\
+&\qquad\Longrightarrow\operatorname{Liable}(x,b,k,r).
+\end{aligned}
+\]
+$\operatorname{CulpReq}$ 包含该参与人的主观归责及不存在其个人排责事由等要求；合法化事由也须按其适用对象与范围分别审查，不能用群体标签掩盖个人地位。一个参与人没有责任年龄或者责任能力，不会仅因此抹去另一参与人客观上的帮助、教唆和共同实行事实；但前者本人仍可能不负刑事责任。这里的 $\operatorname{JointWrong}$ 是教材体系中的技术概念，不能直接当作每个人已经符合法定刑事责任全部条件的缩写。
+
+\paragraph{规则 G12.03：对结果归责不能无限扩张。}
+将 $\operatorname{Scope}_x$ 记为共同故意、具体贡献与规范归责所覆盖的范围。则
+\[
+\operatorname{LiableFor}(x,r)\Longrightarrow
+r\in\operatorname{Scope}_x\land\operatorname{Attributable}(x,r).
+\]
+“部分实行、全部负责”不是“同伙所做的一切都负责”。超出共同范围的独立行为、参与以前已经完成且与后来行为没有归责联系的结果，必须另外审查。对结果加重情节，主观责任要求也不能消失；否则会变为客观结果责任。
+
+\subsection{共同正犯、间接正犯与狭义共犯}
+\paragraph{规则 G12.04：共同正犯的贡献结构。}
+以 $\operatorname{CoControl}(P,b)$ 表示在共同计划中共同支配犯罪过程，$\operatorname{ExecPart}(x,b)$ 表示分工实行或者具有可支持共同正犯评价的重要贡献。教材中的共同正犯模型可写为
+\[
+\begin{aligned}
+&\operatorname{JointWrong}(P,b)\land\operatorname{SharedIntent}(P,b)\\
+&\qquad\land\operatorname{CoControl}(P,b)\land\bigwedge_{x\in P}\operatorname{ExecPart}(x,b)\\
+&\qquad\Longrightarrow_{\theta}\operatorname{CoPrincipal}(P,b).
+\end{aligned}
+\]
+$\theta$ 表示采用的正犯理论。重要贡献的认定须说明支配性和具体分工，不能把一切外围协助均列为共同正犯。对确已归入共同实行范围的结果，不能要求每个人都亲手实现全部构成要件；但也不能省略共同关系和归责范围。
+
+\paragraph{规则 G12.05：间接正犯增加支配条件。}
+设 $x$ 通过 $y$ 实施行为，$\operatorname{CauseAct}(x,y,b)$ 表示引起他人实施相关违法行为，$\operatorname{Control}(x,y,b)$ 表示利用强制、错误、身份等取得行为支配，$\operatorname{IntentControl}(x,y,b)$ 表示故意利用这种支配。则
+\[
+\begin{aligned}
+&\operatorname{CauseAct}(x,y,b)\land\operatorname{Control}(x,y,b)
+\land\operatorname{IntentControl}(x,y,b)\\
+&\qquad\land\operatorname{PrincipalEligible}(x,k)
+\Longrightarrow_{\theta}\operatorname{IndirectPrincipal}(x,b,k).
+\end{aligned}
+\]
+被利用者年幼或者有精神障碍，不足以自动证明行为支配。反过来，利用一个具有责任能力但陷于事实错误的人，也可能成立间接正犯。对身份犯，还须查明行为支配者是否具有作为该罪正犯所需的特定身份。
+
+\paragraph{规则 G12.06：教唆以引起犯意、行为为核心。}
+$\operatorname{Induce}(x,y,k)$ 表示 $x$ 故意引起 $y$ 实施罪名 $k$ 的违法行为。按照原书的从属性分析框架，
+\[
+\begin{aligned}
+&\operatorname{IntentInduce}(x,y,k)
+\land\operatorname{CausalInduce}(x,y,b)
+\land\operatorname{PrincipalWrong}(y,b,k)\\
+&\qquad\Longrightarrow_{\theta}\operatorname{Instigator}(x,y,b,k).
+\end{aligned}
+\]
+如果对方早已形成同一犯罪决意，后来话语未引起或者增强相应犯罪行为，就不能仅据说过鼓励的话认定同一罪的教唆；但应继续审查是否构成心理帮助。将原来较轻犯罪升级为另一个更重犯罪，或者引起新的加重事实，须分别证明该增量的引起关系。
+
+\paragraph{规则 G12.07：教唆的未成年加重与未完成问题。}
+在已成立教唆犯罪的前提下，第29条的年龄后果是
+\[
+\operatorname{Instigator}(x,y,b,k)\land a(y,t)<18
+\Longrightarrow\mathsf{Must}(\operatorname{Heavy}(x,k)).
+\]
+该条第2款关于被教唆者“没有犯被教唆的罪”的适用，原书采用从属性解释，并列举了与独立性说的分歧。因此这里保留两层：法条给出 $\mathsf{May}(\operatorname{Light}\lor\operatorname{Reduce})$ 的处罚授权；该款何时进入适用，另由解释规则 $\theta$ 决定。不能不加说明地把“完全没有引起任何犯罪行为”与“已经实行但未既遂”写成同一个事实。
+
+\paragraph{规则 G12.08：帮助须有实际促进联系。}
+设 $\operatorname{Facilitate}(x,y,b)$ 表示对他人违法行为有物理性或心理性促进，$\operatorname{IntentHelp}(x,y,b)$ 表示帮助故意。则
+\[
+\begin{aligned}
+&\operatorname{IntentHelp}(x,y,b)\land\operatorname{Facilitate}(x,y,b)\\
+&\quad\land\operatorname{PrincipalWrong}(y,b,k)\\
+&\quad\Longrightarrow_{\theta}\operatorname{Helper}(x,y,b,k).
+\end{aligned}
+\]
+提供工具未被使用，不能只看工具是否接触了被害人：如果确实增强实行者信心，仍须审查心理促进；如果既无物理贡献也无心理贡献，不能仅据帮助愿望认定已成立帮助犯。对犯罪结果的既遂归责，还须证明该帮助与相应结果之间的规范联系。
+
+\subsection{参与时间、片面参与与身份}
+\paragraph{规则 G12.09：承继参与不追溯制造历史因果。}
+设 $t_x$ 为 $x$ 加入时点，$r_0$ 为加入前已经形成的结果。则
+\[
+\begin{aligned}
+&\operatorname{JoinAt}(x,b,t_x)\land\operatorname{ResultAt}(r_0,t_0)
+\land t_0<t_x\\
+&\qquad\land\neg\operatorname{PriorContribution}(x,r_0)
+\Longrightarrow\neg\operatorname{LiableByJoiningAlone}(x,r_0).
+\end{aligned}
+\]
+后来利用已经存在的状态，不会自动把过去结果变成本人的行为结果。但对加入后的持续侵害、新结果及本人贡献，仍可承担责任。原书将事前共谋而临时迟到与真正中途才加入区别处理；前者可能早有可归责贡献，不满足公式中的否定条件。
+
+\paragraph{规则 G12.10：既遂后帮助与继续犯。}
+对普通已终了犯罪，事后窝藏犯罪人、处理赃物、毁灭证据，须分别检验相应妨害司法或赃物犯罪的要件，不能自动倒推为上游犯罪帮助犯。继续犯则可能出现
+\[
+ t_c<t_x<t_f,
+\]
+即既遂后而行为终了前加入。此时仍存在正在持续的本罪行为，可能成立承继共同犯罪。是否事前约定、帮助对象是人、物还是证据、上游犯罪是否已结束，都是不同输入。
+
+\paragraph{规则 G12.11：片面帮助要声明学说分支。}
+设 $\operatorname{AwareJoin}(x,y,b)$ 为 $x$ 有意参与 $y$ 的犯罪，$\neg\operatorname{AwareJoin}(y,x,b)$ 为 $y$ 不知道 $x$ 的帮助。肯定片面帮助的解释可写为
+\[
+\begin{aligned}
+&\operatorname{AwareJoin}(x,y,b)\land\neg\operatorname{AwareJoin}(y,x,b)\\
+&\qquad\land\operatorname{IntentHelp}(x,y,b)\land\operatorname{Facilitate}(x,y,b)\\
+&\qquad\land\operatorname{PrincipalWrong}(y,b,k)\land\operatorname{WithinIntent}(x,b,k)\\
+&\qquad\Longrightarrow_{\theta_{+}}\operatorname{OneSidedHelper}(x,y,b,k).
+\end{aligned}
+\]
+$\operatorname{WithinIntent}$ 另要求罪名相关事实在帮助者的故意和归责范围内；若实际实施的是合法行为，缺少 $\operatorname{PrincipalWrong}$，不能仅据误以为在帮助犯罪而推出本式结论。该式不是双向意思联络已经存在的断言，而是特定学说允许单方参与意识的推导。片面正犯、片面教唆与片面帮助的争议和成立条件不完全相同，不能因一项被接受便全部类推。
+
+\paragraph{规则 G12.12：身份限制与罪名个别化。}
+对真正身份犯，$\operatorname{Status}(x,k)$ 表示法定定罪身份。单独正犯通常须满足
+\[
+\operatorname{SolePrincipal}(x,k)\Longrightarrow\operatorname{Status}(x,k).
+\]
+无身份者参与有身份者犯罪，不应仅据缺少身份一律无罪，仍须检验教唆、帮助等参与形式。原书对无身份者能否成为共同正犯也提示了多数说的区分。因此不能将上一必要条件不加区分扩展到所有共同正犯。每个人最终罪名可能不同；罪名不同本身也不能否认已证明的共同违法事实。
+
+\subsection{退出、形态与最终处罚}
+\paragraph{规则 G12.13：共同犯罪中止须处理既有贡献。}
+若 $x$ 的退出只消除了将来的行为，却留下已经形成并继续起作用的物理、心理贡献，就不能仅凭离开现场认定有效中止。设 $C_x$ 为其既有贡献集合，$\operatorname{Neutralize}(x,C_x)$ 为消除其对后续犯罪的作用。在原书的通常模型中，预备阶段退出与实行阶段退出的要求不同，应分别建立规则，而非只写
+\[
+\operatorname{LeaveScene}(x)\Longrightarrow\operatorname{Desist}(x),
+\]
+上式是不成立的推论。实行阶段共同正犯的退出，通常须进一步有效防止既遂结果；教唆、帮助者须审查所引起或促进的危险是否被消除。
+
+\paragraph{规则 G12.14：原书对中止有效性的特殊处理须单列。}
+以下先处理同伙也未既遂的情形。教材在这一分支，将已实施中止行为与未发生既遂结果并列审查，并允许不把未得逞完全归功于退出者。这里不能静默改写为无争议的统一公式。可将其记为作者规则集 $\theta_B$：
+\[
+\begin{aligned}
+&\operatorname{VoluntaryStopAct}(x)\land\neg\operatorname{Complete}(b,k)
+\land\operatorname{AuthorExtraReq}(x,b)\\
+&\qquad\Longrightarrow_{\theta_B}\operatorname{Desist}(x,b,k).
+\end{aligned}
+\]
+其中 $\operatorname{AuthorExtraReq}$ 目前不能只用“尽力”两个字穷尽；仍须依其具体例子和论证逐案核对。另一个更强调防止结果因果贡献的解释规则集记作 $\theta_E$。两套规则不应同时当作无条件公理，否则会对同一事实导出矛盾结论。本讲只忠实标记这项差异，未宣称已经解决解释争议。
+
+若同伙打晕积极阻止者并继续实施至既遂，全案的 $\operatorname{Complete}(b,k)$ 为真，故上式不能直接使用。教材另以退出者个人的归责和积极阻止评价个人中止。强调有效消除贡献和防止结果的解释对该案例仍须另行推导。
+
+\paragraph{规则 G12.15：分工分类与作用分类不是同一个维度。}
+令
+\[
+\begin{aligned}
+R_{\mathrm{division}}&=\{\text{正犯},\text{教唆犯},\text{帮助犯}\},\\
+R_{\mathrm{effect}}&=\{\text{主犯},\text{从犯},\text{胁从犯}\}.
+\end{aligned}
+\]
+一个人须分别得到两个维度中的评价，不能从“教唆犯”直接推出“从犯”，也不能从“亲手实行”直接推出“主犯”。第26—28条的主要后果为：犯罪集团首要分子按集团全部罪行负责，其他主犯按其参与或组织、指挥的全部犯罪负责；从犯应当从轻、减轻或者免除处罚；被胁迫参加犯罪者应当按照其犯罪情节减轻或者免除处罚。这些范围均受共同故意、个人责任与具体法条约束，不是同伙行为的无限担保。
+
+\paragraph{本讲例子与检验。}
+甲成年，乙10周岁，乙自行决定杀害丙，甲知情而为其望风。按原书分层模型，乙实施的违法事实不因乙无责任年龄而消失；甲的帮助故意、实际促进以及对结果的归责仍须审查。甲没有支配乙的事实，不能只因乙年幼便把甲改称间接正犯。若甲其实是指使、操纵乙实施，支配条件发生变化，角色才可能不同。同样，甲在实施中只自行回家而未消除贡献，不足以当然认定犯罪中止。
+
+\section{第十三讲\quad 罪数}
+
+\label{ref:lecture:13}
+
+\noindent\hyperref[lecture:13]{返回本讲的逐节推导与闭卷记忆}
+
+本讲将事实行为的划分、构成要件的满足和法律上处罚次数分开。行为数不能仅靠肢体动作数计数；一个连续动作可能包含多个法律行为，多个动作也可能组成同一实行过程。
+
+\subsection{行为、法条与处罚三个集合}
+\paragraph{规则 G13.01：罪数不是符合条文数的直接输出。}
+设案件行为集合为 $A$，候选罪名集合为 $K$，$\operatorname{Fit}(b,k)$ 表示行为 $b$ 符合罪名 $k$ 的评价条件。定义候选命中集
+\[
+K(b)=\{k\in K:\operatorname{Fit}(b,k)\}.
+\]
+即使 $|K(b)|>1$，也不能立即推出数罪并罚；须先处理法条竞合、想象竞合以及法定结合、吸收等关系。最终处罚单位集合 $U$ 由规范选择规则确定，不应直接设为 $U=K(b)$。
+
+\paragraph{规则 G13.02：法条竞合中的特别与一般。}
+令 $V_k$ 为符合罪名 $k$ 的事实类型集合。在适用范围一致且不存在特别限制的前提下，若
+\[
+V_{k_s}\subsetneq V_{k_g},
+\]
+则特别条款 $k_s$ 与一般条款 $k_g$ 存在包容结构。特别法优先是规范选择规则，不是单由集合包含自动产生的数学定理；法条另有规定、特别条款不适用等情况，必须独立处理。教材用“$A$与$A+B$”帮助解释，但不能把所有金融犯罪与财产犯罪未经要件比较就统一写成严格子集。
+
+\paragraph{规则 G13.03：想象竞合保留一个行为和多罪评价。}
+在已经依法律评价确认只有一个行为 $b$、该行为触犯数个罪名且不按法条竞合处理时，可写为
+\[
+\begin{aligned}
+&\operatorname{OneAct}(b)\land|K(b)|\ge2\\
+&\quad\land\neg\operatorname{StatuteConcurrence}(K(b))\\
+&\quad\Longrightarrow_{\theta}\operatorname{IdealConcurrence}(b,K(b)).
+\end{aligned}
+\]
+择一重罪处罚是适用解释下的处理规则。这里“重”须比较适用法定刑和具体处罚条件，不能仅比较罪名在教材中的先后次序，也不能因此漏掉在定罪、量刑及民事救济上仍有意义的事实。
+
+\paragraph{规则 G13.04：继续犯不等于犯罪后果仍存在。}
+设 $\operatorname{ActContinuous}(b,[s,f])$ 为犯罪行为在时段内持续，$\operatorname{WrongState}(b,[s,f])$ 为不法状态同时持续。继续犯的教材模型要求二者结合。盗窃之后被害人仍然没有拿回财物，不表示盗窃实行行为因此一直持续；非法拘禁的控制行为持续，则可能构成继续犯。这个区分会影响参与时间和追诉时效起算，不只是名称差别。
+
+\subsection{数行为的特别处理}
+\paragraph{规则 G13.05：结合犯必须有明文依据。}
+对两个独立行为 $b_1,b_2$，原本分别符合 $k_1,k_2$，只有存在适用的法定结合规则 $J$ 时，才可按该规则归入一个结合后的处罚单位：
+\[
+\operatorname{Fit}(b_1,k_1)\land\operatorname{Fit}(b_2,k_2)
+\land\operatorname{StatutoryJoin}(J,k_1,k_2,k_*)
+\Longrightarrow\operatorname{UseJoin}(k_*).
+\]
+没有 $J$，不能因为两行为有目的、手段联系就自行吞并一罪。结果加重犯与结合犯也不能只因法定刑升格便混同；前者须审查加重结果的归责和主观要求，后者强调法律对相对独立犯罪的特别结合。
+
+\paragraph{规则 G13.06：事后行为是否另罪须检验新增侵害。}
+对本犯处置犯罪所得的事后行为 $b_2$，不能一律写成“不处罚”。须检查是否存在新增法益侵害、独立构成要件、特别立法以及对第三人的新侵害。所谓事后不可罚，是一个在特定范围内避免重复评价的规范结论，不是授权本犯以后实施任何妨害司法、诈骗或者其他犯罪。数行为、数罪名且无排除并罚规则时，才进入数罪并罚程序。
+
+\paragraph{本讲例子与检验。}
+甲将乙非法拘禁数日，丙在第二日才加入看守。其间拘禁行为仍在持续，丙可能参与同一继续犯罪。甲先前已经盗窃完成，丙后来才知情帮忙藏赃，则不能仅因财物还未归还而认定盗窃实行行为仍在持续；应另审查丙处理赃物的具体犯罪要件。两案行为终了时点不同，导致参与评价不同。
+
+\section{第十四讲\quad 刑罚的体系}
+
+\label{ref:lecture:14}
+
+\noindent\hyperref[lecture:14]{返回本讲的逐节推导与闭卷记忆}
+
+刑罚种类、量刑幅度、实际执行和非刑罚措施是不同类型的对象，不应在同一个无类型数轴上随意相加。
+
+\subsection{刑种与自由刑的边界}
+\paragraph{规则 G14.01：刑种是有限类别。}
+定义主刑类别与通常附加刑类别为
+\[
+\begin{aligned}
+P&=\{\text{管制},\text{拘役},\text{有期徒刑},\text{无期徒刑},\text{死刑}\},\\
+Q&=\{\text{罚金},\text{剥夺政治权利},\text{没收财产}\}.
+\end{aligned}
+\]
+第35条另规定对犯罪外国人可以独立或者附加适用驱逐出境。对一罪通常只能判一个主刑，不能将拘役与有期徒刑作为同一罪的两个主刑并列判处；附加刑则有可独立适用、可并用的法定情形。将“赔偿损失”放入 $Q$ 会发生类型错误，因为其不因此成为刑法规定的附加刑。
+
+\paragraph{规则 G14.02：普通单罪的期限约束。}
+统一以月计时，除法律规定的特殊变更与并罚情形外，期限 $T$ 满足
+\[
+\begin{aligned}
+\operatorname{ControlSentence}(T)&\Longrightarrow3\le T\le24,\\
+\operatorname{DetentionSentence}(T)&\Longrightarrow1\le T\le6,\\
+\operatorname{FixedTermSentence}(T)&\Longrightarrow6\le T\le180.
+\end{aligned}
+\]
+第三式明确保留第50、69条等法定例外，因此不能据此否认二十五年有期徒刑等特殊结果。普通管制、拘役的单罪上限也不能拿来替代并罚后的法定上限。
+
+\paragraph{规则 G14.03：先行羁押的折抵是刑种相关函数。}
+设 $d$ 为依法可折抵的先行羁押日数，$C_s(d)$ 为刑种 $s$ 的折抵日数：
+\[
+C_s(d)=
+\begin{cases}
+2d,&s=\text{管制},\\
+d,&s=\text{拘役或有期徒刑}.
+\end{cases}
+\]
+这是第41、44、47条的基本换算，不意味着一切限制自由措施都自动等同先行羁押。是否属于可折抵期间，应先确认法律依据；刑期起算日、实际执行日数和判决宣告日不能直接混用。
+
+\paragraph{规则 G14.04：死刑限制是资格否定，不是量刑折扣。}
+令 $t_b$ 为犯罪时、$t_j$ 为审判时。第49条可表示为
+\[
+\begin{aligned}
+&a(x,t_b)<18\lor\operatorname{PregnantAtTrial}(x,t_j)
+\Longrightarrow\neg\operatorname{DeathEligible}(x),\\
+&a(x,t_j)\ge75\land\neg\operatorname{CruelKill}(x,b)
+\Longrightarrow\neg\operatorname{DeathEligible}(x).
+\end{aligned}
+\]
+$\operatorname{CruelKill}$ 表示以特别残忍手段致人死亡，不是一般“案情严重”的替代记号。限制不适用死刑，并不等于不负刑事责任。未落入上述禁止范围，也不反向推出应判死刑，仍须审查罪行极其严重、适用罪名、证据及法定程序等条件。
+
+\paragraph{规则 G14.05：死缓的分支结果。}
+对依法判处死刑缓期二年执行者，记 $I$ 为缓期内故意犯罪，$M$ 为确有重大立功，$E$ 为故意犯罪情节恶劣且经最高人民法院核准执行死刑，$N$ 为对故意犯罪已经依法审查并确定不执行死刑。第50条的核心决策分支为
+\[
+\begin{aligned}
+\neg I\land\neg M&\Longrightarrow\text{二年期满依法减为无期徒刑},\\
+\neg I\land M&\Longrightarrow\text{二年期满依法减为二十五年有期徒刑},\\
+E&\Longrightarrow\text{依法执行死刑},\\
+I\land N&\Longrightarrow\text{死缓期间重新计算并依法备案}.
+\end{aligned}
+\]
+上列前两项在没有故意犯罪的范围内区分是否有重大立功，各分支不把故意犯罪与重大立功并存时的冲突藏进无条件公式。尚待核准或审查的状态不等于 $N$，更不能从尚未核准反推出已经依法决定不执行死刑；在决定前应保持待定。复合事实仍须结合第50条及相关解释判断，不宣称已穷尽所有特殊情形。死缓二年从判决确定之日起计算；不把判决前羁押直接折抵为死缓考验期。
+
+\subsection{财产刑、权利刑与其他措施}
+\paragraph{规则 G14.06：没收财产有所有权和生活费用边界。}
+设 $A_x$ 为犯罪分子个人财产，$A_f$ 为家属所有或应有财产，$N$ 为依法必须保留的本人及扶养家属生活费用对应财产。没收集合 $M$ 应满足
+\[
+M\subseteq A_x,\qquad M\cap A_f=\varnothing,\qquad
+\operatorname{AllConfiscation}\Longrightarrow M\cap N=\varnothing.
+\]
+违法所得追缴与合法财产没收不是同一个制度。对合法债务、被害人民事赔偿的处理也应依法确定先后，不得将全部资产简单平均分给国家、债权人与被害人。
+
+\paragraph{规则 G14.07：剥夺政治权利有普通与特别期限。}
+普通期限为一年以上五年以下；判处管制并附加剥夺政治权利的，期限与管制相等并同时执行。判处死刑、无期徒刑者应当剥夺政治权利终身；死缓或无期依法减为有期徒刑时，附加剥夺政治权利依法改为三年以上十年以下。可分别记为
+\[
+T_Q\in[1,5],\quad T_Q=T_{\mathrm{control}},\quad
+T_Q=\operatorname{Lifetime}(x),\quad T_Q\in[3,10],
+\]
+这里 $\operatorname{Lifetime}(x)$ 是至生命终止的法定权利状态，不是数学上的无穷时长，不能与有限年数相加；四个表达的适用前提不同，不能同时无条件施加于同一案件。权利刑的起算和主刑执行期间的效力另依第58条处理。
+
+\paragraph{规则 G14.08：罚金不履行与确实困难分开。}
+期限届满不缴纳，可进入强制缴纳和随时追缴；因不能抗拒的灾祸等原因确有困难，经人民法院裁定，才存在延期、酌减、免除等法定处理。于是
+\[
+\operatorname{NoPayment}(x)\ \not\Longrightarrow\
+\operatorname{UnableToPay}(x),
+\]
+反向也不能从没有发现财产推导罚金义务已自动消灭。金额判断依犯罪情节及具体罪名规定，不是按任意固定比例从自由刑推算。
+
+\paragraph{规则 G14.09：从业禁止与财物追缴的类型。}
+第37条之一的从业禁止以利用职业便利或者违反特定职业义务实施犯罪并被判刑为前提，法院还须根据犯罪情况与预防再犯罪需要决定，普通期间为三年至五年，从刑罚执行完毕或假释之日起算，其他法律、行政法规有特别限制的从其规定。第64条的追缴、退赔、返还被害人财产与没收违禁品、犯罪所用本人财物，分别针对不同财产集合。不能把它们统称为“没收财产刑”，也不能用同一个金额重复计算同一财物。
+
+\paragraph{本讲例子与检验。}
+法院判甲管制六个月，依法认定可折抵羁押十日，则基本折抵量为二十日；若判的是拘役，十日羁押的基本折抵量是十日。若甲个人有合法存款、家庭共有房屋份额和犯罪所得，必须先分清所有权及财产性质，再分别适用没收、返还、追缴，不能把三类财产直接相加认定为全部可没收个人财产。
+
+\section{第十五讲\quad 刑罚的裁量}
+
+\label{ref:lecture:15}
+
+\noindent\hyperref[lecture:15]{返回本讲的逐节推导与闭卷记忆}
+
+本讲的数学对象主要是适用法定刑范围、从宽从重条件、数罪刑期合并的许可集合。法院裁量一般给出一个合法选择集合，而非由少量变量唯一计算出来的刑期。
+
+\subsection{从轻、减轻与免除}
+\paragraph{规则 G15.01：从轻仍在适用法定刑幅度内。}
+设某罪已经确定适用的刑格为 $I_j=[L_j,U_j]$，判处刑期为 $T$。从轻、从重均要求 $T\in I_j$；法律没有仅凭这两个词提供一个统一的数值分界点。不能自行规定“从轻就是 $T$ 小于区间中点”，除非另有适用的量刑规范并已说明。减轻原则上进入法定刑以下；有多个刑格时，依法进入下一个量刑幅度，而不是任意向下跨越多个刑格。
+
+\paragraph{规则 G15.02：减轻与免除不改写有罪判断。}
+第63条第2款的特别减轻须有案件特殊情况并经最高人民法院核准；不能用一般酌情同情代替。免除刑罚处罚以犯罪已成立为前提，不等于无罪判决，也不当然免去非刑罚措施与民事责任。故
+\[
+\operatorname{ExemptPenalty}(x,k)\ \not\Longrightarrow\
+\neg\operatorname{Guilty}(x,k).
+\]
+多个从宽或从重情节同时存在时，应按照各自对象和法律效果综合处理，不可未经规范依据就把所有百分比简单连乘。
+
+\subsection{累犯、自首与立功}
+\paragraph{规则 G15.03：一般累犯的合取条件。}
+对前罪 $k_1$、后罪 $k_2$，设 $t_0$ 为前罪主刑执行完毕或者赦免日，$t_2$ 为后罪发生日，$\operatorname{TermPlus}(k)$ 为有期徒刑以上的相应刑度。一般累犯条件包括
+\[
+\begin{aligned}
+&\operatorname{GeneralRecid}(x)\;:\!\!\iff\\
+&\operatorname{Intentional}(k_1)\land\operatorname{Intentional}(k_2)\\
+&\land a(x,t_1)\ge18\land a(x,t_2)\ge18\\
+&\land\operatorname{SentencedTermPlus}(k_1)
+\land\operatorname{ShouldTermPlus}(k_2)\\
+&\land\operatorname{CompletedOrPardoned}(k_1,t_0)
+\land 0<t_2-t_0\le5\text{年}.
+\end{aligned}
+\]
+这是按教材所归纳的法条及解释条件建立的工作定义。假释成功的，五年起点依第65条从假释期满起算。前罪只是拘役、后罪依法只能判拘役，或者前后某罪是过失犯罪，都不能省略相关限制。
+
+\paragraph{规则 G15.04：特殊累犯不套用一般累犯的全部数值门槛。}
+设
+\[
+K_s=\{\text{危害国家安全犯罪},\text{恐怖活动犯罪},
+\text{黑社会性质的组织犯罪}\}.
+\]
+前罪属于 $K_s$、其刑罚执行完毕或赦免后，在任何时候再犯 $K_s$ 中任一类罪，进入第66条规则，不要求前后必须是同一具体罪名，也不受五年期限、有期徒刑以上门槛的相同限制。原书同时注明特殊累犯年龄限制的多数观点，形式化必须保留其解释前提，不把法条未明写的文字直接伪装为引文。累犯的从重后果为应当；缓刑和假释的禁止另按第74、81条处理。
+
+\paragraph{规则 G15.05：一般自首由投案与供述组成。}
+设 $V(x,k)$ 为自动投案，$T(x,k)$ 为如实供述本人相关罪行，则第67条第1款的基本模型为
+\[
+\operatorname{Surrender}(x,k)\;:\!\!\iff V(x,k)\land T(x,k).
+\]
+自动投案须依据具体司法解释审查投案方式和时点，不能把“被抓后配合”一律改成自动投案。供述对象是本人罪行；共同犯罪中，对与本人有关的共同事实，应依解释核查供述完整性。自首可以从轻或者减轻；犯罪较轻的，可以免除处罚，均不是一有自首就必然免刑。\footnote{最高人民法院《关于处理自首和立功若干具体问题的意见》，法发〔2010〕60号，\url{https://www.court.gov.cn/fabu/xiangqing/2484.html}。本节采用其中自动投案、如实供述、立功线索来源等限制，未把所有司法解释细项逐一形式化。}
+
+\paragraph{规则 G15.06：准自首、坦白与立功的对象不同。}
+准自首要求处于法定强制措施、被告或服刑等状态，如实供述司法机关尚未掌握的本人其他罪行；坦白则适用第67条第3款，不能仅因如实供述就统称自首。普通坦白可以从轻；因如实供述避免特别严重后果，可以减轻。揭发他人犯罪、提供重要线索等立功须查证及证明具体作用，不能把履行供述本人共同犯罪事实的义务全部算作额外立功。
+
+\paragraph{规则 G15.07：立功的查证与来源限制。}
+设 $R(x,q)$ 为揭发或提供线索，$C(q)$ 为查证属实，$E(q)$ 为符合法定立功类型和作用要求，$S(q)$ 为线索来源合法、可归于本人贡献。核心结构为
+\[
+R(x,q)\land C(q)\land E(q)\land S(q)
+\Longrightarrow\operatorname{Merit}(x).
+\]
+从非法手段或他人代为安排中取得的某些线索，不能只看“确实破案”就忽略来源规定。一般立功可以从轻或减轻，重大立功可以减轻或免除。到案时间、协助抓捕的具体行为、同案犯其他独立罪行等细分情形，仍须对照司法解释。
+
+\subsection{数罪并罚：输出合法区间而非唯一数值}
+\paragraph{规则 G15.08：同种有期徒刑的合并边界。}
+设判决宣告前数罪分别判处有期徒刑 $t_1,\ldots,t_n$，统一以年计，$S=\sum_i t_i$，$m=\max_i t_i$，则第69条的上限函数为
+\[
+C(S)=\begin{cases}20,&S<35,\\25,&S\ge35.\end{cases}
+\]
+法条的基本许可边界为
+\[
+T\in\mathcal{C}(t_1,\ldots,t_n)
+\subseteq [m,\min\{S,C(S)\}],
+\]
+其中 $\mathcal{C}$ 表示结合具体裁量条件的合法合并结果集合；不声称区间每一点都必然适当。总和恰好三十五年，适用二十五年上限分支，不能误归不满三十五年。管制并罚最高三年，拘役并罚最高一年，分别另设上限，不能用二十年、二十五年公式处理。
+
+\paragraph{规则 G15.09：异种主刑与附加刑分别处理。}
+数罪中有有期徒刑与拘役的，执行有期徒刑；有期徒刑与管制，或拘役与管制并存的，前者执行完毕后，管制仍须执行。主刑中最高为死刑、无期徒刑等情形，另依相应吸收规则处理，不能把无期徒刑任意折算成某个有限年数再求和。附加刑仍须执行，同种合并、异种分别执行；主刑吸收不当然吞掉全部附加刑。
+
+\paragraph{规则 G15.10：漏罪先并后减，新罪先减后并。}
+设原判应执行有期徒刑为 $A$，已执行 $u$，后发现漏罪应判 $B$，另犯新罪应判 $N$。用 $\mathcal{C}$ 表示依法合并集合，则剩余刑期集合为
+\[
+\begin{aligned}
+\mathcal{R}_{\mathrm{old}}&=\{c-u:c\in\mathcal{C}(A,B),\ c\ge u\},\\
+\mathcal{R}_{\mathrm{new}}&=\mathcal{C}(A-u,N).
+\end{aligned}
+\]
+前一式对应第70条，后一式对应第71条。若既有漏罪又有新罪，应先依法解决漏罪并扣减已执行部分，再处理新罪。两种运算一般不交换次序。新罪情形的尚需执行刑期受本次合并上限约束，但加上过去已经执行的部分，终身实际执行总日数可能超过该次合并上限，不能混为一个量。
+
+\subsection{缓刑：先排除禁止，再审查积极条件}
+\paragraph{规则 G15.11：缓刑资格是多条件合取。}
+设 $B(x)$ 为被判拘役或三年以下有期徒刑，$L(x)$ 为犯罪情节较轻，$R(x)$ 为悔罪表现，$D(x)$ 为没有再犯罪危险，$C(x)$ 为对社区没有重大不良影响，$X(x)$ 为累犯或犯罪集团首要分子。定义
+\[
+\operatorname{ProbationGate}(x)\;:\!\!\iff
+B(x)\land L(x)\land R(x)\land D(x)\land C(x)\land\neg X(x).
+\]
+资格成立后通常为可以宣告；属于第72条所列未成年人、孕妇、已满七十五周岁者，在同样满足全部条件且无禁止的范围内应当宣告。不能从某一特殊身份单独推出必须缓刑，也不能用某罪法定最高刑低于三年来替代实际所判刑罚条件。
+
+\paragraph{规则 G15.12：考验期与撤销条件。}
+以月计，原判拘役期限为 $T$，缓刑考验期 $P$ 须满足 $\max\{T,2\}\le P\le12$；原判有期徒刑期限为 $T$，须满足 $\max\{T,12\}\le P\le60$。考验期从判决确定之日起算。期内犯新罪，或者期内发现判决宣告以前的漏罪，依法撤销并罚；严重违反规定或禁止令，依法撤销执行原判刑罚。期满成功的法律后果是原判刑罚不再执行，而非宣称原判刑罚已经实际执行完毕；附加刑仍须依法执行。
+
+\paragraph{本讲例子与检验。}
+甲三罪分别判十年、十三年、十五年有期徒刑，则 $S=38$、$m=15$，基本边界为十五年至二十五年，仍须法院依法决定具体执行刑期。若原判七年，执行三年后发现漏罪应判十一年，须先把七年与十一年依法合并，再扣三年；若执行三年后新犯应判十一年之罪，则先取原判剩余四年，再与十一年合并。单纯把两个算式写成 $7+11-3$，会掩盖法定上限与裁量顺序，通常不正确。
+
+\section{第十六讲\quad 刑罚的执行和消灭}
+
+\label{ref:lecture:16}
+
+\noindent\hyperref[lecture:16]{返回本讲的逐节推导与闭卷记忆}
+
+本讲区分判处刑期、实际执行下限、考验期间以及追诉期限四个时间变量。它们的起点和法律后果不同，不能共用一个未经定义的“年数”。
+
+\subsection{减刑的资格、幅度和程序}
+\paragraph{规则 G16.01：可以减刑与应当减刑。}
+第78条面向被判管制、拘役、有期徒刑、无期徒刑的罪犯。符合法定执行表现条件，确有悔改或立功表现的，可以减刑；具有该条列举的重大立功表现之一的，应当减刑。可表示为
+\[
+\begin{aligned}
+\operatorname{EligibleSentence}(x)\land\operatorname{OrdinaryMeritReq}(x)
+&\Longrightarrow\mathsf{May}(\operatorname{Commute}(x)),\\
+\operatorname{EligibleSentence}(x)\land\operatorname{MajorMerit78}(x)
+&\Longrightarrow\mathsf{Must}(\operatorname{Commute}(x)).
+\end{aligned}
+\]
+形式上的许可或义务仍受实际执行下限与法定程序约束。不能因为满足表现条件，就由监狱自行宣布任意减刑；第79条要求执行机关提出建议、法院依法审理裁定。
+
+\paragraph{规则 G16.02：实际执行下限分刑种规定。}
+设 $E$ 为法律意义上的实际执行期间，$T$ 为原判期间。普通管制、拘役、有期徒刑依法减刑后满足 $E\ge T/2$；无期徒刑依法减刑后满足 $E\ge13$ 年。对依第50条第2款限制减刑的死缓犯，缓期满后减为无期徒刑的，下限二十五年；减为二十五年有期徒刑的，下限二十年，其起算、折算须依相应规则处理。普通死缓、终身监禁及其他特别限制，不能未经区分全部套用 $E\ge T/2$。
+
+\subsection{假释是附条件提前释放}
+\paragraph{规则 G16.03：刑期门槛与再犯罪风险分开。}
+普通假释条件可分为刑种与期间门槛 $G_T(x)$、法定执行表现 $G_B(x)$、没有再犯罪危险 $G_R(x)$、无禁止 $\neg X_P(x)$ 及法定程序 $G_P(x)$。其中
+\[
+G_T(x)\;:\!\!\iff
+\bigl(\operatorname{FixedTerm}(x,T)\land E\ge T/2\bigr)
+\lor\bigl(\operatorname{Life}(x)\land E\ge13\text{年}\bigr).
+\]
+在综合假释后社区影响等因素后，
+\[
+G_T(x)\land G_B(x)\land G_R(x)\land\neg X_P(x)\land G_P(x)
+\Longrightarrow\mathsf{May}(\operatorname{Parole}(x)).
+\]
+达到一半刑期仅是门槛之一，不是获准假释的充分条件。特殊情况经最高人民法院核准可以不受上述执行刑期限制，这项例外也不等于所有假释条件被取消。
+
+\paragraph{规则 G16.04：禁止假释的两组对象。}
+$X_P(x)$ 包括累犯，以及因故意杀人、强奸、抢劫、绑架、放火、爆炸、投放危险物质或者有组织的暴力性犯罪，被判十年以上有期徒刑、无期徒刑的人。必须保留后一组的罪类与刑度合取。反之，非禁止对象不等于当然获假释。管制、拘役不属于第81条普通假释的对象，也不能因刑期短就直接类推适用。
+
+\paragraph{规则 G16.05：考验期与成功后果。}
+设 $R$ 为有期徒刑未执行部分，假释考验期为 $P$，则
+\[
+P=\begin{cases}R,&\text{有期徒刑},\\10\text{年},&\text{无期徒刑}.\end{cases}
+\]
+考验期从假释之日起算。在期间依法接受社区矫正且没有第86条情形，期满视为原判刑罚执行完毕。缓刑成功是“不再执行”，假释成功是“认为已经执行完毕”，两种法律拟制不同，因此对随后的一般累犯判断不能等同处理。
+
+\paragraph{规则 G16.06：撤销假释绑定事件时点。}
+设 $[p_0,p_1]$ 为假释考验期间。新罪发生于该期间，依法撤销，按第71条先减后并；期间发现原判以前漏罪，依法撤销，按第70条先并后减。可写为
+\[
+\begin{aligned}
+\operatorname{NewCrimeAt}(x,t)\land t\in[p_0,p_1]
+&\Longrightarrow\mathsf{Must}(\operatorname{RevokeParole}(x)),\\
+\operatorname{FindOldCrimeAt}(x,t)\land t\in[p_0,p_1]
+&\Longrightarrow\mathsf{Must}(\operatorname{RevokeParole}(x)).
+\end{aligned}
+\]
+第一式关注犯罪发生时间，不能与发现时间混淆；第二式对漏罪明确使用发现时间。违反法定监督规定但尚未构成新罪的，依第86条及法定程序处理，不能自行把社区矫正期间全部换成已执行的监禁日数抵减剩余刑罚。
+
+\subsection{追诉时效：上限类型、起算与例外}
+\paragraph{规则 G16.07：时效按适用法定最高刑分段。}
+设 $M(k,c)$ 为罪名 $k$ 在具体情节 $c$ 下适用刑格的法定最高刑，而非最后实际判刑。以年计，基本追诉期限为
+\[
+\tau(M)=
+\begin{cases}
+5,&M<5\text{年有期徒刑},\\
+10,&5\text{年}\le M<10\text{年有期徒刑},\\
+15,&M\ge10\text{年有期徒刑且为有限刑},\\
+20,&M\text{为无期徒刑或死刑}.
+\end{cases}
+\]
+特别是最高刑恰为五年进入十年时效分支，恰为十年进入十五年分支。不能只看整个罪名最重档次，也不能只看被告最终被判几年而倒算。
+
+\paragraph{规则 G16.08：普通届满与核准追诉不同。}
+设 $s$ 为依法确定的起算日，$t$ 为拟追诉日。若没有法定延长、重新起算或核准情形，$t-s\ge\tau$ 则进入不再追诉的规则。法定最高刑为无期徒刑、死刑，经过二十年后认为必须追诉的，须报最高人民检察院核准；不能把这项核准直接推广到所有五年、十年、十五年期限，也不能由普通办案机关自行替代核准。
+
+\paragraph{规则 G16.09：不受期限限制要求法定事实。}
+第88条的两个分支为：立案侦查或法院受理后逃避侦查、审判；以及被害人在期限内提出控告，法定机关应当立案却未立案。记作
+\[
+\begin{aligned}
+X_1&=\operatorname{FiledOrAccepted}\land\operatorname{EvadeAfter},\\
+X_2&=\operatorname{TimelyComplaint}\land\operatorname{ShouldFile}\land\operatorname{NotFiled},\\
+X_1\lor X_2&\Longrightarrow\operatorname{NoLimitUnder88}.
+\end{aligned}
+\]
+仅有“多年没抓到人”不必然等于逃避侦查；仅有一般报案也不省略依法应立案等条件。旧行为适用何时版本的时效规范，仍须结合时间效力规则，不可只凭今天的条文回填所有历史案件。
+
+\paragraph{规则 G16.10：继续、连续与再犯罪的起算。}
+普通犯罪从犯罪之日起算；连续或继续状态从犯罪行为终了之日起算。设 $s_0$ 为原起点，$t_2$ 为时效内另犯新罪的时点，若符合第89条，则前罪时效起点重设为 $s_1=t_2$。这属于重新计算，不能把新罪法定最高刑直接替换前罪最高刑。若有多次重新起算，应按时间顺序逐次检验当时前罪时效是否尚未届满，不能对已经届满的期限任意“复活”。
+
+\paragraph{本讲例子与检验。}
+某犯罪适用刑格的最高刑恰为十年有期徒刑，其基本时效是十五年。行为2000年终了，假定无第88条事实，2008年又犯罪，且满足重新起算条件，则前罪从2008年重新计算十五年；不是从2000年继续只余七年，也不是把两罪时效直接相加。若题目只有“至今未查明真凶”，不能据此直接判定不受时效限制，必须继续核查立案、逃避侦查、及时控告及应立未立等具体条件。
+
+
+% 第17—19讲；本片段由专题代理撰写，不含导言区。
+
+\section{第十七讲\quad 分论概说}
+
+\label{ref:lecture:17}
+
+\noindent\hyperref[lecture:17]{返回本讲的逐节推导与闭卷记忆}
+
+本讲及后两讲是依据原书核心结构编写的\textbf{形式化释义}，不逐字代替原书，也未声称将原书全部案例、脚注、学说分歧逐一完成机械证明。已经直接查阅分论概说、主要人身犯罪及主要财产犯罪的原页；扫描图不清的细节不作为新规则的唯一依据。法条以核对的《刑法》及所列司法解释为规范依据，教材解释与本册建模约定另外标明。\footnote{《中华人民共和国刑法》官方整合文本（标示包括修正案十二）：\url{https://fgk.chinatax.gov.cn/zcfgk/c100009/c5212248/content.html}。本部分核对日期为2026年11月4日。}
+
+\subsection{对象、构成与定罪必须分层}
+本部分使用人物论域 $P$、行为论域 $A$、有体财物论域 $M$、财产性利益论域 $I$、时间论域 $T$、具体罪名集合 $C$。人物记为 $x,y,z$，行为记为 $a,b$，财物记为 $m$，财产性利益记为 $i$，时间记为 $t$。$\operatorname{Agent}(a)=x$ 表示行为人，$\operatorname{Time}(a)=t$ 表示行为时间。所有规则都隐含法域、法律版本和证据认定参数，不在每个公式中重复。
+
+\textbf{变量约定：}每条规则都是带类型参数的规则模式。$E_c(a,\ldots)$ 是带固定案件环境参数 $\xi$ 的 $E_c(a,\ldots;\xi)$ 的缩写；$\xi$ 明确指定本次审查中的被害人、对象、场所、单位和解释方案，不能把右边出现的角色参数任意全称化。需要证明某种对象存在时，须另用存在量词。$E_c$ 内出现 $x$ 时，固定为 $x=\operatorname{Agent}(a)$，不另指任意人物；多人过程须先拆为各人行为，或以明确的共同参与关系表示。$\langle a,b\rangle$ 表示先后衔接的行为过程，属于过程类型 $A^*$，不是两个行为的集合并。结果时间是同一被害人相应结果的局部存在见证；$\operatorname{Attributable}(a,y,R)$ 同时绑定行为、被害人与结果。省写只适用于同一段已指定的实例，不得跨案件任意换人换物。
+
+\paragraph{规则 PP17-01：具体罪名的成立接口。}
+\mbox{}\par
+对具体罪名 $c$，用 $E_c(a)$ 表示本部分已列出的分则特殊构成条件，$G_c(x,a)$ 表示还需满足的总则条件，包括刑事责任、主观归责、地域与时间效力、不存在阻却违法或责任的事由、适用法定出罪规则等。于是仅建立如下审查接口：
+\[
+\begin{aligned}
+E_c(a)\land G_c(x,a)&\Longrightarrow\operatorname{Offence}(x,a,c),\\
+\operatorname{Offence}(x,a,c)&\Longrightarrow E_c(a).
+\end{aligned}
+\]
+后一行仅对已选定的\emph{同一解释方案和同一犯罪形态}成立。未遂、共犯或法律拟制会改变 $E_c$ 的结构，不能把既遂正犯的条件强加给所有犯罪形态。后文出现“进入某罪审查”时，只确认 $E_c$ 的一部分或全部，不跳过 $G_c$。例如“甲拿走他人物品”不能独立推出盗窃罪，仍需占有转移、非法占有目的及入罪条件等。
+
+\paragraph{规则 PP17-02：类罪名与具体罪名不同。}
+\mbox{}\par
+设 $\operatorname{Class}:C\to\mathcal K$ 将具体罪名映射到类罪名。对于类名 $k$，只能写
+\[
+\operatorname{OffenceInClass}(x,a,k)
+\Longleftrightarrow
+\exists c\in C\,[\operatorname{Class}(c)=k\land\operatorname{Offence}(x,a,c)].
+\]
+“侵犯财产罪”是一个类，不是任意案件均可直接使用的具体判决罪名。把类罪名形式化为集合，有助于避免从“侵害财产”直接跳到“诈骗”等具体评价。
+
+\subsection{罪名、罪状与规范依赖}
+\paragraph{规则 PP17-03：选择性罪名是一罪内部的析取结构。}
+\mbox{}\par
+对某一法条规定的选择性罪名，设 $B_1,\ldots,B_r$ 为可选择行为，$O_1,\ldots,O_s$ 为可选择对象。其分则入口可以表示为
+\[
+E_c(a)=\Bigl(\bigvee_{j=1}^{r}B_j(a)\Bigr)
+\land\Bigl(\bigvee_{k=1}^{s}O_k(a)\Bigr)\land Q_c(a),
+\]
+其中 $Q_c$ 保留该法条其余要求。同一犯罪过程兼具多个选项，不能仅因析取式中有两个真项就计算成两个罪名。原书以拐卖妇女、儿童罪说明：既拐卖妇女又拐卖儿童，首先是同一选择性罪名的多个对象，并非当然对妇女、儿童分别定两罪并罚。行为次数、独立犯罪过程等仍须在罪数层面另行审查。
+
+上式仅适用于法条确实允许行为选项与对象选项自由组合的情形。若只有部分配对合法，应以法定许可配对集合 $\Lambda_c\subseteq\{1,\ldots,r\}\times\{1,\ldots,s\}$ 改写为 $\bigvee_{(j,k)\in\Lambda_c}[B_j(a)\land O_k(a)]\land Q_c(a)$，不得自行扩大交叉组合。
+
+\paragraph{规则 PP17-04：概括罪名的子类型不必能够拆成判决罪名。}
+\mbox{}\par
+若 $H_1,\ldots,H_n$ 是同一概括罪名的行为类型，则
+\[
+\exists j\,H_j(a)\Longrightarrow E_c(a)\text{ 的相应类型条件满足},
+\]
+但 $H_j$ 不是由此新创的另一个独立罪名 $c_j$。
+例如信用卡诈骗中的不同实行类型，不因分类而生成法律并未规定的“恶意透支罪”。同一条文中的多个实行类型均出现时，必须先确定它们是否属于同一犯罪过程以及有无特别罪数规定。
+
+\paragraph{规则 PP17-05：四种罪状对应四种定义方式。}
+\mbox{}\par
+简单罪状不能理解成构成要件为空；叙明罪状直接列出较多行为条件；引证罪状调用刑法内部条款；空白罪状另依赖刑法以外的规范。可用下表建立区别：
+\begin{center}
+\begin{tabular}{p{.17\linewidth}p{.70\linewidth}}
+\hline
+罪状类型 & 形式化时必须补足的结构\\ \hline
+简单罪状 & $E_c=\operatorname{Interpret}(\text{法定简语},v,t)$，解释后仍须具体化。\\
+叙明罪状 & $E_c=P_1\land\cdots\land P_n$，保留法条的“且”“或”和限定语。\\
+引证罪状 & $E_c=\operatorname{Call}(r,v,t)\land Q_c$，$r$ 是被引刑法条款。\\
+空白罪状 & $E_c=\operatorname{Violation}(N_{v,t})\land Q_c$，$N$ 是有权限且适用的前置规范。\\ \hline
+\end{tabular}
+\end{center}
+空白罪状不等于“违反行政规定即可犯罪”。必须同时满足刑法本身对数量、后果、故意或过失、主体等的规定，且不能用无权设定犯罪的文件扩张刑罚范围。
+
+\subsection{注意规定与法律拟制}
+\paragraph{规则 PP17-06：注意规定是既有可推导结论的重申。}
+\mbox{}\par
+令 $\Gamma$ 是除待检条款 $r$ 之外的规范与解释前提，$S(a)$ 是该条针对的事实情形。将其作为注意规定的工作检验为
+\[
+\Gamma\vdash S(a)\Rightarrow\operatorname{Apply}(c,a),
+\qquad
+\Gamma\cup\{r\}\vdash S(a)\Rightarrow\operatorname{Apply}(c,a).
+\]
+两式结论相同，表示 $r$ 没有新增此种评价所必需的特殊前提。这里的“删除检验”必须固定其他解释规则，不能凭个人直觉推断。原书以利用计算机实施盗窃、诈骗等依照相应罪名定罪为例，强调计算机只是手段，并不当然成立一个额外罪名。
+
+\paragraph{规则 PP17-07：法律拟制需要独立授权及有限适用域。}
+\mbox{}\par
+对本来不符合通常 $E_c$ 的事实，法律另设 $F_r$，指定按 $c$ 处理：
+\[
+\Gamma\nvdash F_r(a)\Rightarrow E_c(a),
+\qquad
+r:\ F_r(a)\Rightarrow\operatorname{TreatAs}(c,a).
+\]
+其含义是法律给出处理规则，并不宣称行为在事实属性上与通常 $c$ 相同。规则的适用域必须完整保留，不能由 $F_r(a)$ 类推到“与它相似”的 $F'_r(a)$。原书讨论刑法第269条时，先行行为、当场性、暴力或者暴力威胁、特定目的均是拟制适用条件，不可只保留“盗窃后打人”五个字。
+
+\paragraph{规则 PP17-08：规范竞争与处罚不能重复计数。}
+\mbox{}\par
+设候选罪集合为 $S_a=\{c:E_c(a)\land G_c(x,a)\}$。适用何种罪数规则必须由另一个函数表示：
+\[
+\begin{gathered}
+\operatorname{FinalCharges}(a)
+=\operatorname{Resolve}(S_a,\operatorname{Acts}(a),\operatorname{SpecialRules}),\\
+\#S_a\text{ 不当然等于 }\#\operatorname{FinalCharges}(a).
+\end{gathered}
+\]
+两个集合的基数可能相同也可能不同。一个行为符合两个罪的评价，不等于必定并罚；多个独立行为也可能因结合犯或法律规定而只按一罪评价。严格建模须保留候选集和最终罪名集，不能在最初识别时删去所有竞合信息。
+
+\paragraph{示例：选择性罪名中的对象认识错误。}
+\mbox{}\par
+甲以出卖儿童为目的，将实际上已满十四周岁的女性误认为儿童而实施拐卖。令 $W(y)$ 表示妇女，$Ch(y)$ 表示儿童，$\widehat{Ch}_x(y)$ 表示甲主观认为是儿童。客观是 $W(y)$，主观是 $\widehat{Ch}_x(y)$。由于本条选择性对象是 $W\lor Ch$，在原书所采用的同一构成要件范围内的对象错误评价下，不能仅因 $W$ 与 $Ch$ 不同，就直接推出该选择性罪名故意消失；但主体责任、出卖目的和拐卖实行行为仍须分别证明。这是带有解释前提的推导，不是由命题逻辑单独证明的法律结论。
+
+\section{第十八讲\quad 人身犯罪}
+
+\label{ref:lecture:18}
+
+\noindent\hyperref[lecture:18]{返回本讲的逐节推导与闭卷记忆}
+
+\subsection{生命、身体与结果归责}
+\paragraph{规则 PP18-01：故意杀人既遂的核心条件。}
+\mbox{}\par
+$\operatorname{LifeAttack}(a,y)$ 表示非法剥夺他人生命的实行行为；$\operatorname{Death}(y,t)$ 表示死亡；$\operatorname{RiskRealized}(a,y)$ 表示死亡实现了行为制造且可归责的生命风险。杀人故意包含希望或放任死亡，不等于单纯认识到任何危险。核心既遂模型为
+\[
+\begin{aligned}
+E_{232}^{\rm comp}(a,y)={}&\operatorname{LifeAttack}(a,y)
+\land\operatorname{IntentDeath}(x,a,y)\\
+&\land\exists t_1\ge\operatorname{Time}(a)
+[\operatorname{Death}(y,t_1)\land\operatorname{RiskRealized}(a,y)].
+\end{aligned}
+\]
+还须接入 $G_{232}$。未死亡不等于没有杀人犯罪，可能成立未遂；发生死亡也不等于当然成立故意杀人，仍要证明主观和结果归责。原书“安乐死”例提示：患者同意不使主动非法剥夺生命当然合法。医疗终止、拒绝治疗、临终照护等的合法性仍须依具体规范判断，不能全塞入“安乐死”一个谓词。
+
+\paragraph{规则 PP18-02：故意伤害与过失致人死亡不能只看结果。}
+\mbox{}\par
+令 $H(a,y)$ 为伤害身体健康的行为，$J_I$、$J_D$ 分别为伤害故意、死亡故意，$N_D$ 为对死亡的过失，$R_H$ 为达到该罪要求的伤害后果。典型区分为
+\[
+\begin{aligned}
+H\land J_I\land R_H&\Rightarrow\text{故意伤害基本或相应结果层次审查},\\
+H\land J_I\land\neg J_D\land N_D\land\operatorname{Death}
+&\Rightarrow\text{伤害致死及因果归责审查},\\
+\neg J_I\land\neg J_D\land N_D\land\operatorname{Death}
+&\Rightarrow\text{过失致人死亡或特别过失罪审查}.
+\end{aligned}
+\]
+轻微伤、轻伤、重伤是需依鉴定与规范解释确定的事实，不以本册任意分数代替。存在特殊业务过失罪时，应先处理特别规定，不能一律适用刑法第233条。
+
+\paragraph{规则 PP18-03：承诺的有效范围与侵害法益有关。}
+\mbox{}\par
+对承诺 $s$，定义 $\operatorname{ValidConsent}(s,y,L)$ 须满足法益 $L$ 具有可处分性、本人有相应能力、信息与意思真实、承诺在行为时存在、行为未超出范围及不存在规范排除等条件。于是
+\[
+\begin{gathered}
+\operatorname{Consent}(s,y,\text{死亡})
+\not\Rightarrow\operatorname{ValidConsent}(s,y,\text{生命}),\\
+\operatorname{ValidConsent}(s,y,L)\land\operatorname{Within}(a,s)\\
+\Rightarrow\text{进入承诺阻却违法审查}.
+\end{gathered}
+\]
+同意发生一种身体接触，不等于同意任何强度和结果；对轻微身体伤害的处分与对重伤、死亡的处分不能无条件并为一类。原书对不同行为方式、目的及严重程度分别评价，形式化也应保留这些参数。
+
+\paragraph{规则 PP18-04：自杀、自伤与支配他人不能混同。}
+\mbox{}\par
+设 $\operatorname{SelfAct}(y,a)$ 表示由本人自主决定并实行，$\operatorname{Autonomous}(y,a)$ 表示不存在足以破坏自主性的胁迫、重大欺骗、责任能力障碍等。若 $x$ 的支配使这些条件不成立，则不能仅因最后动作由 $y$ 完成，排除 $x$ 的杀人、伤害间接正犯评价：
+\[
+\begin{gathered}
+\operatorname{Control}(x,y,a)\land\neg\operatorname{Autonomous}(y,a)
+\land\operatorname{IntentDeath}(x,a,y)\\
+\Rightarrow\text{间接实行的杀人归责审查}.
+\end{gathered}
+\]
+相反，帮助自主自杀是否可罚，不能从前式的逆命题推出；尚涉及独立帮助行为、作为义务、后续救助义务及具体法律评价。原书把欺骗、强迫与普通帮助区分，本册不将它们压成同一个“参与自杀”。
+
+\paragraph{规则 PP18-05：遗弃与不作为杀人存在重叠可能。}
+\mbox{}\par
+$D(x,y)$ 为法定扶养义务，$A_b(x,a)$ 为有履行能力，$\operatorname{Abandon}(a,y)$ 为拒绝扶养且使被害人陷入法条关注的处境，$S(a)$ 为情节恶劣。则 $D\land A_b\land\operatorname{Abandon}\land S$ 形成遗弃罪的核心入口。若另有对生命危险的保证人义务、能够救助却不救助、死亡故意及结果归责，应同时审查不作为杀人：
+\[
+E_{261}(a)\land E_{232}^{\rm omission}(a)
+\Rightarrow\operatorname{Resolve}(\{261,232\},a).
+\]
+两罪不是简单互斥。不能证明杀人故意，并不自动证明遗弃罪；遗弃罪自己的扶养义务、能力和情节条件仍须证明。
+
+\subsection{性自主、未成年人特别保护与职责身份}
+\paragraph{规则 PP18-06：一般强奸的强制与性行为必须连接。}
+\mbox{}\par
+对刑法第236条的一般情形，令 $F(y)$ 为女性，$Sx(a,y)$ 为该条解释意义上的性交实行行为，$C(a,y)$ 为暴力、胁迫或其他足以违背其意志的手段，$\operatorname{Link}(C,Sx)$ 为强制手段与性交的功能联系。核心入口为
+\[
+E_{236}^{\rm ordinary}(a,y)
+=F(y)\land Sx(a,y)\land C(a,y)\land\operatorname{Link}(C,Sx)
+\land\operatorname{Intent}(x,a).
+\]
+不能用“有过身体暴力”替代强制与性交的关系；也不能因无明显反抗或无外伤而推定同意。原书把是否性交及对象、时间、地点等具体条件的决定权列入性自主分析，故对“同意与谁、何时、以何种条件”应分别记录，不写成终身一次性的布尔值。
+
+\paragraph{规则 PP18-07：幼女规则与一般强制规则并列。}
+\mbox{}\par
+行为时年龄为 $\operatorname{Age}(y,t)$。刑法第236条第2款的对象条件为 $F(y)\land\operatorname{Age}(y,t)<14$；奸淫幼女按强奸处理并从重，不能增加“被害人必须明确拒绝”条件：
+\[
+\begin{gathered}
+F(y)\land\operatorname{Age}(y,t)<14\land Sx(a,y)
+\land\operatorname{MensReaForMinor}(x,a,y)\\
+\Rightarrow E_{236}^{\rm minor}(a,y),\\
+\operatorname{Offence}(x,a,236_{\rm minor})\\
+\Rightarrow\mathsf{Must}(\operatorname{HeavierWithinRange}(x,a)).
+\end{gathered}
+\]
+其中主观认识须依证据及相应解释认定，不能由“年龄客观不足十四”直接抹去故意责任原则。年龄不足十周岁又是法定升格情形，不能与“幼女”这一个条件完全合并。法定未成年人保护不以儿童自己的同意使侵害合法。\footnote{未成年人性侵规则还需核对法释〔2023〕3号：\url{https://www.court.gov.cn/zixun/xiangqing/401002.html}，尤其第1—6条、第9—10条、第15条。}
+
+\paragraph{规则 PP18-08：照护职责性侵的年龄区间不能错置。}
+\mbox{}\par
+令 $D_s(x,y,t)$ 表示监护、收养、看护、教育、医疗等特殊职责，含司法解释规定的事实照护关系。第236条之一核心为
+\[
+\begin{aligned}
+E_{236a}(a,y)={}&D_s(x,y,t)\land F(y)
+\land14\le\operatorname{Age}(y,t)<16\\
+&\land Sx(a,y)\land\operatorname{Intent}(x,a),
+\qquad t=\operatorname{Time}(a).
+\end{aligned}
+\]
+该罪不是一般“与未成年人发生关系罪”，不应把特殊职责删掉。若利用优势地位或孤立无援处境迫使发生性关系，须另审查强奸；同时构成第236条的，依本条第2款选择处罚较重的规定，不能无条件并罚。
+
+\paragraph{规则 PP18-09：猥亵的对象与强制要求要分开。}
+\mbox{}\par
+$\operatorname{Molest}(a,y)$ 为性侵害性质的猥亵行为。对于达到儿童保护范围的对象，不将一般强制要素作为必要条件；对于通常的强制猥亵对象，应审查法条规定的强制手段：
+\[
+\begin{aligned}
+\operatorname{Child}(y,t)\land\operatorname{Molest}(a,y)
+\land\operatorname{Intent}(x,a)&\Rightarrow E_{237}^{\rm child}(a,y),\\
+\neg\operatorname{Child}(y,t)\land\operatorname{Molest}(a,y)
+\land\operatorname{Force}(a,y)\land\operatorname{Intent}(x,a)
+&\Rightarrow E_{237}^{\rm force}(a,y).
+\end{aligned}
+\]
+儿童、妇女、其他人的分类会影响具体条款，不能把男性被害人排除出强制猥亵的“他人”。网络视频、照片也可能构成实行方式，不能额外添加“必须现场身体接触”作为全称必要条件。
+
+\paragraph{规则 PP18-10：升格条件是基本罪成立后的附加审查。}
+\mbox{}\par
+对强奸法定升格因素集合 $Q_{236}$，包括情节恶劣、多人、公共场所当众、二人以上轮奸、奸淫不满十周岁幼女或造成幼女伤害、致使被害人重伤死亡等，建立
+\[
+E_{236}(a)\land\bigvee_{q\in Q_{236}}q(a)
+\Rightarrow\operatorname{AggravatedRange}_{236}(a).
+\]
+每个 $q$ 都有独立事实条件，不是一个随意填写的“严重程度分数”。例如“多人”与“多次”不是同义词，公共场所与“当众”也应分别证明；“致使”须作结果归责，不是只要后来发生严重后果即可。对儿童猥亵适用第237条自己的升格集合，不能把强奸升格因素全部移植过去。
+
+\paragraph{规则 PP18-11：轮奸中的共同责任与个人完成情况。}
+\mbox{}\par
+用 $J_S(X,y)$ 表示人物集合 $X$ 基于共同意思先后对同一 $y$ 实施强奸的过程，$P_S(x_j)$ 表示各自实行进度。轮奸情节是否完成与个别人是否完成性交是两个层次：
+\[
+\begin{gathered}
+J_S(X,y)\land |X|\ge2\\
+\Rightarrow\text{分别审查轮奸情节及每人的共同归责范围}.
+\end{gathered}
+\]
+不能从“某人自己未得逞”立即推出其对共同强奸既遂不负责，也不能从他人完成就无需审查本人是否自动退出、阻止结果等中止条件。教材专门区分个人基本罪既遂与轮奸情节未完成；本册保留两个状态变量，避免一个“既遂”覆盖所有层次。
+
+\subsection{人身自由、绑架与拐卖}
+\paragraph{规则 PP18-12：非法拘禁的核心是非法剥夺行动自由。}
+\mbox{}\par
+设 ${C_L}(y,t)$ 为有现实选择离开特定控制范围的可能，${P_L}(a,y,[t_0,t_1])$ 为行为以物理、心理强制或其他方式剥夺该可能，$U(a)$ 为无合法根据。则
+\[
+U(a)\land{P_L}(a,y,[t_0,t_1])
+\land\operatorname{Intent}(x,a)
+\Rightarrow E_{238}(a,y).
+\]
+不要求被害人必须被绑住，也不以被害人始终清醒为条件。正常履行法定职责或安全义务与故意非法限制要区分；原书“飞机能够安全降落却故意不降落”提示，判断对象是限制的非法性，不能把所有运输延误都判成拘禁。
+
+\paragraph{规则 PP18-13：索债目的不使拘禁合法。}
+\mbox{}\par
+以索取债务为目的的非法扣押、拘禁，刑法第238条第3款明确纳入拘禁规则：
+\[
+\operatorname{DebtPurpose}(x,a)\land E_{238}(a,y)
+\Rightarrow\operatorname{Apply}(238,a).
+\]
+因此 $\operatorname{DebtPurpose}$ 不能作为 $U(a)$ 的否定。债务有无、性质、数额、行为人是否虚构债务等会影响拘禁与绑架的区分，但“声称索债”不是自动排除绑架的充分条件；应审查实际债权关系、主观目的与对第三人的要挟方式。
+
+\paragraph{规则 PP18-14：拘禁致重伤死亡与另行暴力分两路。}
+\mbox{}\par
+令 $a$ 为拘禁实行行为，$b$ 为拘禁之外的独立暴力；$N_R$ 为对重伤死亡的过失，$J_R$ 为相应故意。对结果不能只按时间先后归类：
+\[
+\begin{gathered}
+E_{238}(a)\land\operatorname{Attributable}(a,R)\land N_R\\
+\Rightarrow\text{第238条结果加重审查},\\
+E_{238}(a)\land\operatorname{OutsideDetention}(b,a)
+\land\operatorname{Violence}(b)\land\operatorname{Cause}(b,R)\\
+\Rightarrow\text{第238条后句与第232、234条审查}.
+\end{gathered}
+\]
+教材将拘禁实行行为及实行外暴力列为不同表格行，并讨论故意、过失和竞合。形式化必须保留 $a=b$ 或 $a\ne b$、暴力的功能、对结果的主观态度，不能套用“拘禁期间一切死亡都转化为杀人”。
+
+\paragraph{规则 PP18-15：绑架有控制人质与勒索或人质目的。}
+\mbox{}\par
+第239条核心入口为
+\[
+\begin{aligned}
+E_{239}(a,y)={}&\operatorname{CoerciveControl}(a,y)
+\\
+&\land\bigl(\operatorname{RansomPurpose}(x,a)
+\lor\operatorname{HostagePurpose}(x,a)\bigr)\\
+&\land\operatorname{Intent}(x,a).
+\end{aligned}
+\]
+取得赎金不是其通常既遂的必要条件，着手、实际控制及是否完成须分层。勒索财物通常体现控制被绑架者并要挟第三人，不应把一切当面恐吓取财都算绑架。以勒索财物为目的偷盗婴幼儿，是第239条第3款的特别规定，应带上“婴幼儿”“偷盗”“勒索财物目的”三个条件。
+
+\paragraph{规则 PP18-16：绑架特别加重不覆盖所有过失死亡。}
+\mbox{}\par
+刑法第239条第2款列举杀害被绑架人，或者故意伤害被绑架人致重伤死亡。令 $K_a(y)$ 表示 $y$ 是行为 $a$ 的被绑架者，$J_H(b,y)$ 表示后续行为 $b$ 对同一 $y$ 的故意伤害，$R_s(y,b)$ 表示该伤害可归责地导致同一 $y$ 重伤或死亡：
+\[
+\begin{gathered}
+Q_a(y):=\exists b\,\bigl[\operatorname{Agent}(b)=x
+\land\operatorname{WithinKidnap}(b,a)\\
+\land\bigl(\operatorname{IntentionalKill}(b,y)
+\lor[J_H(b,y)\land R_s(y,b)]\bigr)\bigr],\\
+\operatorname{Offence}(x,a,239)\land K_a(y)\land Q_a(y)\\
+\Rightarrow\operatorname{SpecialRange}_{239}(x,a).
+\end{gathered}
+\]
+绑缚、堵嘴等控制行为过失造成死亡，不因有死亡就自动满足“故意伤害被绑架人”。教材对此有专门例题；仍应审查过失致人死亡与绑架之间的竞合、结果归责及其他适用条件，而非把过失死亡当无罪。
+
+\paragraph{规则 PP18-17：拐卖的出卖目的与行为选项。}
+\mbox{}\par
+令 $\mathcal B$ 为拐骗、绑架、收买、贩卖、接送、中转六种行为谓词的集合。依据第240条第2款，
+\[
+\begin{aligned}
+E_{240}(a,y)={}&\operatorname{SellPurpose}(x,a,y)
+\land[\operatorname{Woman}(y)\lor\operatorname{Child}(y)]\\
+&\land\bigvee_{B\in\mathcal B}B(a,y)
+\land\operatorname{Intent}(x,a).
+\end{aligned}
+\]
+仅有转移地点不够，需证明出卖目的和法定行为之一；完成整个交易不是所有选项成立的必要条件。妇女儿童并列于选择性罪名内部，不把每个过程、每种行为选项都机械计成新罪。
+
+\paragraph{规则 PP18-18：收买、再出卖与其他侵害有明文罪数规则。}
+\mbox{}\par
+根据第241条，令 $B(a,y)$ 为收买被拐卖者的犯罪已成立，$S(b,y)$ 为又出卖同一人，$\mathcal C_y$ 为对该被收买者另外成立的强奸、非法拘禁、故意伤害、侮辱等相关罪项的集合；每个罪项记录相应行为而不仅是罪名：
+\[
+\begin{aligned}
+B(a,y)\land S(b,y)&\Rightarrow\operatorname{Apply}(240,\langle a,b\rangle),\\
+B(a,y)\land\mathcal C_y\ne\varnothing
+&\Rightarrow\mathsf{Must}(\operatorname{Aggregate}(\{(241,a,y)\}\cup\mathcal C_y)).
+\end{aligned}
+\]
+第二行以第241条第4款要求并罚的相关罪项为集合范围，并处理其内部竞合及其他特别规则，不是把任意犯罪都自动加入。拐卖行为人奸淫被拐卖妇女，另有第240条升格规定，不能照抄收买罪的并罚规则。不同主体、阶段和法条特别规定必须索引清楚。
+
+\subsection{名誉、人格、个人信息与婚姻家庭}
+\paragraph{规则 PP18-19：侮辱与诽谤按行为内容区分。}
+\mbox{}\par
+设 $P_b$ 为公然性，$D_g$ 为贬损人格的侮辱行为，$F_f$ 为捏造并散布损害名誉的事实，$S$ 为情节严重，则
+\[
+\begin{aligned}
+P_b\land D_g\land S\land\operatorname{Intent}&\Rightarrow E_{246}^{\rm insult},\\
+F_f\land\operatorname{Spread}\land S\land\operatorname{Intent}
+&\Rightarrow E_{246}^{\rm defame}.
+\end{aligned}
+\]
+价值辱骂与可验证真假事实的捏造不同，不能只见“名声受损”就定诽谤。真实事实也可能被用作公然羞辱的手段，是否构成侮辱需独立判断。亲告条件与严重危害社会秩序和国家利益的例外属于程序接口，不得把无人告诉直接等同于客观行为合法。
+
+\paragraph{规则 PP18-20：诬告陷害不能由检举不实倒推。}
+\mbox{}\par
+第243条的主观特征是意图使他人受到刑事追究，核心条件为
+\[
+\begin{gathered}
+\operatorname{Fabricate}(x,f)\land\operatorname{Accuse}(x,y,f)
+\land\operatorname{PurposeCriminalProcess}(x,y)\\
+\land\operatorname{Serious}\Rightarrow E_{243}.
+\end{gathered}
+\]
+第3款把无意诬陷的错告、检举失实排除出本条。因此 $\operatorname{False}(f)$ 仅证明内容不实，不足以证明捏造故意和陷害目的。“举报最后未被立案”更不能推出举报人诬告。
+
+\paragraph{规则 PP18-21：公民个人信息需要对象、违法性和情节接口。}
+\mbox{}\par
+第253条之一不是所有信息流转的全称禁令。令 $\operatorname{PI}(d,y)$ 为可识别自然人或反映其活动情况的个人信息，$N$ 为适用的国家有关规定，$S$ 为情节严重，则
+\[
+\begin{gathered}
+T_d(a):=\operatorname{Sell}(a,d)\lor\operatorname{Provide}(a,d)\\
+\lor\operatorname{StealObtain}(a,d)
+\lor\operatorname{OtherIllegalObtain}(a,d),\\
+\operatorname{PI}(d,y)\land\operatorname{Violation}(N,a)
+\land T_d(a)\land S\land\operatorname{Intent}\\
+\Rightarrow E_{253a}.
+\end{gathered}
+\]
+同意、依法履职、公开信息的处理规则均须依有效前置法审查；“信息已在网上”不能作为不受保护的通用定理。数量、种类、违法所得、损害后果等情节须按相关解释认定，本册不给所有信息设置一个统一数值门槛。
+
+\paragraph{规则 PP18-22：强迫劳动的直接实行与帮助不同。}
+\mbox{}\par
+令 $L(y)$ 为劳动，$V$ 为暴力威胁或限制自由，$H$ 为招募、运送或其他协助，则
+\[
+\begin{aligned}
+V(a,y)\land\operatorname{ForceWork}(a,y)\land\operatorname{Intent}
+&\Rightarrow E_{244}^{\rm principal},\\
+H(a,b)\land\operatorname{Know}(x,E_{244}^{\rm principal}(b))
+&\Rightarrow\text{第244条第2款参与责任审查}.
+\end{aligned}
+\]
+教材强调帮助行为需结合实行端的强迫劳动事实，不因存在招工、运送就推定犯罪。反之，以剥夺自由强迫劳动可能同时触及拘禁的评价，应在罪数层面保留竞合，而非删除其中一个法益侵害。
+
+\paragraph{规则 PP18-23：雇用童工危重劳动的“童工”年龄不是十四岁。}
+\mbox{}\par
+第244条之一要求违反劳动管理法规，雇用不满十六周岁未成年人从事规定的危重劳动，且情节严重：
+\[
+\begin{gathered}
+\operatorname{Age}(y,t)<16\land\operatorname{Employ}(x,y)
+\land\operatorname{HazardousWork}(y)\\
+\land\operatorname{Violation}(N)\land\operatorname{Serious}
+\land\operatorname{Intent}\Rightarrow E_{244a}.
+\end{gathered}
+\]
+对法律年龄界限理解错误与对劳动者实际年龄认识错误是不同变量。原书以将童工误解为十四岁以下提示该区别；不能把前者写为客观不存在雇用十五岁人的故意。是否有违法性认识可能性另接总则审查。
+
+\paragraph{规则 PP18-24：重婚的两种身份结构。}
+\mbox{}\par
+令 $\operatorname{Spouse}(x,t)$ 表示已有配偶，$\operatorname{Marry}(x,y,t)$ 包括法律规定并经解释认可的婚姻结合形态，$\operatorname{KnowSpouse}(x,y)$ 为明知对方有配偶。第258条可以分解为
+\[
+\begin{gathered}
+\operatorname{Spouse}(x,t)\land\operatorname{Marry}(x,y,t)
+\\
+\Rightarrow\text{有配偶者重婚的特殊条件满足},\\
+\neg\operatorname{Spouse}(x,t)\land\operatorname{KnowSpouse}(x,y)
+\land\operatorname{Marry}(x,y,t)\\
+\Rightarrow\text{明知型的特殊条件满足}.
+\end{gathered}
+\]
+普通恋爱、偶发性关系、同居与以夫妻名义共同生活不能未经事实判断就画等号。军婚另有第259条特殊保护；对双方身份、明知、同居或结婚形态须重新配对，不能把一般重婚的全部条件原封不动搬来。
+
+\paragraph{规则 PP18-25：虐待、遗弃与其他侵害要按义务和关系识别。}
+\mbox{}\par
+第260条虐待家庭成员并要求情节恶劣；第260条之一保护被监护、看护人，有特殊职责主体和情节要求；第261条遗弃以扶养义务、能力及拒绝扶养为中心。令 $F$ 为家庭成员关系，$C$ 为监护看护关系，$D$ 为扶养义务：
+\[
+\begin{aligned}
+F\land\operatorname{Abuse}\land\operatorname{Serious}&\Rightarrow E_{260},\\
+C\land\operatorname{Abuse}\land\operatorname{Serious}&\Rightarrow E_{260a},\\
+D\land\operatorname{AbleToSupport}\land\operatorname{RefuseSupport}
+\land\operatorname{Serious}&\Rightarrow E_{261}.
+\end{aligned}
+\]
+三个入口不是同义替换，且均需主观和总则条件。造成伤亡时应审查基本行为风险与结果、故意伤害杀人及法定竞合规定，不可由“家属”身份统一降格为虐待。
+
+\subsection{示例：控制行为过失致死的逐层分析}
+甲为勒索乙的家属，将乙捆绑并以毛巾堵嘴，实际控制乙；甲没有伤害乙身体健康的故意，但本可预见窒息风险，乙因堵嘴窒息死亡。先记 $\operatorname{CoerciveControl}=1$、$\operatorname{RansomPurpose}=1$，进入第239条基本犯罪审查；再记 $\operatorname{IntentionalInjury}=0$、$\operatorname{NegligentDeath}=1$、$\operatorname{AttributableDeath}=1$。这不满足 PP18-16 的“杀害或故意伤害”项，因此不能仅凭死亡推出该特别加重。
+
+随后审查同一控制行为是否成立过失致人死亡及其与绑架的竞合关系。若满足两罪全部条件，教材按一个行为的想象竞合择一重处理。这个结论依赖“同一控制行为”“无伤害故意”“死亡可归责”三个事实前提；若另有故意殴打致重伤死亡，前提变了，不能重复使用同一结论。示例仅使用原书所区分的行为结构，未将其概括为所有绑架致死案件的统一公式。
+
+\section{第十九讲\quad 财产犯罪}
+
+\label{ref:lecture:19}
+
+\noindent\hyperref[lecture:19]{返回本讲的逐节推导与闭卷记忆}
+
+本讲将原书的“行为模型”进一步写成\textbf{权利状态、占有状态、因果链和规范门槛}。模型可以揭示缺失的条件，但不能凭计算代替对占有、处分、损失和非法占有目的的法律解释。原书明确展示多数说、少数说的地方，以下用理论参数保留分歧，不用一个等号抹去争议。
+
+\subsection{所有、占有与非法占有目的}
+\paragraph{规则 PP19-01：所有权、占有事实与辅助控制不同。}
+\mbox{}\par
+$\operatorname{Own}(y,m,t)$ 表示所有，$\operatorname{Poss}(y,m,t)$ 表示刑法评价中的占有。另以 $\operatorname{AssistPoss}(z,y,m,t)$ 表示对 $y$ 占有的辅助。三个谓词不能互相替换：
+\[
+\begin{aligned}
+\operatorname{Own}(y,m,t)&\not\Rightarrow\operatorname{Poss}(y,m,t),\\
+\operatorname{Poss}(y,m,t)&\not\Rightarrow\operatorname{Own}(y,m,t),\\
+\operatorname{AssistPoss}(z,y,m,t)&\not\Rightarrow\operatorname{Poss}(z,m,t).
+\end{aligned}
+\]
+主人将车交他人长期保管，是所有与占有可能分离的实例；临时借看手机、现场辅助保管婚礼戒指则未必使独立占有转移。财物接触者是否成为占有人，依实际控制、上下关系、委托内容、时间空间及社会一般观念判断，而不是一律以“谁拿在手里”为准。
+
+\paragraph{规则 PP19-02：占有具有对象粒度。}
+\mbox{}\par
+占有必须指向具体对象 $m$，不能从对外包装或容器的占有任意推出对一切内容物的占有：
+\[
+\operatorname{Poss}(x,\operatorname{Container}(m),t)
+\not\Rightarrow\operatorname{Poss}(x,m,t).
+\]
+原书以封缄物、运输货物、洗车时车内彩票、修理电脑内藏金条等例子说明，对容器整体、已知内容、封缄内容可能作不同评价。本册将它们分别作为对象节点，保留委托与控制范围；不把“受托保管包裹”简单写成“获得包裹内所有物品的独立占有”。封缄与否也不是万能开关，还需适用相应解释方案。
+
+\paragraph{规则 PP19-03：占有可在没有即时接触时继续存在。}
+\mbox{}\par
+${D_C}(y,m,t)$ 是身体或空间上的直接支配，${N_L}(y,m,t)$ 是依位置、用途、返回可能、管理关系等继续归属于某人的控制联系。采用原书的事实与观念占有区分时，
+\[
+\operatorname{Poss}(y,m,t)
+\Leftarrow{D_C}(y,m,t)
+\lor{N_L}(y,m,t),
+\]
+但右边两项都需经过刑法意义上的占有认定，不是所有民事关系都能满足。门前停放自行车、为避灾搬到街边的财物、共享单车等，不能仅因主人不在旁边即认定无占有；真正脱离占有的遗忘物则需另行判断。原书对出租车后备厢等情形还考察司机等第三人的占有，因此原主人失去占有不必等于无人占有。
+
+\paragraph{规则 PP19-04：非法占有目的由排除与利用两个方向刻画。}
+\mbox{}\par
+依原书采用的解释框架，令 $\operatorname{ExcludeOwner}(x,m)$ 表示排除权利人、把财物当作自己或第三人所有物来处置的意思，$\operatorname{UseValue}(x,m)$ 表示利用其经济、功能或物质价值的意思：
+\[
+\operatorname{IllegalPurpose}(x,m)
+\Longleftrightarrow_{\rm book}
+\operatorname{ExcludeOwner}(x,m)\land\operatorname{UseValue}(x,m).
+\]
+下标表示这是教材解释模型，不是刑法以符号逐字规定的定义。利用不要求正常用途或自己使用，卖给他人、用于抵偿、作为材料烧用都可能体现利用。仅为毁弃而搬走财物可能欠缺利用方向，需审查毁坏；短期使用后无条件按原状归还的真实意思，可能欠缺排除方向，但不能仅凭事后自称“想归还”就否定非法占有目的。
+
+\paragraph{规则 PP19-05：非法占有目的须索引到行为时点。}
+\mbox{}\par
+令 $J(x,m,t)$ 表示某时点有非法占有目的。财物交付前、占有后、发生争执后的目的变化不能压成一个常量：
+\[
+J(x,m,t_0)=0,\quad J(x,m,t_1)=1,\quad t_0<t_1
+\not\Rightarrow J(x,m,t_0)=1.
+\]
+原书以正常借用后起意据为己有、先有付款意思后来逃费、原本以临时用为目的后来转为变卖等作区分。事后行为可以作为证明行为时目的的证据，但不是逻辑上必然的逆向推导。借款未按时归还、经营失败、买受后反悔等，也不能单靠结果推成最初诈骗故意。
+
+\paragraph{规则 PP19-06：非法占有受到的保护具有相对性。}
+\mbox{}\par
+设 $U(y,m)$ 为非法占有，$S(y,m)$ 为已形成相对稳定的占有秩序，$O(z,m)$ 为真正权利人的权利。原书区分第三人“黑吃黑”、权利人取回、占有尚在侵害中的及时挽回，其结构是
+\[
+\operatorname{ProtectPoss}(y,m\mid z)
+=f(U,S,O,\operatorname{RecoveryMode},\operatorname{Time}),
+\]
+而不是全称断言 $U\Rightarrow\neg\operatorname{ProtectPoss}$ 或 $S\Rightarrow\operatorname{ProtectPoss}$。第三人盗取赃物不因赃物违法来源而当然无罪；权利人取回与第三人取走也不能直接类比。是否允许具体的取回手段仍受人身、住宅等其他法益限制，不能把财产权利解释成一般私人搜身或任意暴力权。
+
+\subsection{侵占与盗窃：谁改变何种占有}
+\paragraph{规则 PP19-07：侵占的核心是已有占有后的据为己有。}
+\mbox{}\par
+第270条以代为保管物、遗忘物、埋藏物等规定对象，要求非法占为己有、达到法定数额并拒不退还或交出。令 $t_0<t_1$，有
+\[
+\begin{aligned}
+E_{270}(a,m)={}&\operatorname{Own}(y,m,t_0)\land x\ne y
+\land\operatorname{Poss}(x,m,t_0)\land\operatorname{Eligible270}(m)\\
+&\land\operatorname{Appropriate}(x,m,t_1)
+\land\operatorname{IllegalPurpose}(x,m)\\
+&\land\operatorname{AmountGate}_{270}(m)
+\land\operatorname{RefuseReturnOrDeliver}(x,m).
+\end{aligned}
+\]
+并非“拿到过他人物品”都符合初始独立占有。变卖、抵押、消费、赠与或能退还而拒不退还，可表现据为己有，但需结合行为内容和主观。数额、告诉才处理和合法理由等条件不能删掉；民事上资金交付的效果也不能机械代替刑法侵占对象的判断。
+
+\paragraph{规则 PP19-08：盗窃核心状态转移。}
+\mbox{}\par
+对于有体财物，令 ${B_P}(a,y,m)$ 为破坏他人占有，${E_P}(a,x,m)$ 为建立行为人或其指定第三人的新占有，${P_T}(a)$ 为未达到抢夺、抢劫强制类型的取走。核心模型为
+\[
+\begin{aligned}
+E_{264}^{\rm comp}(a,m)={}&\operatorname{Poss}(y,m,t_0)
+\land{B_P}(a,y,m)
+\land{E_P}(a,x,m)\\
+&\land{P_T}(a)
+\land\operatorname{IllegalPurpose}(x,m)
+\land\operatorname{Gate}_{264}(a,m).
+\end{aligned}
+\]
+“平和”是相对于人身强制的性质，不等于秘密。公开地平和取走仍可能是盗窃。盗窃未遂须另接着手、未完成及意志以外原因，不能因未建立新占有就把已着手行为从模型中删除。
+
+\paragraph{规则 PP19-09：盗窃入罪门槛包含金额与独立行为类型。}
+\mbox{}\par
+第264条的基本入口是析取而非全合取：
+\[
+\begin{aligned}
+\operatorname{Gate}_{264}(a,m)={}&[V(m,t)\ge\theta_{264}(r,v)]
+\lor\operatorname{RepeatedTheft}(a)\\
+&\lor\operatorname{HouseTheft}(a)
+\lor\operatorname{ArmedTheft}(a)
+\lor\operatorname{Pickpocket}(a).
+\end{aligned}
+\]
+$\theta_{264}(r,v)$ 为适用地区 $r$、版本 $v$ 的具体数额标准；另有解释规定的降低数额等情形，应在参数层处理。不能把所有盗窃都要求同时入户、携凶、扒窃，也不能把“数额小”当作所有类型一律无罪。司法解释关于入户、携凶、扒窃、多次的具体条件仍须满足；情节显著轻微等总则出口仍保留。\footnote{法释〔2013〕8号盗窃解释：\url{https://www.court.gov.cn/fabu/xiangqing/5228.html}。其第1条设全国幅度与地方具体标准，不宜将原书用于教学概括的“2000元左右”固定成全国统一法律常数。}
+
+\paragraph{规则 PP19-10：入户盗窃、扒窃等不能仅凭地点推定。}
+\mbox{}\par
+入户盗窃需对“户”的生活功能、相对隔离及非法进入等作完整审查；扒窃要求在公共场所或公共交通工具等解释规定范围内对他人随身携带财物实施盗窃。模型分别为
+\[
+\begin{aligned}
+\operatorname{HouseTheft}(a)&=\exists h\,[\operatorname{House}(h)
+\land\operatorname{IllegalEnter}(x,h)\\
+&\qquad\land\operatorname{TheftIn}(a,h)],\\
+\operatorname{Pickpocket}(a;m,y)&=\exists p\,[\operatorname{QualifyingPublicPlace}(p)\\
+&\qquad\land\operatorname{CarriedBy}(m,y)
+\land\operatorname{TheftAt}(a,p,m)].
+\end{aligned}
+\]
+这些是简化接口，细化仍服从司法解释。“在居民楼里”不是“进入他人的户”，“商店里拿商品”不是扒窃；随身携带也不只等于贴身衣兜。教材说明座位旁提包、行李架随身行李等也应具体判断，不能用厘米距离作法定界限。
+
+\paragraph{规则 PP19-11：受托人窃取与侵占的分支必须先定初始占有。}
+\mbox{}\par
+将同一件财物的委托前后状态作表：
+\begin{center}
+\begin{tabular}{p{.37\linewidth}p{.43\linewidth}}
+\hline
+据为己有前的状态 & 后续审查方向\\ \hline
+原主人或第三人仍占有，行为人只是辅助者 & 行为人破坏他人占有，审查盗窃及其门槛。\\
+行为人已独立占有他人所有财物 & 不以“转移他人占有”为当然前提，审查侵占对象与拒不退还等。\\
+行为人基于职务控制本单位财物 & 另审查职务侵占或贪污的身份、便利与对象。\\ \hline
+\end{tabular}
+\end{center}
+“职业是快递员”“自称代为保管”都不足以直接选分支。需要确定被侵害的是容器、内容物、货款还是单位财物，以及相应控制关系。原书的封缄物案例包含解释立场，不能把其所有结论提升为跨情境全称公理。
+
+\subsection{抢夺、抢劫与敲诈勒索}
+\paragraph{规则 PP19-12：抢夺区分对物夺取与对人强制。}
+\mbox{}\par
+依原书行为模型，抢夺是带非法占有目的，当场直接夺取他人紧密占有财物、取财手段具有使人受伤危险的类型，记为
+\[
+\begin{aligned}
+E_{267}(a,m)={}&\operatorname{DirectSnatch}(a,m)
+\land\operatorname{ClosePoss}(y,m)
+\land\operatorname{PersonalDanger}(a)\\
+&\land\operatorname{IllegalPurpose}(x,m)
+\land\operatorname{Gate}_{267}(a,m).
+\end{aligned}
+\]
+若已以对人暴力、胁迫压制反抗来取得财物，需改审查抢劫；若只是拾起仍由他人占有但已落在数米外的包，原书将其放入盗窃模型。紧密占有、危险性和直接夺取的认定是法律评价，不能以“速度快”一个变量替代全部条件。
+
+\paragraph{规则 PP19-13：抢夺入罪及伤亡升格应使用解释现行接口。}
+\mbox{}\par
+第267条的基本门槛为数额较大或者多次抢夺；2013年抢夺解释将导致他人重伤、自杀列为其他严重情节，将导致他人死亡列为其他特别严重情节：
+\[
+\begin{gathered}
+\operatorname{Snatch}(a)\land\operatorname{AttributableSeriousInjury}(a)\\
+\Rightarrow\operatorname{OtherSerious}_{267}(a),\\
+\operatorname{Snatch}(a)\land\operatorname{AttributableDeath}(a)\\
+\Rightarrow\operatorname{OtherParticularlySerious}_{267}(a).
+\end{gathered}
+\]
+结果与基本行为的风险实现、最低限度的主观归责须另证；“被害人后来死亡”不能直接置为 $\operatorname{AttributableDeath}=1$。原书将其称为结果加重的行为结构，本册以解释中的法定情节接口表达，不与过去已被修改的择一重旧规则混用。\footnote{法释〔2013〕25号：\url{https://www.court.gov.cn/fabu/xiangqing/5832.html}，特别是第3、4、6、7条。}
+
+\paragraph{规则 PP19-14：抢夺转入抢劫的两种不同规范路径。}
+\mbox{}\par
+一是刑法第267条第2款对携带凶器抢夺明确指向第263条；二是驾驶车辆夺取中，对被害人不放手仍强取、逼挤撞击或故意放任解释列举伤害后果等，按抢劫处理。不能把两者混成“凡夺取造成伤害均抢劫”：
+\[
+\begin{aligned}
+\operatorname{Snatch}(a)\land\operatorname{CarryWeaponIn267}(x,a)
+&\Rightarrow\operatorname{TreatAs}(263,a),\\
+\operatorname{VehicleSnatch}(a)\land\operatorname{Condition6}_{2013}(a)
+&\Rightarrow\operatorname{Apply}(263,a).
+\end{aligned}
+\]
+携带的对象是否属于凶器、携带与抢夺的关系需依刑法解释，不得用危险动物与器械的直觉相似性无限扩张拟制。原书以牵藏獒抢夺的设问提示这里的解释边界，数学模型保留 $\operatorname{CarryWeaponIn267}$ 的法定语义而不自行扩大。
+
+\paragraph{规则 PP19-15：抢劫的手段—反抗—取财连接。}
+\mbox{}\par
+令 $\operatorname{RelevantPerson}(y,m)$ 表示占有人、占有辅助者或实际保护财物者；$\operatorname{Suppress}(a,y)$ 表示以暴力、胁迫或其他方法达到压制反抗的程度；$\operatorname{ForTaking}(a,m)$ 为强制服务于取财。则通常抢劫的核心为
+\[
+\begin{aligned}
+E_{263}(a,m)={}&\operatorname{RelevantPerson}(y,m)
+\land\operatorname{Suppress}(a,y)
+\land\operatorname{ForTaking}(a,m)\\
+&\land\operatorname{IllegalPurpose}(x,m)
+\land\operatorname{TakingAct}(a,m).
+\end{aligned}
+\]
+抢劫罪不以“数额较大”为一般入罪条件，但不因此否定总则情节显著轻微出口。强制行为须对取得财物有功能联系；为独立报复先打人，后来另起取财意思，不能不加分析即把先前暴力当作取财手段。
+
+\paragraph{规则 PP19-16：无关第三人与财物保护者不同。}
+\mbox{}\par
+教材将压制财物保护者与压制完全无关的旁观者区分。形式上
+\[
+\begin{gathered}
+\operatorname{Bystander}(z)\land\neg\operatorname{RelevantPerson}(z,m)
+\land\operatorname{Threat}(a,z)\\
+\not\Rightarrow\operatorname{SuppressPossForTaking}(a,m).
+\end{gathered}
+\]
+若旁观者正在保护财物，$\operatorname{RelevantPerson}$ 的值会改变；如果行为人误认无关人为占有人，须另审查对象错误、故意和未遂，而非直接由客观关系不成立推出所有抢劫责任均消失。原书某些例题的最终罪数依不同条件，形式化不作无条件推广。
+
+\paragraph{规则 PP19-17：抢劫既遂的官方规则与作者理论分开。}
+\mbox{}\par
+原书主张取得型财产犯罪以取得财物控制为通常既遂标准，同时明确司法文件对抢劫采用“劫取财物或者造成轻伤以上人身伤害”的既遂规则。这里保留两层：
+\[
+\begin{aligned}
+\operatorname{Complete}^{\rm acquisition}_{263}(a)
+&:=\operatorname{NewControlOfProperty}(a),\\
+\operatorname{Complete}^{\rm applicable}_{263}(a)
+&:=\operatorname{PropertyTaken}(a)
+\lor\operatorname{InjuryAtLeastMinor}(a),
+\end{aligned}
+\]
+第二行仍以已成立抢劫实行行为、伤害与抢劫关联为前提，并须核对所适用司法文件。作者理论不能替代适用规则，也不能从第一行得出“没拿到钱只造成轻伤一定是未遂”。是否可把特定既遂规则推广至承继共犯等问题，原书有自己的限制性观点，应标注为作者观点而非正式规则。\footnote{抢劫既未遂及与绑架关系等应结合最高法2005年《两抢意见》；本册对转化型抢劫与加重情节另核对2016年指导意见：\url{https://www.court.gov.cn/fabu/xiangqing/37412.html}。}
+
+\paragraph{规则 PP19-18：事后抢劫的四组条件不能删去。}
+\mbox{}\par
+对刑法第269条，令 $A_0$ 为已着手盗窃、诈骗或抢夺并符合解释门槛的先行行为，$P$ 为窝藏赃物、抗拒抓捕或者毁灭罪证目的，$S$ 为当场性，$V$ 为当场使用暴力或暴力威胁：
+\[
+F_{269}(a,b)=A_0(a)\land P(b)\land S(a,b)\land V(b),
+\qquad F_{269}\Rightarrow\operatorname{TreatAs}(263,\langle a,b\rangle).
+\]
+2016年指导意见指出先行行为一般不以既遂为必要，但数额明显低且无解释列举情形等有排除条件；轻微摆脱、未达相应后果的暴力，也不能当然认为满足转化条件。为继续取得财物而当场升级使用足够强制，与取得后为特定目的暴力转化，是需要区分的规范路径。
+
+\paragraph{规则 PP19-19：转化型抢劫的共同责任须个别化。}
+\mbox{}\par
+对共同先行盗窃中的参与者 $x_j$，另一人突然使用暴力，并不逻辑上自动让全体成为抢劫共犯。设 $K_j$ 为认识暴力及其取财或转化功能，$J_j$ 为形成共同意思，$H_j$ 为实施或帮助：
+\[
+F_{269}\land K_j\land J_j\land H_j
+\Rightarrow\text{对 }x_j\text{ 的抢劫共犯归责审查}.
+\]
+2016年指导意见要求结合共同犯意、帮助或实际成为帮凶等。仅因同处现场不能推定这些条件；也不能因本人没打人而排除帮助归责。若退出、制止或不知情，应按其所能证明的事实分别处理。
+
+\paragraph{规则 PP19-20：入户抢劫至少有四层连接。}
+\mbox{}\par
+令 $H(h)$ 为符合家庭生活功能及相对隔离的户，$E(x,h)$ 为带人身或财产侵害目的进入，$V_h(a)$ 为在户内实施强制，$K_h$ 为对他人户的认识。核心结构为
+\[
+\operatorname{HouseRobbery}(a;h)
+=H(h)\land E(x,h)\land V_h(a)\land K_h(x,h)
+\land E_{263}(a).
+\]
+合法受邀进入后临时起意抢劫，不因地点在户内就当然是入户抢劫。经营与居住混用场所要根据隔离情况、营业时段等具体判断。为盗窃等非法目的入户，在户内当场使用暴力符合转化条件时可构成入户抢劫；暴力在户外实施不当然满足同一升格条件。原书的“入户抢劫”与“户内抢劫”对比因此不是一个简单地点标签。
+
+\paragraph{规则 PP19-21：抢劫八种升格是列举析取。}
+\mbox{}\par
+刑法第263条列八种因素，记作 $q_1,\ldots,q_8$。完整的法定刑入口为
+\[
+E_{263}(a)\land\bigvee_{j=1}^{8}q_j(a)
+\Rightarrow\operatorname{AggravatedRange}_{263}(a).
+\]
+各项分别为入户、公共交通工具、银行或其他金融机构、多次或数额巨大、致人重伤死亡、冒充军警、持枪、军用或抢险救灾救济物资等。必须对照法条的限定语；真实军警实施抢劫不等于“冒充军警”，非运营的车辆不当然属于“在公共交通工具上抢劫”的升格范围，持玩具枪不当然满足“持枪”。多个因素并存并不生成多个独立抢劫罪，也不自动推出死刑。法定刑范围与具体宣告刑是不同输出。
+
+\paragraph{规则 PP19-22：敲诈勒索保留恐惧与交付的因果链。}
+\mbox{}\par
+原书行为模型可写成有时间序列的因果网络：
+\[
+\begin{aligned}
+&\operatorname{Threaten}(x,y,e,t_0)
+\xrightarrow{\rm causes}\operatorname{Fear}(y,e,t_1)\\
+&\quad\xrightarrow{\rm motivates}\operatorname{Deliver}(y,x,m,t_2)
+\xrightarrow{}\operatorname{Gain}(x,m,t_3),
+\qquad t_0\le t_1\le t_2\le t_3.
+\end{aligned}
+\]
+这里的箭头不是仅表示先后，还须证明心理与财产交付的联系。犯罪入口另须非法占有目的及数额较大或者多次等门槛。若被害人没有恐惧而配合侦查、交付假财物等，既遂与未遂的状态需重新审查，不能只因口头提出索财就认为取得型既遂。
+
+\paragraph{规则 PP19-23：威胁实现方式与取财压制程度共同区分抢劫和敲诈。}
+\mbox{}\par
+可记录 $\operatorname{ImmediateForce}$、$\operatorname{SuppressionLevel}$、$\operatorname{FutureHarm}$、$\operatorname{ChoiceSpace}$ 等事实维度。一般抢劫强调以足以压制反抗的强制即时取财；敲诈典型是恐吓使人基于恐惧处分，但不能简单写为
+\[
+\operatorname{DeliverTomorrow}\Longleftrightarrow\operatorname{Extortion},
+\qquad
+\operatorname{DeliverNow}\Longleftrightarrow\operatorname{Robbery}.
+\]
+上两式是应当\textbf{拒绝}的简化，并非本册规则：威胁未来损害也可能要求立即交款，抢劫也可能控制被害人取款。合法维权、索债、举报和非法占有目的及不法索财之间的边界，需结合有无权利、金额、手段与具体规范，不以“使用了会令人不安的话语”自动定罪。
+
+\subsection{诈骗：信息、错误、处分、取得和损失}
+\paragraph{规则 PP19-24：诈骗既遂的五段链及非法占有目的。}
+\mbox{}\par
+令 $D$ 为具有欺骗性的事实陈述或隐瞒节点，$E$ 为被害人产生或维持认识错误节点，$A_d$ 为基于错误处分财产节点，$G$ 为行为人或第三人获得财产节点，$L_\vartheta$ 为依解释方案 $\vartheta$ 认定的财产损失节点。节点单独写在合取式中时，是 $\operatorname{Occurs}(D)$ 等发生命题的缩写；在 $\operatorname{Cause}(D,E)$ 中则指相应事件节点，二者通过 $\operatorname{Occurs}$ 显式区分。令 $w\in M\sqcup I$ 为本次被审查的财物或利益，$\operatorname{ActPurpose}(x,a;w)$ 表示 $a$ 针对 $w$ 具有非法占有目的，不把行为 $a$ 当作财物参数。则
+\[
+\begin{aligned}
+E_{266}^{\rm comp}(a;w)={}&\operatorname{ActPurpose}(x,a;w)
+\land D\land E\land A_d\land G\land L_\vartheta\\
+&\land\operatorname{Cause}(D,E)
+\land\operatorname{Cause}(E,A_d)
+\land\operatorname{Cause}(A_d,G,L_\vartheta)\\
+&\land\operatorname{AmountGate}_{266}(a).
+\end{aligned}
+\]
+这不是将各节点命名后就宣称完成全部法律解释：下面分别展开它们的可检条件。链条任何一环未证明，应保留“未确定”或对应未遂审查，不能从“对方说谎”直接推出诈骗既遂。合同违约与刑事诈骗的区别还在行为时非法占有目的、履行能力与真实交易安排等，不由是否存在合同决定。
+
+\paragraph{规则 PP19-25：事实欺骗与主观价值评价不同。}
+\mbox{}\par
+对内容 $s$，$\operatorname{TruthApt}(s)$ 表示能够判断事实真假，$\operatorname{Material}(s)$ 表示与相应财产处分有实质联系。典型积极欺骗须满足
+\[
+\operatorname{Assert}(x,s)\land\operatorname{TruthApt}(s)
+\land\operatorname{False}(s)\land\operatorname{KnowFalse}(x,s)
+\land\operatorname{Material}(s)\Rightarrow D.
+\]
+单纯“美丽”“很好”等一般价值评价不必具有可真假判断的具体事实内容，不能自动当作诈骗。若“纯金”“真品”“单身”“有某资格”等带事实承诺，即使掺有宣传语，也需分别审查。教材以相亲介绍中的美丑评价与婚姻、性别事实对照，模型不能把两类话语统一设为虚假命题。
+
+\paragraph{规则 PP19-26：不作为欺骗需要告知义务。}
+\mbox{}\par
+沉默维持对方错误，不当然是刑法上的欺骗。令 $O_d(x,y,s)$ 为法律、职务、约定、先前行为等产生且适用于该交易的告知义务，$A_b$ 为有能力告知，则
+\[
+O_d\land A_b\land\operatorname{Withhold}(x,s)
+\land\operatorname{KnowError}(x,y,s)
+\land\operatorname{Material}(s)
+\Rightarrow D_{\rm omission}.
+\]
+原书古玩交易中一般买受人不向卖方说明其低估价值，与受托鉴定者故意贬低价值后买入，因义务来源不同而分开。对对方自己已有错误的被动接受、主动冒领身份、积极强化错误，也应区别；不能以“别人已经错了”一律排除诈骗，亦不能把任何知情不言都纳入诈骗。
+
+\paragraph{规则 PP19-27：错误必须与处分相连，欺骗无效不等于既遂。}
+\mbox{}\par
+设 $\widehat{W}_y$ 是被害人对相关事实的认识状态，$W$ 是真实状态。错误是对处分具有实质意义的 $\widehat{W}_y\ne W$，还须
+\[
+\operatorname{BecauseOf}(A_d,\widehat{W}_y)
+\land\operatorname{CausedBy}(\widehat{W}_y,D).
+\]
+如果被害人早已知道真相，因其他原因交钱，或者明知骗局而协助侦查，认识错误节点可能不存在。形式化时应把“错误未产生”“错误产生但未处分”“已处分但未取得”等作为不同失败位置，分别接入未遂、不能犯或其他犯罪审查，不能统一叫“诈骗未遂”而不解释着手与危险性。
+
+\paragraph{规则 PP19-28：客观处分与主观处分意识。}
+\mbox{}\par
+依原书所采用的处分意识必要说，$\operatorname{Disposition}(y,x,m)$ 由客观转移占有的行为和对实际处分对象的主观认识组成：
+\[
+\operatorname{Disposition}(y,x,m)
+=\operatorname{TransferByVictim}(y,x,m)
+\land\operatorname{AwareDisposing}(y,m).
+\]
+只意识到交付一个包装盒，不必然意识到处分被秘密藏入的相机；看到相机而仅误认其价格，则通常有处分相机的意识。处分意识的具体程度存在理论讨论，故本册把这一公式标为原书选定方案，而不宣称所有学说都接受该定义。处分民事效力与刑法处分是不同问题，民法上可撤销不使刑法处分行为自动消失。
+
+\paragraph{规则 PP19-29：两角关系中的盗窃与诈骗分支。}
+\mbox{}\par
+令 $T$、$A$、$R$ 分别简称本次由被害人转移占有、存在处分意识、错误导致该转移三个命题。在其他条件已经补齐的\emph{有体财物转移模型}内：
+\[
+\begin{aligned}
+T\land A\land R&\Rightarrow\text{诈骗路径},\\
+\neg(T\land A\land R)\land\operatorname{TakingByActor}
+\land\operatorname{BreakPoss}&\Rightarrow\text{盗窃路径待审查}.
+\end{aligned}
+\]
+第二行不能省为“非诈骗即盗窃”，因为也可能是侵占、抢夺、抢劫或不犯罪。原书调换价签与在饼干箱藏相机的差别，恰在收银员是否处分真正对象；“店员收了钱”本身不足以排除盗窃。
+
+\paragraph{规则 PP19-30：三角诈骗需要处分者对被害财产的处分地位。}
+\mbox{}\par
+以 $x$ 为行为人、$y$ 为受骗处分者、$z$ 为财产受损者。三角结构不能只有“骗到一个人、损失另一个人”，还须 $y$ 有处分 $z$ 财产的地位或权限，按所采解释方案 $\eta$ 记作 $\operatorname{DispPower}_{\eta}(y,z,m)$：
+\[
+\begin{aligned}
+D(x,y)\land E(y)\land\operatorname{DispPower}_{\eta}(y,z,m)
+\land A_d(y,x,m)\\
+{}\land G(x,m)\land L(z,m)
+\Rightarrow\text{三角诈骗入口}.
+\end{aligned}
+\]
+该处分地位不能用“事实上把物品递给了行为人”循环定义。若受骗者只是被利用的无处分地位工具，可能转入盗窃的间接实行模型；在不同理论下对地位的范围有分歧，应报告前提而非假定唯一答案。
+
+\paragraph{规则 PP19-31：机器不会产生人的认识错误。}
+\mbox{}\par
+普通自动设备根据程序运行，不在本册认识错误谓词的自然人参数域内。令 $\mathcal U_{\rm machine}$ 为与人物域 $P$ 不交的机器对象域，则
+\[
+u\in\mathcal U_{\rm machine}\Rightarrow u\notin P.
+\]
+因此不能把机器 $u$ 代入只接受自然人参数的 $\operatorname{HumanError}$；这里不是用越域调用的否定充作证明。
+但不能从此直接推出“欺骗机器永远只是盗窃”或“任何自动支付异常都不犯罪”。应审查设备管理者有无先行处分、程序与资金控制关系、特定金融犯罪或计算机犯罪的特别规定，以及是否通过机器实际欺骗另一自然人。类型约束排除错误的心理节点，不自动决定最终罪名。
+
+\paragraph{规则 PP19-32：财产损失按所选理论计算，不能假装无争议。}
+\mbox{}\par
+对于相互给付交易，设支付价值 $p$、取得对价 $q$，整体财产说可以用经过法律评价的净差额作入口；个别财产或目的落空方案还需具体财产处分目的。仅作结构示意：
+\[
+\begin{aligned}
+L_{\rm total}&=\operatorname{NegativeNetChange}(p,q),\\
+L_{\rm purpose}&=\operatorname{DefeatedMaterialPurpose}(p,q,\pi),
+\end{aligned}
+\]
+$\pi$ 是已体现于交易的、具有财产相关性的处分目的，不能是任何主观失望。原书用将公务员教材冒充法考教材、把赃车冒充合法车等展示观点：即使价格相当，目的是否落空仍可能成为损失判断关键。模型应分别输出 $L_{\rm total}$ 与 $L_{\rm purpose}$，不能将“等价”当作两派必然都无损失的证明。
+
+\paragraph{规则 PP19-33：捐赠中的目的不能以对价为零否定。}
+\mbox{}\par
+单方捐赠本来就不期待交易对价，不能令 $q=0$ 后机械判全部捐赠为损失或均无损失。应审查欺骗是否使捐赠财产偏离约定公益用途或实质处分目的：
+\[
+\begin{gathered}
+\operatorname{Donation}(a,\pi)\land\operatorname{Deceived}(y)
+\land\operatorname{ActualUse}\notin\operatorname{PermittedUses}(\pi)\\
+\Rightarrow\text{目的落空型损失审查}.
+\end{gathered}
+\]
+仍需非法占有目的、取得与其他犯罪条件。原书将“谎称赈灾实为据为己有”与“夸称他人都捐更多，但资金真实用于约定救灾”区别：骗到捐赠动机中一个次要事实，不总能推出财产目的失败；目的识别必须可证明且受法律评价限制。
+
+\subsection{职务侵占、财产数额与既遂}
+\paragraph{规则 PP19-34：职务侵占不是所有工作场所内取财。}
+\mbox{}\par
+第271条要求单位工作人员、利用职务便利、本单位财物、非法占为己有及相应数额门槛：
+\[
+\begin{aligned}
+E_{271}(a,m;u)={}&\operatorname{Staff}(x,u)
+\land\operatorname{DutyConvenience}(x,a,m,u)\\
+&\land\operatorname{UnitProperty}(m,u)
+\land\operatorname{Appropriate}(x,m)\\
+&\land\operatorname{IllegalPurpose}(x,m)
+\land\operatorname{Gate}_{271}(a).
+\end{aligned}
+\]
+仅利用熟悉环境、与财物接近等工作便利，不当然是管理、经手等职务便利；私人物品不因放在公司里就成为本单位财物。对象可包括符合规范解释的财产性利益、股权等，需逐项证明，不以“无现金实物”排除。国家工作人员从事公务、受委派从事公务等情形须按第271条第2款转接贪污规则，不能只看单位所有制。
+
+\paragraph{规则 PP19-35：2026年职务侵占标准的参照关系。}
+\mbox{}\par
+2026年5月1日起施行的贪污贿赂解释（二）\textbf{第8条}规定，职务侵占的定罪量刑标准参照贪污罪标准执行。形式化时应作规范映射：
+\[
+\operatorname{Gate}_{271}(V,Q;v_{2026})
+=\operatorname{RefGate}_{\rm embezzlement}(V,Q;v_{2026}),
+\]
+其中 $Q$ 包括适用标准要求的额外情节，不能只映射一个数字而删掉情节替代条件。教材写明新的通常数额起点，但本册不把它误写为全国所有职务侵占情形唯一门槛，也不沿用旧资料中的六万元标准。历史行为须结合从旧兼从轻等时间规则另处理，不因本册核对日较新就把新标准溯及所有案件。\footnote{法释〔2026〕6号全文：\url{https://www.court.gov.cn/fabu/xiangqing/497181.html}。该参照规定是第8条；第7条是私分国有资产的数额规则，二者不可混淆。}
+
+\paragraph{规则 PP19-36：有体财物取得控制的既遂指标。}
+\mbox{}\par
+对盗窃、诈骗、抢夺、敲诈勒索等通常取得型财产犯罪，令 $t_b$ 是破坏原占有时间，$t_g$ 是取得新控制时间。依原书采用的取得控制模型，
+\[
+\operatorname{Complete}^{\rm acquire}_c(a,m)
+\Longleftrightarrow_{\rm book}
+\operatorname{NewControl}(x,m,t_g)\land t_g<\infty.
+\]
+原主人失去占有并不总证明行为人已经建立控制；外出销赃或花掉财物也不是所有既遂所必需。具体控制取决于物体大小、所在环境、当场监控、追捕和行为人控制范围等。原书小件物品放入口袋等案例的推理需固定这些事实，不能写成“进兜必既遂”或“没出商店必未遂”的全称定理。抢劫既遂另见 PP19-17 的适用规则。
+
+\paragraph{规则 PP19-37：数额必须分犯罪所得与后续收益。}
+\mbox{}\par
+定义行为时点 $t_a$ 的取得财物价值为 $V_a$，事后收益为 $Y(t)$。它们可以不同：
+\[
+\begin{gathered}
+\operatorname{CrimeAmount}(a)=V_a,\\
+\operatorname{ProceedsAfter}(a,t)=Y(t),\\
+V_a\ne Y(t)\text{ 一般可能}.
+\end{gathered}
+\]
+偷得股票、名画或将赃款投资后升值，不应不加区分把升值全部倒灌到既遂数额。刑法数额、追缴收益、民事赔偿的计算依据不同。价值认定时间、票证属性、可支配范围和主观认识均需具体规则；不能从账面标注金额直接推出盗取卡片时已取得账户全部余额。
+
+\paragraph{规则 PP19-38：数额认识应比较行为时主观与客观。}
+\mbox{}\par
+设 $V_o$ 为行为时客观价值，$\widehat V_x$ 为行为时相应价值认识，$V_r$ 为事后才获知的价值。主客观对应应比较 $V_o$ 与 $\widehat V_x$，而不是比较 $V_o$ 与 $V_r$：
+\[
+\operatorname{Correspondence}(a)
+=g(V_o(t_a),\widehat V_x(t_a),\operatorname{AmountRule}_c),
+\quad t_a=\operatorname{Time}(a).
+\]
+教材例中，行为时知道并抢得数额较大财物，事后误以为不值钱而扔掉，不能使已完成犯罪倒变为未遂。反之，对财物含隐藏巨额价值完全无认识时，不宜仅凭后来中奖、鉴定结果就直接认定行为时存在对全部巨额的故意。
+
+\paragraph{规则 PP19-39：金额门槛是罪名、地区与版本的函数。}
+\mbox{}\par
+对罪名 $c$，门槛记作 $\theta_c(r,v,Q)$，其中 $r$ 是依法可适用地区，$v$ 是规范版本，$Q$ 是降低或替代门槛等特殊情节。数额较大入口为
+\[
+\operatorname{AmountLarge}_c(a)
+=[\operatorname{Valuation}_c(a)\ge\theta_c(r,v,Q)].
+\]
+盗窃、诈骗、抢夺、敲诈勒索不能共用一个“2000元”或“3000元”的常数。诈骗2011年解释规定全国数额幅度并允许地方确定具体标准；特殊诈骗类型、跨地区规则与其他解释仍需核对。没有给出适用地区和行为时间的例题，本册数值题若只作模型演示，明确把 $\theta$ 当题设，不伪称它是全国统一现行门槛。\footnote{法释〔2011〕7号诈骗解释：\url{https://www.court.gov.cn/zixun/xiangqing/2472.html}。}
+
+\subsection{财产性利益：不能只画实物位移}
+\paragraph{规则 PP19-40：财产性利益与债权纸张不同。}
+\mbox{}\par
+$i\in I$ 可表示债权实现利益、免除或延期履行义务利益、服务利益等；$m\in M$ 是欠条、银行卡等有体载体。载体与其所代表利益属于不同类型，本模型不使用跨类型等号。$\operatorname{AcquireInterest}:A\times I\to\{0,1\}$ 表示取得利益，因而
+\[
+\operatorname{Take}(a,m)\not\Rightarrow\operatorname{AcquireInterest}(a,i).
+\]
+欠条证明债权但不必使持有人取得债权；实名可挂失卡片与不记名不挂失购物卡对利益的控制能力也不同。认定有体载体犯罪数额，须审查是否可实现相应利益、载体价值和特别规则，不能把欠条面额或银行卡余额机械作为被取纸片的价值。
+
+\paragraph{规则 PP19-41：债权利益模型的“放弃”不等于民事债权消灭。}
+\mbox{}\par
+原书把债权人当场实现、继续追索或延迟实现债权作为财产利益分析。令 $\operatorname{EnforceNow}(y,i,t)$ 为当场行使债权利益，$\operatorname{WaiveNow}(y,i,t)$ 为因欺骗或强制放弃即时实现，则
+\[
+\operatorname{WaiveNow}(y,i,t)
+\not\Rightarrow\neg\operatorname{CivilClaimExists}(y,i,t).
+\]
+即使民法上仍可诉请履行，刑法上现实可实现性、即时履行利益可能受损；反过来，存在民事债权也不保证每次迟延均构成犯罪。需分别记录债权本体、实现时点、现实实现可能性以及被害人的处分，避免把“法律没消灭债权”作为排除一切利益损害的简便证明。
+
+\paragraph{规则 PP19-42：利益取得与损失须有对应关系。}
+\mbox{}\par
+在原书采用的多数说利益模型内，不要求有体物物理位移，但要求同一利益的此消彼长及条件关系。设 $\Delta B_x(i)>0$ 为行为人利益增加，$\Delta B_y(i)<0$ 为被害人对应利益减少：
+\[
+\begin{aligned}
+\operatorname{MatchedBenefit}(a,i)={}&[\Delta B_x(i)>0]
+\land[\Delta B_y(i)<0]\\
+&\land\operatorname{SameInterest}(\Delta B_x,-\Delta B_y)
+\\
+&\land\operatorname{CausedBy}(a,\Delta B_x,\Delta B_y).
+\end{aligned}
+\]
+两个数不是必须由同一市场价格直接相等；关键是利益法律内容对应。造成他人损害而自己获得完全无关好处，不自动是取得该他人财产利益。是否将此种利益纳入某个取财罪，仍是该罪对象解释问题；少数说不承认某些转移方式时，应输出分歧而非强行设定其同意。
+
+\paragraph{规则 PP19-43：逃费要先确定非法占有目的出现时间。}
+\mbox{}\par
+令 $t_0$ 为请求提供商品服务时点，$t_1$ 为债务成立时点，$t_2$ 为逃费行为时点。原书按目的变化区分：
+\[
+\begin{gathered}
+J(t_0)=1\land D(t_0)\land\operatorname{ProvideDueToError}\\
+\Rightarrow\text{原商品或服务利益的诈骗审查},\\
+J(t_0)=0,\ J(t_2)=1\land D(t_2)\land\operatorname{WaiveNow}(y,i)\\
+\Rightarrow\text{债权实现利益的诈骗审查}.
+\end{gathered}
+\]
+若开始真有付费意思，事后从后门偷偷逃离而债权人未放弃即时实现，原书展示多数说不按盗窃利益处理、少数说肯定等观点。不能把这类逃费一律归为诈骗，也不能把开始即骗取提供的情形降为普通债务纠纷。对暴力逃费还应审查取财联系与抢劫利益的理论前提。
+
+\paragraph{规则 PP19-44：冒领快递三个状态须分别记录。}
+\mbox{}\par
+以同一包裹 $m$ 为例，原书区分送至真实收件人门口后被邻居拿走、误投邻居控制领域后被据为己有、送件人确认身份时被主动冒领。模型分别检查：
+\[
+\begin{aligned}
+\operatorname{Poss}(y,m)\land\operatorname{TakingBy}(x,m)&\Rightarrow\text{盗窃分支},\\
+\operatorname{Poss}(x,m)\land\operatorname{Own}(y,m)
+\land\operatorname{Appropriate}(x,m)&\Rightarrow\text{侵占分支},\\
+\operatorname{FalseIdentity}(x)\land\operatorname{Error}(z)
+\land\operatorname{Disposition}(z,x,m)&\Rightarrow\text{诈骗分支}.
+\end{aligned}
+\]
+这些是各自额外前提已被证明后的入口，不是只凭门牌位置即可机械定罪。误投是否已产生独立占有、送件人有没有处分地位、行为人是否积极确认身份等需要具体事实；金额与总则条件也没有被例子取消。
+
+\subsection{其他财产犯罪与罪数约束}
+\paragraph{规则 PP19-45：故意毁坏与取得型犯罪的目的不同。}
+\mbox{}\par
+第275条核心是故意毁坏公私财物、达到数额较大或其他严重情节；“毁坏”可表现为物理毁损或价值、功能丧失，需依法解释。令 $W(m)$ 为财物的效用状态，则
+\[
+\operatorname{IntentDamage}(x,m)\land\operatorname{Cause}(a,W_{\rm before}\to W_{\rm impaired})
+\land\operatorname{Gate}_{275}(a)
+\Rightarrow E_{275}(a).
+\]
+没有变成自己的财物，不排除毁坏；取得并利用财物也可能使物理形态消失，不能仅凭“烧了”就忽略取得目的。原书以取木材烤火与仅为毁弃搬走自行车等说明，应区分取财利用与纯粹破坏的行为结构；还须对行为个数与被侵害对象作罪数审查。
+
+\paragraph{规则 PP19-46：破坏生产经营有特定目的与对象联系。}
+\mbox{}\par
+第276条以泄愤报复或其他个人目的、毁坏机器设备、残害耕畜或其他方法破坏生产经营为核心。模型为
+\[
+\operatorname{PersonalPurpose}(x,a)
+\land\operatorname{SabotageOperation}(a,u)
+\land\operatorname{Intent}(x,a)\Rightarrow E_{276}(a).
+\]
+不是所有造成企业经济损失的行为都属于该罪；对象、手段与经营功能的连接应证明。若与故意毁坏财物、计算机犯罪或其他罪同时符合，须保留候选罪集，按竞合规则处理，不能由“发生在工厂”自动选第276条。
+
+\paragraph{规则 PP19-47：拒不支付劳动报酬有命令前置条件。}
+\mbox{}\par
+第276条之一不是“欠薪即犯罪”。令 $O_w$ 为支付义务，$E_v$ 为转移财产、逃匿等逃避支付，$A_p$ 为有能力支付而不支付，$N$ 为数额较大，$Order$ 为政府有关部门依法责令支付且仍不支付：
+\[
+O_w\land(E_v\lor A_p)\land N\land Order
+\land\operatorname{Intent}(x,a)
+\Rightarrow E_{276a}(a).
+\]
+单位犯罪按法条对单位和直接责任人员分别评价。尚未造成严重后果、提起公诉前支付并依法承担赔偿等是法定从宽路径，应写 $\mathsf{May}(\operatorname{Reduce}\lor\operatorname{Exempt})$，不能写成必然免罪；只补发一部分款项也不能自动满足全部条件。
+
+\paragraph{规则 PP19-48：销赃不是一律不可罚事后行为。}
+\mbox{}\par
+设 $a$ 为取得原财物，$b$ 为向第三人出售，$y$ 为原权利人，$z$ 为受骗买受人。若 $b$ 又满足对 $z$ 的诈骗全部构成条件，损失主体可能新增：
+\[
+\operatorname{Offence}(x,a,c_1)\land E_{266}(b,z)
+\land G_{266}(x,b)\Rightarrow
+\{c_1,266\}\subseteq\operatorname{Candidates}(a,b).
+\]
+最终并罚取决于行为个数、不同被害人的财产损失以及特别竞合规则。原书分别讨论一个卖树行为同时对树主盗窃、对买者诈骗，与先诈骗取得车辆再独立卖给第三人两头骗；不能用“均是销赃”把一行为竞合与两个独立侵害合并。
+
+\paragraph{规则 PP19-49：同一财产损失不重复评价是约束，不是万能吸收公式。}
+\mbox{}\par
+原书对侵占后谎称被盗免除返还、取得财物后暴力排除返还等，讨论重罪吸收和少数说不可罚事后行为。应记录每个行为所侵害利益单元 $\mathcal L(a)$：
+\[
+\mathcal L(a)\cap\mathcal L(b)\ne\varnothing
+\Rightarrow\operatorname{CheckDoubleCounting}(a,b),
+\]
+但不能逆向升级成
+\[
+\mathcal L(a)=\mathcal L(b)\Rightarrow
+\text{所有前后犯罪必定只定一罪}.
+\]
+后一式不是一般有效规则；人身法益、司法法益、新被害人、特别结合或并罚规定均可能改变结果。这里把“同一份财产损失”视为提出重复评价审查的问题，而非计算完份数就代替全部罪数理论。
+
+\paragraph{规则 PP19-50：身份罪与普通取财罪不能靠称呼选定。}
+\mbox{}\par
+对单位工作人员与外部人员共同取财，需分别审查身份、职务便利和共同故意。只写 $\operatorname{Staff}(x,u)$ 并不把外部人自动变成单位工作人员；共同犯罪可能依身份与功能作共同归责，但须显式规则支持。正确接口为
+\[
+\begin{gathered}
+\operatorname{Identity}(x,c)\land\operatorname{DutyLink}(x,a)
+\land\operatorname{JointIntent}(x,z,a)\\
+\Rightarrow\operatorname{AnalyseParticipation}(z,c,a).
+\end{gathered}
+\]
+不能把企业负责人、村干部、国企职工、国家工作人员等称谓直接一对一映射为贪污或职务侵占。原书村长侵吞村集体财物与协助政府行政管理时侵吞公共财物的区分，正要求把实际公务职能索引到具体行为。
+
+\subsection{三个可复核的推导示例}
+\paragraph{示例一：藏入包装盒与调换价签。}
+\mbox{}\par
+甲在超市把相机秘密藏进普通商品包装，收银员仅看到包装及普通商品信息，收取普通商品价款。对相机这个精确对象，若收银员没有处分相机的认识，记 $\operatorname{AwareDisposing}(y,m)=0$；若相机仍由超市占有，甲通过自己取走破坏该占有，则进入盗窃路径。不能因为收银员交出包装盒，就把任何未知内容物都当作已处分。
+
+再改题设：甲把贵重相机的价签换成低价相机的价签，收银员看见相机本体，将其误以为低价型号而交付。此时对真实交付相机有处分意识，错误在型号、价格等事实；若欺骗、错误、交付、取得、损失、非法占有目的和门槛均得到证明，则进入诈骗路径。两个案件都含欺骗，但处分对象变量不同，故不因表面共同点而得到相同罪名。处分意识必要说的理论前提也应同时列出。
+
+\paragraph{示例二：借用后据为己有不能倒推借用时即诈骗。}
+\mbox{}\par
+乙把相机交甲独立保管一周，记 $x$ 为甲。$t_0$ 时甲确有归还意思，没有虚构事实，$\operatorname{Poss}(x,m,t_0)=1$、$J(x,m,t_0)=0$。$t_1$ 时甲起意变卖并拒绝归还，故 $J(x,m,t_1)=1$。若其他侵占条件满足，则按 PP19-07 审查侵占；由于 $t_0$ 缺乏诈骗目的和欺骗链条，不能从 $t_1$ 的变卖直接推成 $t_0$ 的诈骗。
+
+再改题设：甲起初就谎称借相机拍摄，实际上计划骗到后出售；乙因相信其借用承诺而处分独立占有。此时 $J(t_0)=1$，还须证明虚假承诺所表达的当时事实、乙的错误和交付因果关系。若齐备，进入诈骗模型。事后相同的“卖相机”可以对应不同的起始状态，因此形式化必须保留时间序列和证据证明，不能只按最后结果分类。
+
+\paragraph{示例三：逃费中的三种理论输出。}
+\mbox{}\par
+令餐费债权为 $i$，金额设为题设中的足够数额，先不预设任何地区法定常数。情形A：甲吃饭前即不想付钱，虚构有支付能力和付款意愿使店方提供餐食。诈骗分析对象可以是餐食财物或服务利益，沿 $D\to E\to A_d\to G\to L$ 检查，不因后来形成债权就自动排除此前诈骗。
+
+情形B：甲起初真想付费，吃完才起意，谎称下次合并支付使店方放弃当场行使债权。模型中的关键不是债权在民法上是否绝对消灭，而是即时实现利益是否因错误处分而损失；在原书选定的多数说利益解释下进入诈骗利益审查。
+
+情形C：甲起初真想付费，后来从后门偷偷逃走，店方从未同意延期或放弃追索。此时不存在店方基于错误处分的同一链条，不能套情形B。原书展示对盗窃财产性利益的不同观点，应分别输出：多数说在此不认盗窃利益，少数说认为损害即时实现并获得延迟履行利益而可进入盗窃审查。\emph{“存在观点展示”本身就是严格模型的输出之一}，不是模型失败，更不能擅自伪造唯一结论。
+
+\subsection{本讲尚不能机械化的判断及核对清单}
+以上规则已经给出核心类型、状态转换、条件连接、版本接口与争议分支，但下列项目仍需要以可核对事实和法律解释填入：刑法意义占有的归属与对象粒度；强制是否压制反抗及与取财的功能联系；行为时非法占有目的；被骗处分的准确对象及处分地位；财产性利益是否属于特定罪的保护对象；个别财产目的的重要性；价格认定与地方标准；结果风险实现；共同参与人的认识范围。
+
+这些项目不是随意裁量空白。每次填值都应附“事实材料—证据状态—所采规范—解释方案”，并允许未知值；不能让计算程序默认为真。完成全部这些判断后，可以检验条件组合有无遗漏、推理是否自相矛盾、是否误用逆命题、是否重复计算损失。\textbf{本册完成的是可审查的核心规则形式化，不是把自然语言法律争议全部变成无争议的有限算法。}
+
+
+% 短谓词对照（正文中文说明给出语义）：
+% MP = MajorProperty
+% PS = PublicScope
+% ED = EquivalentDanger
+% IP = IntentPublic
+% OM = OtherMethod
+% ROD = ReviewOtherDanger
+% Tran = Transport
+% OR = OverturnRisk
+% RTD = ReviewTransportDamage
+% TRB = TrafficRuleBreach
+% TO = TrafficOutcome
+% Resp = Responsibility
+% Negl = Negligence
+% RTA = ReviewTrafficAccident
+% RL = RescueLoss
+% RF = RelevantFault
+% RED = ReviewEscapeDeath
+% RM = RoadMotor
+% RDD = ReviewDangerDrive
+% TO2 = TerrorOrg
+% ROT = ReviewOrgTerror
+% GCC = GunCrimeCandidate
+% SA = SpecificAct
+% SA2 = SeriousAccident
+% FQ = FakeQuality
+% POS = ProduceOrSell
+% RFPC = ReviewFakeProductCompleted
+% RTF = ReviewToxicFood
+% RUF = ReviewUnsafeFood
+% BCA = BorderControlAct
+% EC = EvadeCustoms
+% OC = ObjectClass
+% SSR = SelectSmugglingRule
+% SB = SameBusiness
+% UO = UseOffice
+% SC = StateCompany
+% IGL = IllegalGainLarge
+% R165 = Review165
+% OC2 = OtherCompany
+% LRB = LawRegBreach
+% ML = MajorLoss
+% PAR = PassAsReal
+% Coun = Counterfeit
+% RSBF = ReviewSellBuyFake
+% RUF2 = ReviewUseFake
+% RPD = ReviewPublicDeposit
+% DL = DeceiveLoan
+% IPP = IllegalPossessPurpose
+% LF = LoanFraud
+% P7 = Predicate7
+% CSN = ConcealSourceNature
+% RL2 = ReviewLaundering
+% DH = DeceiveHide
+% TEB = TaxEvasionBase
+% NCP = NoCriminalPursuit
+% RT = RefuseTax
+% TRL = TaxResistanceLink
+% RRT = ReviewResistTax
+% SGS = SameGoodsServices
+% RFM = ReviewFakeMark
+% IB = IllegalBusiness
+% SRB = StateRuleBreach
+% SC2 = StatutoryCategory
+% SMD = SeriousMarketDisorder
+% PP = PeoplePolice
+% LD = LawfulDuty
+% VA = ViolentAttack
+% KPD = KnowPoliceDuty
+% RPA = ReviewPoliceAssault
+% TO3 = ThreatOnly
+% SDT = StateDocumentType
+% RI = RelevantIntent
+% RFPD = ReviewForgePublicDoc
+% KNC = KnowNetCrime
+% RHNC = ReviewHelpNetCrime
+% NEBL = NationalExamByLaw
+% OC3 = OrganizeCheat
+% REC = ReviewExamCheat
+% SWR = SpecialWitnessRole
+% CP = CriminalProceeding
+% FE = FalseEvidence
+% FP = FramePurpose
+% HCP = HideCrimePurpose
+% RP = ReviewPerjury
+% OSM = OtherStatutoryMeans
+% BOIFT = BlockOrInduceFalseTestimony
+% ROE = ReviewObstructEvidence
+% KO = KnowOffender
+% SE = ShelterEscape
+% RS = ReviewShelter
+% FPF = FalseProofFor
+% RCO = ReviewCoverOffender
+% KP = KnowProceeds
+% CH = ConcealHandle
+% RCP = ReviewConcealProceeds
+% FCB = FabricatedCivilBasis
+% BCS = BringCivilSuit
+% SJI = StatutoryJusticeImpact
+% RFS = ReviewFalseSuit
+% CCC = CulturalCrimeCandidate
+% PR = ProtectedRelic
+% RAT = RelicActType
+% IBC = IllegalBorderCross
+% BAPB = BoundaryAndProcedureBreach
+% OC4 = OrganizeCross
+% AC = ArrangeControl
+% TC = TransportCross
+% CFC = CarryForCross
+% RMA = ReviewMedicalAccident
+% RIM = ReviewIllegalMedical
+% PT = PollutantType
+% DH2 = DischargeHandle
+% SP = SeriousPollution
+% RP2 = ReviewPollution
+% DBL = DrugByLaw
+% SSTM = SmuggleSellTransportMake
+% R347 = Review347
+% TC2 = TransportComplete
+% SMFT = SpatialMoveForTransport
+% MC = ManufactureComplete
+% DP = DrugProduced
+% PP2 = ProvidePlace
+% KDU = KnowDrugUse
+% SS = StatutorySeriousness
+% RHDU = ReviewHarborDrugUse
+% CAP = ControlArrangeProstitution
+% ROP = ReviewOrganizeProstitution
+% CP2 = CoerceProstitution
+% RFP = ReviewForceProstitution
+% IHI = InduceHarborIntroduce
+% R358O359 = Review358Or359
+% OBL = ObsceneByLaw
+% MCPSS = MakeCopyPublishSellSpread
+% PP3 = ProfitPurpose
+% ROP2 = ReviewObsceneProfit
+% ROS = ReviewObsceneSpread
+% SF = StateFunctionary
+% PW = PublicWork
+% SCE = StateCompanyEmployee
+% ESA = EntrustedStateAssets
+% ASA = AppropriateStateAsset
+% R382P2 = Review382Paragraph2
+% AOML = AuthorityOrManageLink
+% PP4 = PublicProperty
+% IAP = IllegalAppropriationPurpose
+% RE = ReviewEmbezzlement
+% Q382 = Qualified382
+% JI = JointIntent
+% JA = JointAppropriate
+% RJE = ReviewJointEmbezzlement
+% PF = PublicFunds
+% RMPF = ReviewMisappropriatePublicFunds
+% NPU = NaturalPersonUse
+% PNOU = PersonalNameOtherUnit
+% DUNFPB = DecideUnitNameForPersonalBenefit
+% DFP = DivertForPersonal
+% EA = ExecutionAct
+% PC = PunishCondition
+% RP3 = ReviewPunishable
+% AI = AcceptIllegal
+% BF = BenefitFor
+% BP = BribeProperty
+% RBT = ReviewBribeTaking
+% PB = PromiseBenefit
+% KSR = KnowSpecificRequest
+% DP2 = DeemedPromise
+% PBBL = PropertyBenefitByLaw
+% AG = ActualGain
+% MP2 = MarketPrice
+% PP5 = PaidPrice
+% SC3 = SubordinateConstraint
+% PC2 = PositionConvenience
+% DOR = DirectOfficeRoute
+% IBR = ImproperBenefitRequest
+% RMR = ReviewMediationRoute
+% IQ = InfluenceQualified
+% RIR = ReviewInfluenceRoute
+% RBG = ReviewBribeGiving
+% BG = BribeGiving
+% IB2 = ImproperBenefit
+% IB3 = IllegalBenefit
+% UCA = UnfairCompetitiveAdvantage
+% ODI = OtherDefinedImpropriety
+% BFU = BribeForUnit
+% RUG = ReviewUnitGiving
+% HMA = HighlyMixedAssets
+% RPG = ReviewPersonalGiving
+% PAP = PersonalAppropriationPurpose
+% PPG = PublicPropertyGiving
+% DC = DerelictionCrime
+% CP3 = CombinePunish
+% IG = IllegalGain
+% ROR = RecoverOrRestitute
+% OW = OrganWorker
+% DB = DutyBreach
+% LD2 = LegalDuty
+% RC = RequiredConduct
+% Depa = Departure
+% IDM = IntentionalDutyMisuse
+% NDF = NegligentDutyFailure
+% AC2 = AbuseCandidate
+% NC = NeglectCandidate
+% SL = SeriousLoss
+% R397 = Review397
+% TPA = ThirdPartyAct
+% SDCE = SpecialDutyCrimeElements
+% PR2 = PriorityReview
+% BT = BribeTaking
+% Dere = Dereliction
+% RCR = ReviewCombinationRule
+% CD = CollectiveDecision
+% PL = PersonalLiability
+% HNS = HarmNationalSecurity
+% RE2 = ReviewEspionage
+% JSO = JoinSpyOrg
+% IRIA = ImplementRelevantIllegalAct
+% AST = AcceptSpyTask
+% BET = BeginExecuteTask
+% CTI = CompleteTargetIndication
+% SS2 = StateSecret
+% SIR = SecurityInterestRelevant
+% NPBRR = NotPublicByRelevantRule
+% OR2 = OverseasRecipient
+% PI = ProvideIllegal
+% R111 = Review111
+% STPS = SpyTaskProvideSecret
+% RSA = ReviewSpyAbsorption
+% KSR2 = KnownSpyRelation
+% R111I = Review111Independently
+% IL = IntentionalLeak
+% SLC = StatutoryLeakConduct
+% IOS = IllegallyObtainSecret
+% LP = LaterProvide
+% RAR = ReviewActRelation
+% Exce = Exceptions
+% Conc = Conclusion
+% 第20—25讲核心规则。工作模型：事实成立、构成评价与法律后果分层。
+\noindent\textbf{本部分的符号约定：}人物变量$a,b,c$属于人员论域，$e,e_0,e_1$属于行为事件论域，$r$属于结果论域，$x$属于财物或法定对象论域，$p$属于信息内容论域，$t$属于时间论域，$v$属于规范版本论域。机构、组织与人员集合另以$u,O,G$标明。每条规则的自由变量均取相应类型的全称闭包；规范版本与事件发生时点必须固定后才能应用；在以$e$为主要事件的规则中，$t$统一指$\operatorname{Time}(e)$，多事件的时间线应另按各事件分别确定。为控制公式长度，同一段内已经固定的参数可省略，省略只表示固定参数的简记，不表示该参数任意变化，也不表示自动存在量化。所有以“审查”结尾的谓词表示进入相应构成的完整核对，不是已经作出有罪结论。短谓词的中文含义由所在段落给定。
+
+\section{第二十讲\quad 危害公共安全罪}
+
+\label{ref:lecture:20}
+
+\noindent\hyperref[lecture:20]{返回本讲的逐节推导与闭卷记忆}
+
+本讲抽取危险方法、交通、恐怖、枪支及安全生产的核心判断结构；没有逐一形式化原书全部案例，也不代表这一章全部罪名的穷尽列举。
+
+\subsection{公共性、危险性与结果必须分别表达}
+设$e$为行为事件，$r$为损害结果，$V(e)$为实际被害人集合，$R(e)$为依当时客观条件可能被危及的人员、财产范围。$R(e)$是结合行为方式、场所、传播机制和控制能力认定的范围，不是任意扩大后的假想集合。定义$\operatorname{LifeBody}(R)$为涉及生命、身体安全，$\operatorname{MP}(R)$为涉及重大公私财产安全；$\operatorname{PS}(e)$表示风险具有公共性。它需要具体评价潜在危及范围及失控、扩散可能性，不能仅用实际死伤人数替代。
+
+\paragraph{规则20.1：实际被害人数不是公共性的定义。}
+\[
+\begin{aligned}
+|V(e)|=1&\nRightarrow\neg\operatorname{PS}(e),\\
+|V(e)|>1&\nRightarrow\operatorname{PS}(e).
+\end{aligned}
+\]
+向多人可能取用的食物投毒，即使只有一人实际食用，也可能具有公共危险；将危险严格限制于已确定的特定个人，并不因死亡人数增加而必然转化为公共危险。这里的“不特定”主要涉及侵害范围难以确定或控制，不等于行为人不知道被害人的姓名。教材表格所区分的正是实际结果集合$V(e)$与风险范围$R(e)$。
+
+\paragraph{规则20.2：以其他危险方法危害公共安全的限制。}
+设$\operatorname{ED}(e)$表示行为的危险性质与放火、决水、爆炸、投放危险物质具有实质相当性，$\operatorname{IP}(a,e)$表示行为人对公共危险具有相应故意。核心审查规则为
+\[
+\begin{aligned}
+&\operatorname{OM}(e)\land\operatorname{ED}(e)\\
+&\quad\land\operatorname{PS}(e)\land\operatorname{IP}(a,e)\\
+&\qquad\Rightarrow\operatorname{ROD}(a,e).
+\end{aligned}
+\]
+结论是进入该罪构成审查，不是只要“很危险”就自动有罪。尚须满足具体危险、责任能力等完整条件，并排除特别条文优先适用问题。不能把条文中的概括性用语理解为处罚一切危险行为的兜底授权。
+
+\paragraph{规则20.3：危险状态与损害结果是不同变量。}
+记$D_C(e)$为罪名$C$要求的危险已经形成，$H_C(e)$为该条款要求的严重实害结果已经形成。对于以具体危险为成立要求的基本构成：
+\[
+\operatorname{Base}_C(e)\Rightarrow D_C(e),\qquad
+\neg H_C(e)\nRightarrow\neg\operatorname{Base}_C(e).
+\]
+对于结果加重条款，另需$H_C(e)$、因果归责及相应罪过。不能把“尚未造成严重后果”推成“危险尚未发生”，也不能用基本犯的故意直接替代对加重结果的归责。抽象危险、具体危险与结果犯的区别是条文结构的区别，不是按行为人胆量或社会新闻影响大小分类。
+
+\subsection{交通工具、交通肇事与危险驾驶}
+\paragraph{规则20.4：破坏对象与公共危险相联系。}
+以破坏交通工具罪的典型构成为例，$\operatorname{Tran}(x)$表示法定交通工具，$\operatorname{InUse}_v(x,t)$为依版本$v$的解释属于正在使用的对象，$\operatorname{OR}(e,x)$为足以发生倾覆、毁坏等法定危险：
+\[
+\begin{aligned}
+&\operatorname{Tran}(x)\land\operatorname{InUse}_v(x,t)
+\land\operatorname{Destroy}(e,x)\\
+&\quad\land\operatorname{OR}(e,x)
+\Rightarrow\operatorname{RTD}(e).
+\end{aligned}
+\]
+“使用”不能仅以车辆此刻是否行驶作机械判断，备用、检修等情形须依具体解释评价；普通财物损坏也不能只因对象是一辆车而升级为公共安全犯罪。抢劫、盗窃车辆附属设备与破坏交通工具的罪数，还应审查同一行为是否同时实现两个构成。
+
+\paragraph{规则20.5：交通肇事要求违章、结果、责任及过失的连接。}
+设$\operatorname{TRB}(a,e)$、$\operatorname{TO}_v(r)$、$\operatorname{Resp}_v(a,e,r)$分别表示违反交通运输管理法规、达到相应法定结果标准、达到相应事故责任要求；$\operatorname{Attr}(e,r)$表示结果可归责于该违章行为。则
+\[
+\begin{aligned}
+&\operatorname{TRB}(a,e)\land\operatorname{TO}_v(r)\\
+&\land\operatorname{Resp}_v(a,e,r)\land\operatorname{Attr}(e,r)
+\land\operatorname{Negl}(a,r)\\
+&\qquad\Rightarrow\operatorname{RTA}(a,e,r).
+\end{aligned}
+\]
+死亡、重伤、财产损失与事故责任比例存在不同组合，不宜删成一个固定人数标准。公共交通领域以外的生产、作业事故，还要先确定规范领域。对监管者、指使者的过失责任，应分别建立其义务违反和因果贡献，不能把故意共同犯罪概念直接套在共同过失上。
+
+\paragraph{规则20.6：因逃逸致人死亡需要第二条因果链。}
+令$e_0$为先前事故，$e_1$为逃逸，$r_d$为死亡，$\operatorname{RL}(e_1,r_d)$表示逃逸使本可获得的救助未能获得，且这种延误导致死亡。$\operatorname{Actor}(a,e_0)$表示$a$是先前事故中的相关责任行为人，$\operatorname{EF}(a,e_1,e_0)$表示$a$针对该事故逃逸；避免把无关事故与他人逃逸拼接：
+\[
+\begin{aligned}
+&\operatorname{Accident}(e_0)\land\operatorname{Actor}(a,e_0)
+\land\operatorname{EF}(a,e_1,e_0)\\
+&\quad\land\operatorname{RL}(e_1,r_d)\\
+&\quad\land\operatorname{RF}(a,r_d)
+\Rightarrow\operatorname{RED}(a,e_0,e_1,r_d).
+\end{aligned}
+\]
+仅有“逃逸以后被害人死亡”的时间先后不能证明本项。逃逸途中另撞死他人的，是新的撞击因果链，不当然就是逃逸使原被害人失救。对于先前事故是否必须独立达到基本犯入罪标准，教材脚注列出不同处理观点；应将观点参数$\pi$写入适用规则，不能伪装为无争议的逻辑定理。
+
+\paragraph{规则20.7：危险驾驶必须命中法定行为分支。}
+设$\operatorname{RM}(e)$为在道路上驾驶机动车；四个分支分别是追逐竞驶且情节恶劣$B_1$、醉酒驾驶$B_2$、从事校车业务或旅客运输且严重超员或严重超速$B_3$、违反危险化学品安全管理规定运输危险化学品且危及公共安全$B_4$。结构为
+\[
+\operatorname{RM}(e)\land(B_1(e)\lor B_2(e)\lor B_3(e)\lor B_4(e))
+\Rightarrow\operatorname{RDD}(e).
+\]
+道路、机动车、醉酒认定及严重程度均须依据相应规范与证据确定。一般超速、疲劳驾驶或单纯饮酒，不能只凭危险印象直接填进上述四个分支；同时构成其他犯罪的，另按法定竞合处理。
+
+\subsection{恐怖、枪支与生产安全}
+\paragraph{规则20.8：恐怖组织的角色与实施行为。}
+令$O$为恐怖活动组织，$\operatorname{TO2}_v(O)$为依法律认定具有相应性质。领导记为$\operatorname{Ld}$，组织记为$\operatorname{Org}$，参加记为$\operatorname{Jn}$：
+\[
+\operatorname{TO2}_v(O)\land
+\bigl(\operatorname{Org}(a,O)\lor\operatorname{Ld}(a,O)
+\lor\operatorname{Jn}(a,O)\bigr)
+\Rightarrow\operatorname{ROT}(a,O).
+\]
+角色影响构成与法定刑；另外实施杀人、爆炸、绑架等犯罪的，应按法律规定继续评价，不能以组织犯罪自动吸收所有实施犯罪。单纯令人恐惧、传播谣言不等于组织恐怖活动；资助、准备、宣扬等条款也有各自行为条件。
+
+\paragraph{规则20.9：枪支犯罪先确定法定对象。}
+\[
+\operatorname{GCC}(a,x)
+\Rightarrow\operatorname{GunByLaw}_v(x)\land\operatorname{SA}_v(a,x).
+\]
+$\operatorname{GunByLaw}_v$需要物证、鉴定与适用标准，$\operatorname{SA}_v$须具体为制造、买卖、运输、邮寄、储存、持有、私藏等法定行为之一。玩具外观、商品名称、是否已经打伤人，都不能分别替代对象认定；持有型与流转型行为的关系及主观认识，应逐项审查，不可由鉴定结果单独推出故意。
+
+\paragraph{规则20.10：事故型与危险作业型构成分层。}
+对于重大责任事故等结果型条款，基本链为
+\[
+\operatorname{Duty}(a,d)\land\operatorname{Breach}(a,d,e)
+\land\operatorname{SA2}_v(r)\land\operatorname{Attr}(e,r)
+\land\operatorname{Negl}(a,r).
+\]
+危险作业罪则须命中关闭、破坏监控报警救生设备，拒不执行相关停产整改要求，或未经许可从事法定高度危险生产作业等具体分支，并具备发生重大伤亡事故或者其他严重后果的现实危险。不能把所有安全生产行政违法都转换成危险作业罪；尚未发生事故也不能自动否定该罪。
+
+\paragraph{小例与反例。}
+甲为杀乙，在向不特定员工供应的食堂汤桶投毒，只有乙喝汤死亡。形式分析先确定汤桶的供应范围$R(e)$及扩散可能性，再判断公共危险及罪过，而不是计算$|V(e)|=1$后排除公共安全。若另案中甲仅向乙单独持有且不会转交的药杯投毒，风险范围与取财、人身侵害条款的关系都可能改变。两个案件死亡人数相同，但决定构成方向的公共性事实不同。
+
+\section{第二十一讲\quad 破坏经济秩序犯罪}
+
+\label{ref:lecture:21}
+
+\noindent\hyperref[lecture:21]{返回本讲的逐节推导与闭卷记忆}
+
+以下按照原书八节建立产品、走私、公司企业、金融、税收、知识产权和市场秩序的审查模型。各节只给核心规则，不把“违反行政规定”本身写成充分入罪条件。
+
+\subsection{产品与食品犯罪：数额、危险和特别条款}
+\paragraph{规则21.1：一般伪劣产品构成中的数量对象。}
+设$\operatorname{FQ}(x)$为掺杂掺假、以假充真、以次充好或以不合格冒充合格，$S(e)$为已销售金额，$U(e)$为未销售货值，$\theta_v$为一般完成形态的销售金额门槛。核心分支为
+\[
+\begin{aligned}
+&\operatorname{POS}(a,x,e)\land\operatorname{FQ}(x)
+\land S(e)\geq\theta_v\\
+&\qquad\Rightarrow\operatorname{RFPC}(a,e).
+\end{aligned}
+\]
+未销售部分须按相应司法解释计算未遂门槛及已售、未售混合折算，不能把货值不加区别地当销售额。教材使用已售与未售的折算模型；这里以$\theta_v$与转换系数$k_v$保留法源版本，不能由民事合同总价直接代替刑事销售金额。
+
+\paragraph{规则21.2：特别产品罪与一般产品罪是竞争评价。}
+令$C_s$为特定产品罪，$C_g$为一般伪劣产品罪。应先分别检验两个构成：
+\[
+\begin{aligned}
+\operatorname{Elements}_{C_s}(e)\land\operatorname{Elements}_{C_g}(e)
+&\Rightarrow\operatorname{Apply149}(C_s,C_g,e),\\
+\neg\operatorname{Elements}_{C_s}(e)\land\operatorname{Elements}_{C_g}(e)
+&\Rightarrow\operatorname{Review}_{C_g}(e).
+\end{aligned}
+\]
+刑法第149条设有具体处理规则；不能由产品在特定目录中就排除一般条款，也不能不比较法定条件而把两个罪名一律并罚。既侵犯购买人的财产又构成销售伪劣产品的，还须判断是否属于同一行为触犯不同构成。
+
+\paragraph{规则21.3：有毒有害食品与不符合安全标准食品的区别。}
+设$N(x)$为掺入有毒、有害的非食品原料，$F(x)$为不符合食品安全标准，$D(x)$为足以造成严重食物中毒事故或其他严重食源性疾病的法定危险：
+\[
+\begin{aligned}
+\operatorname{Food}(x)\land N(x)\land\operatorname{POS}(a,x)
+&\Rightarrow\operatorname{RTF}(a,x),\\
+\operatorname{Food}(x)\land F(x)\land D(x)
+\land\operatorname{POS}(a,x)
+&\Rightarrow\operatorname{RUF}(a,x).
+\end{aligned}
+\]
+两式省略的故意、责任、加重结果等仍须补全。$N,F,D$须依食品、添加物和危险认定规范证明；不能把所有过期食品推成有毒有害食品，也不能把“食品安全标准不合格”与具体危险合成一个未经证明的谓词。教材表格对这一区分作了专门比较。
+
+\subsection{走私、公司企业及金融秩序}
+\paragraph{规则21.4：走私的监管回避与对象分类。}
+\[
+\begin{aligned}
+&\operatorname{BCA}(e)\land\operatorname{EC}(e)
+\land\operatorname{OC}_v(x,c)\\
+&\quad\Rightarrow\operatorname{SSR}_v(c,e,x).
+\end{aligned}
+\]
+先分类为普通货物、物品或禁止、限制类特定对象，再适用相应税额、情节或对象条款。没有支付关税与逃避海关监管不是同义命题；境内收购、运输的共犯或拟制构成也须有特别规定。事后帮助与事前通谋的边界不能因对象属于走私物品就消失。
+
+\paragraph{规则21.5：公司企业背信犯罪须保留身份、职务与损失。}
+以非法经营同类营业罪为例，$\operatorname{Manager}_v(a,u)$表示法定董事、监事、高级管理人员身份，$\operatorname{SB}(e,u)$为自己经营或为他人经营与任职单位同类营业，$\operatorname{UO}(a,e)$为实质利用职务便利。2024年起的条文结构包含不同分支：
+\[
+\begin{aligned}
+&\operatorname{SC}(u)\land\operatorname{Manager}_v(a,u)
+\land\operatorname{UO}(a,e)\\
+&\quad\land\operatorname{SB}(e,u)
+\land\operatorname{IGL}_v(e)
+\Rightarrow\operatorname{R165}(a,e),\\
+&\operatorname{OC2}(u)\land\operatorname{Manager}_v(a,u)
+\land\operatorname{LRB}(e)\\
+&\quad\land\operatorname{UO}(a,e)\land\operatorname{SB}(e,u)
+\land\operatorname{ML}_v(u,e)
+\Rightarrow\operatorname{R165}(a,e).
+\end{aligned}
+\]
+这是刑法修正案（十二）扩展到其他公司企业后的分支结构；不能继续套用“只能由国有单位人员构成”的旧口诀。对为亲友非法牟利、低价折股出售等犯罪，同样须分别保留其行为类型与国家或企业利益重大损失要求。\footnote{刑法修正案（十二），最高检公开全文：\url{https://www.spp.gov.cn/spp/zdgz/202312/t20231229_638849.shtml}。}
+
+\paragraph{规则21.6：假币的交易双方认识决定行为类型。}
+设$K_a(x)$、$K_b(x)$为卖方、对方知道是假币；$\operatorname{Transfer}(a,b,x)$为有偿转移，$\operatorname{PAR}(a,b,x)$为当真币投入流通：
+\[
+\begin{aligned}
+\operatorname{Coun}(x)\land K_a(x)\land K_b(x)
+\land\operatorname{Transfer}(a,b,x)
+&\Rightarrow\operatorname{RSBF}(a,b,x),\\
+\operatorname{Coun}(x)\land K_a(x)\land\neg K_b(x)
+\land\operatorname{PAR}(a,b,x)
+&\Rightarrow\operatorname{RUF2}(a,x).
+\end{aligned}
+\]
+两式须继续满足数额等条件，且$\neg K_b$不能由“未证实其知情”自动推出。展示假币与投入流通不同；对自动交易设备的使用不要求存在一个受骗的自然人。教材特意区分出售假币与使用假币，并提示不能把白纸冒充假币的诈骗自动写成假币犯罪未遂。
+
+\paragraph{规则21.7：非法集资的非法性与诈骗目的分开。}
+用$A$表示未经依法许可或借用合法经营形式，$P$表示公开宣传，$R$表示承诺还本付息或给予回报，$U$表示面向社会公众，$T_v$表示达到法定数额或情节门槛。典型非法吸收公众存款审查式为
+\[
+A\land P\land R\land U\land T_v
+\Rightarrow\operatorname{RPD}.
+\]
+再有非法占有目的、诈骗方法与取得资金的对应证据，才进入集资诈骗评价。非法占有目的不能只由经营失败、逾期未还推定为必然成立；面向亲友与面向社会公众的区别也不能只按通讯录名称决定。
+
+\paragraph{规则21.8：金融欺骗与金融诈骗不是同义词。}
+设$\operatorname{DL}(a,e)$为使用欺骗方法取得贷款等资金，$\operatorname{IPP}(a,e)$为非法占有目的：
+\[
+\begin{aligned}
+\operatorname{DL}(a,e)&\nRightarrow
+\operatorname{IPP}(a,e),\\
+\operatorname{LF}(a,e)&\Rightarrow
+\operatorname{DL}(a,e)\land\operatorname{IPP}(a,e).
+\end{aligned}
+\]
+贷款诈骗还须法定行为和数额等要求；骗取贷款等条款则有其自身结果或情节要求与单位主体规则。不能以“申请材料虚假”一个事实同时替代资金流转、损失、目的与责任的全部证明。
+
+\paragraph{规则21.9：洗钱的对象来源和掩饰行为必须连接。}
+设$\operatorname{P7}(c)$为法定七类上游犯罪，$\operatorname{Proceeds}(x,c)$为该犯罪所得及其收益，$\operatorname{CSN}(a,e,x)$为实施法定方式以掩饰、隐瞒来源、性质：
+\[
+\exists c\,[\operatorname{P7}(c)\land\operatorname{Proceeds}(x,c)]
+\land\operatorname{CSN}(a,e,x)
+\Rightarrow\operatorname{RL2}(a,e,x).
+\]
+主观条件与各行为方式仍须证明。上游犯罪人实施符合条件的自洗钱不能仅因“自己的钱”排除；同样，取得、消费犯罪所得也不能不经掩饰隐瞒方式审查就一律入洗钱罪。
+
+\subsection{税收、知识产权及市场秩序}
+\paragraph{规则21.10：逃税的金额与比例是两个同时要求的变量。}
+令$E$为逃避缴纳税额，$B$为适用规范确定的应纳税额基数，$\rho=E/B$（$B>0$），$\theta_v$为数额较大标准。对纳税人的典型基本分支：
+\[
+\operatorname{Taxpayer}(a)\land\operatorname{DH}(a,e)
+\land E\geq\theta_v\land\rho\geq0.10
+\Rightarrow\operatorname{TEB}(a,e).
+\]
+扣缴义务人有不同的法定结构，不可直接复制比例要求。基数、所属期间和累计规则须按解释确定；不能把账面营业额当应纳税额。
+
+\paragraph{规则21.11：补税后的排除追究不是一般免罪公式。}
+依第201条第4款，记$N$为税务机关依法下达追缴通知，$P$为补缴应纳税款并缴纳滞纳金，$A$为已受行政处罚，$X$为五年内因逃税受过刑事处罚或者被税务机关给予二次以上行政处罚的除外情形。规则表达为
+\[
+\operatorname{TEB}(a,e)\land N\land P\land A\land\neg X
+\Rightarrow\operatorname{NCP}_{201(4)}(a,e).
+\]
+适用主体、处理顺序、程序阶段以及各条件的法律解释必须继续核对。该款不能扩展给抗税、逃避追缴欠税或所有扣缴义务人；“愿意补税”也不等于三个条件已经满足。教材将此作为排除处罚问题单列，而不是改写成原逃税行为从未发生。
+
+\paragraph{规则21.12：抗税的暴力、威胁须服务于拒不缴税。}
+\[
+\operatorname{RT}(a,e)\land
+\bigl(\operatorname{Violence}(e)\lor\operatorname{Threat}(e)\bigr)
+\land\operatorname{TRL}(e)
+\Rightarrow\operatorname{RRT}(a,e).
+\]
+一般争执与法定暴力、威胁不同；其后补税不当然适用第201条的特殊排除追究机制。造成伤亡及与妨害公务等的关系，另按具体法定条件评价。
+
+\paragraph{规则21.13：知识产权犯罪不能用“有侵权”替代刑事构成。}
+以假冒注册商标的典型结构为例，$\operatorname{RegMark}(m)$为受保护注册商标，$\operatorname{SGS}_v$、$\operatorname{SameMark}_v$为刑法及解释意义上的同一种商品、服务与相同商标：
+\[
+\begin{aligned}
+&\neg\operatorname{Permit}(h,a,m)\land\operatorname{RegMark}(m)
+\land\operatorname{SGS}_v\\
+&\quad\land\operatorname{SameMark}_v\land\operatorname{Serious}_v
+\Rightarrow\operatorname{RFM}(a).
+\end{aligned}
+\]
+民事“近似”概念不能未经解释直接代入刑事“相同”；不得遗漏假冒服务商标的法定路径。销售假冒注册商标商品与制造商标标识分别有不同条件。著作权犯罪须逐项列举作品、权利、法定行为、营利目的及相应门槛；商业秘密罪还要证明秘密性、商业价值、保密措施和非法获取、披露、使用的联系，而不是只写“客户资料被带走”。相关对象、数额与共同犯罪条件应按2025年4月26日起施行的知识产权刑事解释核对，不能继续直接套用已被其废止的旧解释。\footnote{最高检公布的2025年知识产权刑事解释：\url{https://www.spp.gov.cn/spp/xwfbh/wsfbt/202504/t20250424_693977.shtml}。}
+
+\paragraph{规则21.14：非法经营的开放语句受罪刑法定限制。}
+\[
+\operatorname{IB}(a,e)
+\Rightarrow\operatorname{SRB}_v(e)
+\land\operatorname{SC2}_v(e)
+\land\operatorname{SMD}_v(e).
+\]
+$\operatorname{SC2}_v$必须写出对应条款或依法作出的具体解释，不能把它定义为“凡被执法者认为不妥的经营”。营业执照问题、普通违约、伦理争议和违法经营之间不能自动画等号。
+
+\paragraph{小例与反例。}
+甲明知钞票为假，将其作为真币付给不知情的商家；乙明知是假币，低价向甲购买一批假币。两案都涉及假币流转，但前案的核心是当真币投入流通，后案的核心是双方明知下的假币交易。分别填入规则21.6后，还要核查数量、金额、共同犯罪与其他财产罪构成；不能把两案都只命名为“假币诈骗”而结束推理。
+
+\section{第二十二讲\quad 妨害社会管理犯罪}
+
+\label{ref:lecture:22}
+
+\noindent\hyperref[lecture:22]{返回本讲的逐节推导与闭卷记忆}
+
+本讲保留公共秩序、司法、文物、国境、公共卫生、环境、毒品、卖淫与淫秽物品九类索引；规则不是全部罪名的自动判决程序。
+
+\subsection{公共秩序：对象、行为强度与主观认识}
+\paragraph{规则22.1：袭警罪的对象资格与履职状态。}
+\[
+\begin{aligned}
+&\operatorname{PP}(b)\land\operatorname{LD}(b,t)
+\land\operatorname{VA}(a,b,e)\\
+&\qquad\land\operatorname{KPD}(a,b,t)
+\Rightarrow\operatorname{RPA}(a,e).
+\end{aligned}
+\]
+行为对象不是所有身穿制服者；辅助人员与人民警察的资格不同，具体同时侵害情形按解释处理。“正在依法执行职务”是构成审查事实，不能由警察身份自动推出。纯粹辱骂、一般性抵抗和暴力袭击的界限，需要依攻击方式、强度与现实危险评价。教材已使用2025年1月18日起施行的袭警解释。\footnote{最高法公布的袭警司法解释：\url{https://www.court.gov.cn/fabu/xiangqing/452851.html}。}
+
+\paragraph{规则22.2：威胁与暴力不得在不同罪名间任意替换。}
+\[
+\operatorname{TO3}(a,b,e)\nRightarrow\operatorname{VA}(a,b,e).
+\]
+威胁可能进入妨害公务等条款，但不能因此删去袭警罪对暴力袭击的要求。对于执法存在违法、重大过错或严重过错的案件，应分别处理履职合法性、侵害性质、责任和情节显著轻微等问题，不应写成“只要警察有错，任何暴力都合法”的反向公式。
+
+\paragraph{规则22.3：公文、证件、印章犯罪先识别公共信用。}
+以伪造国家机关公文、证件、印章为例：
+\[
+\operatorname{SDT}_v(x)\land\operatorname{Forge}(a,x)
+\land\operatorname{RI}_v(a,x)
+\Rightarrow\operatorname{RFPD}(a,x).
+\]
+须根据具体罪名保留伪造、变造、买卖、盗窃、抢夺等法定行为差别。文书声称的机关是否现实存在，并不单独决定其是否足以侵害相应公共信用；教材对此提出专门解释。仅制作玩具、舞台道具或没有相应使用意图的行为，要按具体条文和解释分析，不得将图像相似度直接当作构成结论。
+
+\paragraph{规则22.4：网络帮助犯罪需要认识与促进关系。}
+设$\operatorname{NetCrime}(b,c)$为他人利用信息网络实施犯罪，$\operatorname{AidType}_{287.2}(a,e)$为法定技术支持、广告推广、支付结算等帮助，$\operatorname{KNC}(a,b)$为达到规范要求的明知，$\operatorname{Serious}_v(e)$为情节严重：
+\[
+\begin{aligned}
+&\operatorname{NetCrime}(b,c)\land\operatorname{AidType}_{287.2}(a,e)
+\land\operatorname{Promote}(e,c)\\
+&\quad\land\operatorname{KNC}(a,b)\land\operatorname{Serious}_v(e)
+\Rightarrow\operatorname{RHNC}(a,e).
+\end{aligned}
+\]
+明知可以基于证据依法推认，但不能用职业、年龄、某次转账或异常费率单独定义为必然明知。帮助信息网络犯罪活动罪、掩饰隐瞒犯罪所得罪与诈骗共犯，分别要求对不同事实及参与程度的认识和行为贡献，不可只按使用银行卡这一外观分类。
+
+\paragraph{规则22.5：组织考试作弊的考试范围。}
+\[
+\operatorname{NEBL}_v(q)\land\operatorname{OC3}(a,q,e)
+\Rightarrow\operatorname{REC}(a,e).
+\]
+法律规定的国家考试是限定词，学校随堂测验、普通企业招聘考试不能自动代入。非法出售、提供试题答案和代替考试有各自构成；组织、提供帮助及替考之间的参与关系，需要按各人行为和故意认定。
+
+\subsection{妨害司法：证明内容与程序位置}
+\paragraph{规则22.6：伪证罪不是一切诉讼中的虚假陈述。}
+设$\operatorname{SWR}(a)$表示证人、鉴定人、记录人或翻译人；$\operatorname{CP}(q)$为刑事诉讼；$\operatorname{Material}(p,q)$为与案件有重要关系的事实，$\operatorname{FE}(a,p,q)$为故意作虚假的证明、鉴定、记录或翻译：
+\[
+\begin{aligned}
+&\operatorname{SWR}(a)\land\operatorname{CP}(q)
+\land\operatorname{Material}(p,q)\\
+&\land\operatorname{FE}(a,p,q)
+\land\bigl(\operatorname{FP}(a)\lor\operatorname{HCP}(a)\bigr)\\
+&\qquad\Rightarrow\operatorname{RP}(a,q).
+\end{aligned}
+\]
+不能把被告人的辩解直接放入特别主体集合；民事诉讼虚假陈述也不能无视程序类型直接按本罪处理。发生虚假内容但没有故意，或具有故意但所陈述内容客观真实，均不能只靠“态度不诚实”的评价补全虚假证明。教材还明确既遂不以法官实际受骗为必要。
+
+\paragraph{规则22.7：妨害作证评价指向干预他人作证。}
+\[
+\bigl(\operatorname{Violence}(e)\lor\operatorname{Threat}(e)
+\lor\operatorname{Bribe}(e)\lor\operatorname{OSM}_v(e)\bigr)
+\land\operatorname{BOIFT}(e)
+\Rightarrow\operatorname{ROE}(e).
+\]
+该罪的行为人与伪证罪的特别主体不是同一集合。是否需要他人已经作出伪证、实际阻止程度及刑事、民事程序的覆盖，应依条文和解释确定，不能从上述简式反推出不存在其他成立方式。
+
+\paragraph{规则22.8：窝藏、包庇与掩饰隐瞒犯罪所得对象不同。}
+\[
+\begin{aligned}
+\operatorname{KO}(a,b)\land\operatorname{SE}(a,b,e)
+&\Rightarrow\operatorname{RS}(a,e),\\
+\operatorname{KO}(a,b)\land\operatorname{FPF}(a,b,e)
+&\Rightarrow\operatorname{RCO}(a,e),\\
+\operatorname{KP}(a,x)\land\operatorname{CH}(a,x,e)
+&\Rightarrow\operatorname{RCP}(a,e).
+\end{aligned}
+\]
+前两项指向犯罪人逃避追究，第三项指向犯罪所得及其收益。事先通谋的行为可能依所帮助的本罪共犯处理，不能一概降为事后犯罪。亲属关系也不自动抹除法定构成，仍须依法审查期待可能性等具体问题。
+
+\paragraph{规则22.9：虚假诉讼须识别所捏造的诉讼基础。}
+\[
+\operatorname{FCB}(e)\land\operatorname{BCS}(a,e)
+\land\operatorname{SJI}_v(e)
+\Rightarrow\operatorname{RFS}(a,e).
+\]
+败诉、请求数额夸大、举证不足与捏造事实不是同义词。与诈骗罪、伪造证据行为及执行程序的关系，应以行为、结果及特别处罚规则继续分析，不能把民事违法一律转换成虚假诉讼罪。
+
+\subsection{文物、国境、医疗、环境与毒品}
+\paragraph{规则22.10：对象型犯罪须先完成对象鉴别。}
+\[
+\operatorname{CCC}(a,x,e)
+\Rightarrow\operatorname{PR}_v(x)
+\land\operatorname{RAT}_v(e,x).
+\]
+古旧物品不当然是法定文物；文物的等级、来源、国有属性及行为是盗掘、倒卖、损毁还是走私，会改变罪名。文物监管与出入境管理的竞合须保留，不能仅凭收藏爱好或交易价格代替对象证明。
+
+\paragraph{规则22.11：组织、运送与偷越国边境分层。}
+\[
+\begin{aligned}
+\operatorname{IBC}_v(e)&\Rightarrow
+\operatorname{BAPB}_v(e),\\
+\operatorname{OC4}(a,G,e)&\Rightarrow
+\operatorname{AC}(a,G,e),\\
+\operatorname{TC}(a,G,e)&\Rightarrow
+\operatorname{CFC}(a,G,e).
+\end{aligned}
+\]
+缺少证件、签证手续异常和刑法意义的偷越必须依具体规定认定；组织者、运送者与本人偷越不是同一角色。是否牟利、是否多次以及是否造成伤亡，须按各罪的法定情节要求分别输入，不能用单一“参与人数”变量代替。
+
+\paragraph{规则22.12：医疗事故与非法行医的主体及行为形态。}
+令$Q(a)$为法定医务人员身份，$D(a,e)$为严重不负责任违反诊疗义务，$H(r)$为死亡或严重损害身体健康；$NQ(a)$为未取得医生执业资格，$\operatorname{Practice}(a,e)$为依法解释的非法行医活动：
+\[
+\begin{aligned}
+Q(a)\land D(a,e)\land H(r)\land\operatorname{Attr}(e,r)
+\land\operatorname{Negl}(a,r)
+&\Rightarrow\operatorname{RMA}(a,e),\\
+NQ(a)\land\operatorname{Practice}(a,e)\land\operatorname{Serious}_v(e)
+&\Rightarrow\operatorname{RIM}(a,e).
+\end{aligned}
+\]
+教材采用职业性活动解释，区分反复、持续行医意思与偶然帮人治病；这一解释选择须显式保留。具有资格但执业地点不符合管理要求，不能仅据地点就推成无资格的实行犯。死亡结果亦不能抹去资格、故意过失和业务义务的差别。
+
+\paragraph{规则22.13：污染环境须明确规范、物质、行为及严重程度。}
+\[
+\operatorname{SRB}_v(e)\land
+\operatorname{PT}_v(x)\land\operatorname{DH2}(e,x)
+\land\operatorname{SP}_v(e)
+\Rightarrow\operatorname{RP2}(e).
+\]
+“严重污染环境”不能仅按舆论感受赋真值，应记录检测、地点、数量、后果或法定情节。伪造监测数据、帮助处理污染物和单位责任都需具体规范连接；保护环境的抽象目的不能替代入罪门槛。
+
+\paragraph{规则22.14：毒品犯罪不以数量门槛统一本罪是否成立。}
+\[
+\operatorname{DBL}_v(x)\land\operatorname{KnowDrug}(a,x)
+\land\operatorname{SSTM}(a,x,e)
+\Rightarrow\operatorname{R347}(a,e,x).
+\]
+刑法第347条对走私、贩卖、运输、制造毒品采取特别结构；数量主要影响具体量刑和相应情节，而不是可直接复制到非法持有毒品罪的统一规则。须证明知道对象具有毒品的性质，不要求知道准确化学名称或法定分类；反过来，成分鉴定本身不能证明主观明知。
+
+\paragraph{规则22.15：运输与制造的既遂节点不同。}
+\[
+\begin{aligned}
+\operatorname{TC2}(e,x)
+&\Rightarrow\operatorname{SMFT}(e,x),\\
+\operatorname{MC}(e,x)
+&\Rightarrow\operatorname{DP}(e,x).
+\end{aligned}
+\]
+按教材的模型，运输不以到达目的地为必要，制造不以产量大或纯度高为必要。仅为包装、分装或掺入非毒品物质，不能无条件当作制造；使用根本不能制造毒品的方法，涉及不能犯的规范评价。运输共同犯罪仍须证明参与人的共同故意和分工联系，不能由同车或同一雇主自动推出。
+
+\paragraph{规则22.16：容留吸毒与毒品流转分开。}
+\[
+\operatorname{PP2}(a,G,e)\land\operatorname{KDU}(a,G,e)
+\land\operatorname{SS}_v(e)
+\Rightarrow\operatorname{RHDU}(a,e).
+\]
+房屋所有权不是提供场所的唯一来源；偶然在场、明知后无管理能力者与积极提供场所者必须分开。不能因同一场所发生贩毒，就把所有房主、房客与吸毒者一律写成贩毒共犯。
+
+\subsection{卖淫、淫秽物品与罪数边界}
+\paragraph{规则22.17：组织、强迫与引诱、容留、介绍须分别赋值。}
+\[
+\begin{aligned}
+\operatorname{CAP}(a,G,e)
+&\Rightarrow\operatorname{ROP}(a,e),\\
+\operatorname{CP2}(a,b,e)
+&\Rightarrow\operatorname{RFP}(a,e),\\
+\operatorname{IHI}(a,b,e)\land T_v(e)
+&\Rightarrow\operatorname{R358O359}(a,e).
+\end{aligned}
+\]
+各罪的行为人地位、被害人年龄与行为方式不能互相借用。是否牟利、是否具有持续管理控制、是否属于实行行为，需分别与具体条款对应；对幼女的引诱另有特别保护结构。涉性行为的道德评价不能替代对法定卖淫行为的认定。
+
+\paragraph{规则22.18：淫秽物品的对象与目的影响罪名。}
+\[
+\begin{aligned}
+\operatorname{OBL}_v(x)\land\operatorname{MCPSS}(a,x,e)
+\land\operatorname{PP3}(a,e)\land T_v(e)
+&\Rightarrow\operatorname{ROP2}(a,e),\\
+\operatorname{OBL}_v(x)\land\operatorname{Spread}(a,x,e)
+\land\operatorname{Serious}_v(e)
+&\Rightarrow\operatorname{ROS}(a,e).
+\end{aligned}
+\]
+第二式须排查与第一式的关系，不能将缺少营利目的直接推成无罪；医学、艺术资料是否属于刑法对象，应依条文及具体内容判断。浏览量、群人数、文件数、传播次数的计算口径不同，必须按司法解释固定，不能任取平台统计数字替换。
+
+\paragraph{小例与反例。}
+甲在刑事案件中作为证人，故意谎称未在现场见过乙，目的是帮助乙隐匿犯罪；乙作为被告人否认自己犯罪。甲需要按规则22.6审查特别主体、重要事实和隐匿目的；乙的否认不因同样不真实就自动构成伪证。若甲只是记忆错误，则虚假内容仍不能替代故意证明。三个情形显示，命题真假、主体资格和心理态度是三个独立输入。
+
+\section{第二十三讲\quad 贪污贿赂罪}
+
+\label{ref:lecture:23}
+
+\noindent\hyperref[lecture:23]{返回本讲的逐节推导与闭卷记忆}
+
+本讲以贪污、挪用公款、普通及斡旋受贿、行贿、利用影响力受贿为核心。法源核对包括刑法修正案（十二）以及2026年5月1日起施行的贪污贿赂司法解释（二）。\footnote{最高法公布的2026年解释（二）全文：\url{https://www.court.gov.cn/fabu/xiangqing/497181.html}。下列公式是对法律和原书核心判断关系的建模，不替代数额鉴定及事实证明。}
+
+\subsection{身份、财物与职务便利的类型限制}
+\paragraph{规则23.1：公务身份不等于劳动关系。}
+记$\operatorname{SF}_v(a,t)$为刑法第93条及相应规范意义的国家工作人员，$\operatorname{PW}(a,t)$为依法从事公务。则
+\[
+\operatorname{SCE}(a)
+\nRightarrow\operatorname{SF}_v(a,t).
+\]
+委派到非国有单位从事公务、依法从事公务的其他人员等，需要依法律身份路径认定；纯体力劳动、一般劳务与公务不同。伪造任职材料但实际从事公务的情形，亦不能只据任职形式真假作结。身份判断须标注行为时点，不由此后离职反推行为时无身份。
+
+\paragraph{规则23.2：受委托管理国有财产是贪污的特别主体路径。}
+设$\operatorname{ESA}(a,x)$为受法定国有单位委托管理、经营国有财产$x$。则
+\[
+\begin{aligned}
+&\operatorname{ESA}(a,x)\land\operatorname{UO}(a,e)
+\land\operatorname{ASA}(a,x,e)\\
+&\qquad\Rightarrow\operatorname{R382P2}(a,e,x).
+\end{aligned}
+\]
+这不是宣布该类人员在全部罪名中都自动成为国家工作人员。教材特别提示，挪用公款罪没有相同拟制，可能需要考察挪用资金等条款；不能把第382条的主体扩张跨罪名复制。
+
+\paragraph{规则23.3：实质职务便利与工作接近机会不同。}
+\[
+\operatorname{UO}(a,e,x)
+\Rightarrow\operatorname{AOML}(a,e,x).
+\]
+利用主管、管理、经手财物的权力或职责，是典型的实质便利；仅因上班容易接近财物、熟悉库房路线，并不足以自动证明该谓词。反过来，未亲手保管财物的领导，如果依法享有支配、管理权限，也不能只因“钱不在手里”排除职务便利。
+
+\subsection{贪污与挪用公款：占有目的、流向及时间}
+\paragraph{规则23.4：贪污的核心连接。}
+令$\operatorname{PP4}_v(x)$为刑法公共财物，$\operatorname{IAP}(a,x)$为非法占有目的，$\operatorname{TakeMode}(a,x,e)$包括侵吞、窃取、骗取或其他非法占有方式：
+\[
+\begin{aligned}
+&\operatorname{SF}_v(a,t)\land\operatorname{PP4}_v(x)
+\land\operatorname{UO}(a,e,x)\\
+&\land\operatorname{TakeMode}(a,x,e)\land\operatorname{IAP}(a,x)
+\land T^{\rm embezzle}_v(e)\\
+&\qquad\Rightarrow\operatorname{RE}(a,e,x).
+\end{aligned}
+\]
+金额与其他较重情节采用版本化条件$T^{\rm embezzle}_v$，不将原书表格中的一般起点误写成没有例外的唯一门槛。管理中的应收账款、单位已收款及对外公务取得财物，需要依据财物归属和支配关系具体判断；形式上由第三人直接付款不当然排除。
+
+\paragraph{规则23.5：共同贪污须有身份连接与共同故意。}
+\[
+\begin{aligned}
+&\operatorname{Q382}(a)\land\operatorname{UO}(a,e)
+\land\operatorname{JI}(a,b,e)\\
+&\quad\land\operatorname{JA}(a,b,x,e)
+\Rightarrow\operatorname{RJE}(a,b,e).
+\end{aligned}
+\]
+非身份人可以在满足共犯条件时承担责任，但不能由与官员相识、财物最终到其手中或帮助搬运一个外观事实自动证明共谋。共同数额与个人实际分得额不是同一变量；分别用于责任范围和量刑、追缴问题。
+
+\paragraph{规则23.6：挪用公款的三种用途结构。}
+令$M$为数额，$d$为未还持续期间，$I$为进行非法活动，$P$为进行营利活动，$N$为其他用途，$G$为归个人使用，$\theta^I_v,\theta^P_v,\theta^N_v$为依适用解释需检验的数额条件。则实际追究审查框架为
+\[
+\begin{aligned}
+&\operatorname{SF}_v(a,t)\land\operatorname{PF}(x)
+\land\operatorname{UO}(a,e,x)\land\operatorname{Divert}(a,x,e)\land G\\
+&\quad\land\bigl[(I\land M\geq\theta^I_v)
+\lor(P\land M\geq\theta^P_v)\\
+&\hspace{38mm}\lor(N\land M\geq\theta^N_v\land d>3\text{个月})\bigr]\\
+&\qquad\Rightarrow\operatorname{RMPF}(a,e).
+\end{aligned}
+\]
+三个分支的金额条件来自不同条文、司法解释组合，不能任取一个数额贯穿全部用途。三个月不是所有分支的共同要求；营利与非法活动亦不以获利为必要。公款与特别款物的对象范围、公共财物能否折价计算等须分别依适用法源审查。
+
+\paragraph{规则23.7：归个人使用包含三条规范路径。}
+设$\operatorname{NPU}$、$\operatorname{PNOU}$、$\operatorname{DUNFPB}$分别表示供本人、亲友或其他自然人使用，以个人名义供其他单位使用，个人决定以单位名义供其他单位使用并谋取个人利益。工作定义为
+\[
+G\equiv\operatorname{NPU}
+\lor\operatorname{PNOU}
+\lor\operatorname{DUNFPB}.
+\]
+最后分支中的个人利益不能任意限缩为现金收益；前两分支不能擅自增加相同的获利要求。2026年解释（二）第9条还规定了虚构付款事由、不按规定入账以逃避单位监管而供其他单位使用的认定路径。教材对此作了更新引用。
+
+\paragraph{规则23.8：实行行为、使用事实与处罚条件须注明模型。}
+教材采取的分析区分为：为归个人使用而挪出公款属于实行行为；具体用途、数额、时间条件还影响实际追究。可写为
+\[
+\begin{aligned}
+\operatorname{DFP}(a,e)&\Rightarrow\operatorname{EA}_{B}(a,e),\\
+\operatorname{EA}_{B}(a,e)\land\operatorname{PC}_v(e)
+&\Rightarrow\operatorname{RP3}_{B,v}(a,e).
+\end{aligned}
+\]
+下标$B$明确这是原书采用的分析模型，不能据此宣称所有理论都承认相同的“客观处罚条件”分类。刚挪出即归还、未及使用、因意志外原因未挪出等情况，应分别处理行为阶段与实际处罚；不能用一条未经分层的“挪出即有罪”概括。
+
+\paragraph{规则23.9：归还不等于否认已经发生的挪用。}
+\[
+\operatorname{Return}(a,x,t_2)\land t_2>t_1
+\nRightarrow\neg\operatorname{Divert}(a,x,t_1).
+\]
+归还时间可能影响第三分支是否满足、巨大不退还情形、犯罪情节和量刑，但不能逆转过去事实。2026年解释（二）第10条将巨大不退还与提起公诉前因客观原因不能退还相联系；办案机关追回与本人主动退还还应区别评价。
+
+\subsection{受贿：权钱联系、索取与谋利分支}
+\paragraph{规则23.10：普通受贿存在不同法定行为分支。}
+记$\operatorname{Solicit}(a,b,x)$为利用职务便利索取财物，$\operatorname{AI}(a,b,x)$为非法收受财物，$\operatorname{BF}(a,b)$为为他人谋取利益。基本结构为
+\[
+\begin{aligned}
+&\operatorname{SF}_v(a,t)\land\operatorname{UO}(a,e)
+\land\operatorname{BP}_v(x)\\
+&\quad\land\bigl[\operatorname{Solicit}(a,b,x)
+\lor(\operatorname{AI}(a,b,x)\land\operatorname{BF}(a,b))\bigr]\\
+&\quad\land T^{\rm bribe}_v(e)
+\Rightarrow\operatorname{RBT}(a,e).
+\end{aligned}
+\]
+索贿分支不能擅自加上与收受型完全相同的谋利要求。$\operatorname{UO}$也不能被“是官员”一个身份事实替代。教材用权钱交易说明实行行为，适合表达职务与财物的交换联系；但形式化时仍须保留法条两个分支，不以教学比喻抹平法条结构。
+
+\paragraph{规则23.11：谋取利益并不以实际办成事为必要。}
+根据适用解释，实际谋取、承诺谋取，以及明知具体请托事项而收受财物等认定路径需要分别记录：
+\[
+\begin{aligned}
+\operatorname{PB}(a,b)&\Rightarrow\operatorname{BF}(a,b),\\
+\operatorname{KSR}(a,b)\land\operatorname{AI}(a,b,x)
+&\Rightarrow\operatorname{DP2}_v(a,b).
+\end{aligned}
+\]
+“事未办成”不自动排除受贿；“送礼后官员恰好依法办事”也不能反向自动证明受贿。普通受贿中的利益不要求一概不正当；斡旋受贿、行贿等条款中的不正当利益另须单独检验。
+
+\paragraph{规则23.12：贿赂财物包括可金钱评价的财产性利益。}
+\[
+\operatorname{BP}_v(x)
+\Leftarrow\operatorname{Money}(x)\lor\operatorname{Goods}(x)
+\lor\operatorname{PBBL}_v(x).
+\]
+这里是依解释认定对象的充分路径，不是把所有好处定义为财物。债务免除、由他人支付应由本人支付的服务费用等，可按相应规范评价；劳务本身、人情、一般社会资源是否属于财产性利益，不能只因“对官员有帮助”一律赋真。教材通过免费服务与第三人代付费用的例子强调这一边界。
+
+\paragraph{规则23.13：一般数额计算与特殊收益型数额分开。}
+用$t_r$表示收受时，$t_c$表示案发时，$V(x,t)$为依法确定的财物价值。一般规则为$M=V(x,t_r)$。对于以股票、股权预期收益为贿赂形式且已经构成犯罪的特定情形，2026年解释（二）第11条区分。式中实际获利、市场价格与支付价格均针对同一涉案资产和相同份额，以总额为单位；若证据给出每股单价，须先乘以对应股数后再代入：
+\[
+M=\begin{cases}
+\operatorname{AG}(t_c),&\text{案发时已经实际获利},\\
+\operatorname{MP2}(t_c)-\operatorname{PP5},
+&\text{尚未实际获利且适用一般溢价规则}.
+\end{cases}
+\]
+该分段式不能扩展到所有投资，也不能将负值、亏损等异常情形机械填入作为“负受贿”。真伪鉴定、价格认定、授意购买特定物品等另有第12条规则。数额认定的证据必须能够对应具体财物、时间和交易形式。
+
+\paragraph{规则23.14：普通受贿、斡旋受贿与利用影响力受贿。}
+设$\operatorname{SC3}(a,c)$为职务上的隶属、制约关系，$\operatorname{PC2}(a,c)$为本人职权地位形成但不属前者的便利。核心区分为
+\[
+\begin{aligned}
+\operatorname{SF}(a)\land\operatorname{SC3}(a,c)
+&\Rightarrow\operatorname{DOR}(a,c),\\
+\operatorname{SF}(a)\land\operatorname{PC2}(a,c)
+\land\operatorname{IBR}(b)
+&\Rightarrow\operatorname{RMR}(a,b,c),\\
+\operatorname{IQ}_{388.1}(a,c)
+\land\operatorname{IBR}(b)
+&\Rightarrow\operatorname{RIR}(a,b,c).
+\end{aligned}
+\]
+后两式还须财物、承诺或具体行为、数额情节等全部条件；不能只据亲属或离职关系直接定罪。2026年解释（二）第13、14条进一步规定承诺斡旋的认定与隶属制约关系；教材强调上级命令与同级说情的区别，也提醒并非只限直接上下级。
+
+\paragraph{规则23.15：关系密切必须体现法定影响路径。}
+\[
+\operatorname{Friend}(a,c)\nRightarrow
+\operatorname{IQ}_{388.1}(a,c).
+\]
+利益、利害及其他能够形成相关影响的关系应具体证明，不仅看是否近亲属或感情好。若本人也是国家工作人员，且依靠自己的职务隶属、制约关系办事，应先审查普通受贿；若与工作人员通谋，则还可能涉及受贿共同犯罪，不能仅按身份标签机械选择较轻或较重罪名。
+
+\subsection{行贿、单位犯罪、竞合与追缴}
+\paragraph{规则23.16：主动行贿与被勒索给付的例外不同。}
+令$P$为谋取不正当利益目的，$G$为给予国家工作人员财物，$E$为因被勒索而给付，$A$为实际获得不正当利益。基本审查与法定例外分别写为
+\[
+\begin{aligned}
+P\land G\land T^{\rm giving}_v&\Rightarrow\operatorname{RBG},\\
+E\land G\land\neg A&\Rightarrow\neg\operatorname{BG}_{389(3)}.
+\end{aligned}
+\]
+主动行贿不以实际得到利益为统一必要条件；被勒索给付的例外则明确关心是否获得不正当利益。不能从受贿成立反推送财者必然行贿，亦不能从送财者未构成行贿反推收财者无受贿。
+
+\paragraph{规则23.17：不正当利益包括不公平竞争优势。}
+\[
+\operatorname{IB2}(b,q)
+\Leftarrow\operatorname{IB3}(b,q)
+\lor\operatorname{UCA}(b,q)
+\lor\operatorname{ODI}_v(b,q).
+\]
+最后一项必须具体落入适用解释，不能是空白授权。利益本身有法律依据但通过行贿取得不公平优先地位，也可能满足该要件；反过来，主观以为自己不应取得，但客观利益完全正当的案件，需要分别评价目的、客观利益和不能犯等问题。教材以补贴与职务竞争的不同模型说明此点。
+
+\paragraph{规则23.18：单位名义不等于单位犯罪。}
+设$D_u$为集体决定或实际控制人、主管人员代表单位决定，$B_u$为违法所得归单位，$B_p$为实际归个人。2026年解释（二）第16条的模型为
+\[
+\begin{aligned}
+D_u\land B_u\land\operatorname{BFU}(e)
+&\Rightarrow\operatorname{RUG}(e),\\
+\operatorname{HMA}\land B_p\land\operatorname{Bribe}(e)
+&\Rightarrow\operatorname{RPG}(e).
+\end{aligned}
+\]
+单位收财但以个人占有为目的或财物归个人，也要按个人受贿结构审查。单位受贿、对单位行贿、单位行贿的主体集合和情节门槛不同，不能把金额相同当成同一罪名。
+
+\paragraph{规则23.19：公款行贿的并罚特别规则。}
+\[
+\begin{aligned}
+&\operatorname{SF}(a)\land\neg\operatorname{PAP}(a)
+\land\operatorname{UO}(a,e)\\
+&\land\operatorname{PPG}(a,e)
+\land\operatorname{BG}(a,e)\land\operatorname{DC}(a,e)\\
+&\qquad\Rightarrow\mathsf{Must}(\operatorname{CP3}(a)).
+\end{aligned}
+\]
+这是2026年解释（二）第20条的特定规范，不能不顾条件推广为所有受贿、行贿与渎职一律并罚。教材正用不具有个人占有目的的公款行贿，与先将公款据为己有再行贿作对比；后者还要审查贪污等其他构成。
+
+\paragraph{规则23.20：追缴对象、退赃与既遂不是同一个问题。}
+\[
+\operatorname{IG}(x)\Rightarrow
+\mathsf{Must}(\operatorname{ROR}(x)).
+\]
+原物转化、与合法财产混同、代持及等值追缴依2026年解释（二）第23条分别处理。积极退赃可按第22条认定并进入法定量刑规则，但不因退赃一项就逆转已成立犯罪。共同犯罪中退回实际分得额与自愿继续退赃有特定规则；计算责任范围、实际获利、追缴对象必须使用不同变量。
+
+\paragraph{小例与反例。}
+国家工作人员甲为乙承诺通过对丙的职务制约关系办理事项，收受乙财物，但最终没有找丙。先检验职务制约关系，决定普通职务便利路径；再检验具体请托、承诺和收财联系，不能仅因未转达事项就排除。若甲没有该制约关系，只利用本人职权地位形成的便利说情，则需另检验斡旋路径中的不正当利益等要求。若中间人是离职人员丁，还须改用第388条之一的身份与影响路径，不能继续沿用甲的身份条件。
+
+\section{第二十四讲\quad 渎职罪}
+
+\label{ref:lecture:24}
+
+\noindent\hyperref[lecture:24]{返回本讲的逐节推导与闭卷记忆}
+
+本讲的对象是具体职务义务违反与严重后果之间的归责，不是把行政工作中的一切错误形式化为犯罪。
+
+\subsection{主体资格与职务义务}
+\paragraph{规则24.1：国家机关工作人员须独立于国家工作人员判断。}
+记$\operatorname{OW}_v(a,t)$为渎职条款及相关立法解释认可的国家机关工作人员类型：
+\[
+\operatorname{SF}_v(a,t)
+\nRightarrow\operatorname{OW}_v(a,t).
+\]
+国有公司、企业、事业单位人员的失职、滥用职权可能适用第168条等特别罪名，不因同样从事公务就自动适用第397条。反之，法律法规授权、依法受委托代表国家机关行使职权的特定人员，也不能仅因编制形式排除；需将身份路径和具体职权一并记录。
+
+\paragraph{规则24.2：职务义务是规范对象，不由损失倒推。}
+\[
+\operatorname{DB}(a,d,e)
+\Rightarrow\operatorname{LD2}_v(a,d,t)
+\land\operatorname{RC}(d,t)\land\operatorname{Depa}(e,d).
+\]
+本式明确令$t=\operatorname{Time}(e)$。应说明义务来源、履行条件、权限范围及当时可用信息。发生重大损失并不能直接证明某一人员负有该义务，也不能倒推出其有现实履行能力。多人签字、集体研究或工作分工，不应消灭对每个具体责任人义务和罪过的个别审查。
+
+\subsection{滥用职权、玩忽职守及因果链}
+\paragraph{规则24.3：区分关键不在作为与不作为。}
+设$\operatorname{IDM}(a,e)$为故意违背职权职责实施行为或不履行职责，$\operatorname{NDF}(a,e)$为因严重不负责任而不履行或不正确履行职责：
+\[
+\begin{aligned}
+\operatorname{AC2}(a,e)&\Rightarrow
+\operatorname{IDM}(a,e),\\
+\operatorname{NC}(a,e)&\Rightarrow
+\operatorname{NDF}(a,e).
+\end{aligned}
+\]
+对行为与对结果的罪过要进一步区分，不能将“故意滥用”误写成必须希望所有损害结果发生。教材明确提示：故意不履职可以是滥用职权，不作为并非玩忽职守的充分标志。
+
+\paragraph{规则24.4：一般渎职结果犯的合取结构。}
+\[
+\begin{aligned}
+&\operatorname{OW}_v(a,t)\land\operatorname{DB}(a,d,e)
+\land\operatorname{SL}_v(r)\\
+&\quad\land\operatorname{Attr}(e,r)\land\operatorname{RF}(a,r)
+\Rightarrow\operatorname{R397}(a,e,r).
+\end{aligned}
+\]
+金额、伤亡或社会影响属于不同的法定严重性路径，应写明适用解释、计算时间和因果口径。不能把单位总亏损全部归给一个批准行为，也不能把事后能够看到的风险无条件当成行为时应当预见的风险。
+
+\paragraph{规则24.5：介入他人犯罪不当然中断，也不当然确认因果。}
+\[
+\operatorname{TPA}(f)\land\operatorname{After}(f,e)
+\nRightarrow\neg\operatorname{Attr}(e,r).
+\]
+对违法审批、放任危险或失于监管，应具体检验职务义务所防范的风险是否正通过第三人行为实现。若结果发生与义务违反无联系，或超出该义务的保护范围，则不能仅凭先后顺序归责。教材以违法发放驾驶证、视力体检造假后发生车祸的案件提出因果关系问题；原案的事实应逐项代入，而不能给出“有假证即对以后所有事故负责”的全称命题。
+
+\paragraph{规则24.6：特别渎职构成优先检验。}
+\[
+\operatorname{SDCE}_{C}(a,e)
+\Rightarrow\operatorname{PR2}(C,397,a,e).
+\]
+徇私枉法、民事行政枉法裁判、执行判决裁定失职或滥用职权、徇私舞弊不移交刑事案件、环境监管失职等均有额外主体、行为、目的或结果条件。特别条款与一般条款的关系应依具体规范决定，不能只因行为很严重就跳过特别条款。
+
+\subsection{受贿与渎职的罪数规则}
+\paragraph{规则24.7：分别完成构成检验后再处理罪数。}
+\[
+\operatorname{BT}(a,e_1)\land\operatorname{Dere}(a,e_2)
+\Rightarrow\operatorname{RCR}_v(e_1,e_2).
+\]
+一般法源要求与刑法特别规定可能给出不同处理。应先找是否存在第399条等特别的择重处罚规则，再适用一般并罚规则，不能用一个总公式覆盖全部案件。前讲规则23.19针对公款行贿与渎职的2026年特别规则，也不得偷换成受贿、行贿、贪污和渎职四罪一律并罚。
+
+\paragraph{规则24.8：集体决定不等于责任消失。}
+此处$U$专指参与集体决定的人员集合，不表示一个单位机构：
+\[
+\operatorname{CD}(U,e)
+\nRightarrow\forall a\in U\;\neg\operatorname{PL}(a,e).
+\]
+需要查明提议、批准、实际控制、执行及反对情况，逐人对应法定义务、参与贡献和主观认识。会议记录不完整也不能自动推成每个人参与；证明责任不因“集体研究”四字改变。
+
+\paragraph{小例与反例。}
+甲作为有审批职责的国家机关工作人员，明知依法应拒绝仍违法批准高危生产；乙只因严重疏忽漏看材料作出同样批准。两案都可能发生重大事故，但前者与后者对职责违反的心理态度不同，不能按“都签了字”归成同一罪名。两案还都必须证明严重后果及归责；若事故完全源于与审批事项无关的独立原因，构成结论不能由批准违法单独支撑。
+
+\section{第二十五讲\quad 危害国家安全罪}
+
+\label{ref:lecture:25}
+
+\noindent\hyperref[lecture:25]{返回本讲的逐节推导与闭卷记忆}
+
+原书仅就间谍、为境外窃取刺探收买非法提供国家秘密情报及相关秘密犯罪作提纲性说明。本节相应只形式化这些核心连接，不把两页提纲冒充全部国家安全犯罪的完整公理系统。
+
+\subsection{间谍行为的法定分支与完成节点}
+\paragraph{规则25.1：间谍罪按法定行为分支审查。}
+令$O$为间谍组织，$\operatorname{SpyOrg}_v(O)$为依法认定的该类组织；$J$表示参加，$A$表示接受间谍组织及其代理人的任务，$T$表示为敌人指示轰击目标。构成审查必须同时带危害国家安全的法定联系：
+\[
+\operatorname{HNS}(e)\land
+\bigl[J(a,O,e)\lor A(a,O,e)\lor T(a,e)\bigr]
+\Rightarrow\operatorname{RE2}(a,e).
+\]
+必须依法证明组织、代理人、任务性质和行为人的相关认识，不能仅凭有境外联系、信息接触或观点不同代入。每个分支的既遂节点也不必等到最终国家损失发生。
+
+\paragraph{规则25.2：既遂节点须注明采用的教材解释。}
+教材的说明可记录为工作模型$B$：
+\[
+\begin{aligned}
+\operatorname{Complete}^{B}_{J}&\Leftarrow
+\operatorname{JSO}\land\operatorname{IRIA},\\
+\operatorname{Complete}^{B}_{A}&\Leftarrow
+\operatorname{AST}\land\operatorname{BET},\\
+\operatorname{Complete}^{B}_{T}&\Leftarrow
+\operatorname{CTI}.
+\end{aligned}
+\]
+该式忠实记录原书对完成节点的分析，并不意味着把法条全部字面条件改写为此三个双条件定义。是否已加入、任务是否开始、目标是否指示完成，应由具体证据证明；无须敌人实际轰击或任务最终成功，不能因此跳过行为分支本身。
+
+\subsection{国家秘密、情报与境外提供}
+\paragraph{规则25.3：国家秘密与刑法情报的对象范围。}
+设$\operatorname{SS2}_v(p)$为依保密法等依法确定的国家秘密，$\operatorname{Intel111}_v(p)$为第111条意义的情报。二者不能并成一切未公开信息：
+\[
+\operatorname{Intel111}_v(p)\Rightarrow
+\operatorname{SIR}(p)
+\land\operatorname{NPBRR}_v(p).
+\]
+教材提示情报应作限定解释，与国家安全和利益相关且尚未公开或依法不应公开。是否已经公开、合法的公开范围、文件定密和密级鉴定等需有证据依据；商业秘密、个人隐私、一般内部资料与本罪对象不能无条件互换。
+
+\paragraph{规则25.4：行为、对象与接收方三个条件相乘。}
+\[
+\begin{aligned}
+&\operatorname{OR2}_v(b)\land
+\bigl(\operatorname{SS2}_v(p)\lor\operatorname{Intel111}_v(p)\bigr)\\
+&\land\bigl(\operatorname{Steal}(a,p)\lor\operatorname{Probe}(a,p)
+\lor\operatorname{Buy}(a,p)\lor\operatorname{PI}(a,b,p)\bigr)\\
+&\quad\land\operatorname{RI}(a,p,b)
+\Rightarrow\operatorname{R111}(a,p,b).
+\end{aligned}
+\]
+境外机构、组织、人员的认定，不以对方是否外国国籍一个条件完全替代；主观上是否知道接收方与对象性质也需证明。式中的相应故意谓词$\operatorname{RI}(a,p,b)$在本条还包含“为该境外机构、组织、人员实施取得或提供”的目的及联系，不允许将无关的境外$b$与境内窃取事件任意拼接。不能由接收方在境外推成资料必为国家秘密，也不能由资料涉密推成任何持有行为都等于向境外提供。
+
+\paragraph{规则25.5：间谍身份与提供秘密的关系依参与路径决定。}
+\[
+\begin{aligned}
+\operatorname{JSO}\land\operatorname{STPS}
+&\Rightarrow\operatorname{RSA}_v,\\
+\neg\operatorname{KSR2}\land\operatorname{Elements}_{111}
+&\Rightarrow\operatorname{R111I}.
+\end{aligned}
+\]
+上式第二行的否定指已依法确认的事实，不是证据空缺。教材说明行为人知道对方为间谍组织并接受其任务，以及不知道该身份但为境外非法提供秘密的案件，可能适用不同路径。是否吸收、择一或并罚必须依据具体法源与行为关系，不能仅因两个罪名都属于国家安全章节就自动合并。
+
+\subsection{泄露、非法获取与责任边界}
+\paragraph{规则25.6：故意泄露国家秘密与为境外提供并非同义。}
+\[
+\begin{aligned}
+\operatorname{IL}_{398}(a,p,e)
+&\Rightarrow\operatorname{SS2}_v(p)
+\land\operatorname{SLC}_v(e)
+\land\operatorname{Serious}_v(e),\\
+\operatorname{Elements}_{111}(a,p,b)
+&\Rightarrow\operatorname{OR2}_v(b).
+\end{aligned}
+\]
+接收方范围及对象范围不同，不能将前式任意缩成“给境内人”、后式扩成“给境外人即有罪”。第398条对国家机关工作人员以外人员也有规定；非国家机关工作人员不能仅因身份不足就当然排除该条。过失泄露还须独立证明过失与法定情节，不由秘密已经流出自动推出。
+
+\paragraph{规则25.7：非法获取与后续利用分层。}
+\[
+\operatorname{IOS}(a,p,e_1)
+\land\operatorname{LP}(a,b,p,e_2)
+\Rightarrow\operatorname{RAR}_v(e_1,e_2).
+\]
+先核对国家秘密对象、窃取刺探收买等获取方式，再核对后续接收方及用途。非法持有国家绝密、机密文件资料等条款另有拒不说明来源与用途等结构，不能用一般持有替换。罪数取决于行为联系及特别规定，不以“先后两步”单独决定两罪并罚。
+
+\paragraph{规则25.8：未知不能转换为有罪所需事实。}
+\[
+\operatorname{Unknown}(\operatorname{Secret}(p))
+\nRightarrow\operatorname{Secret}(p),\qquad
+\operatorname{Unknown}(\operatorname{Intent}(a))
+\nRightarrow\operatorname{Intent}(a).
+\]
+国家安全法益的重大性不改变逻辑上输入命题需要证明这一要求。此处形式化的作用是揭示尚缺哪些事实与规范依据，而不是用符号掩盖对象、身份、目的、认识或因果关系的证明缺口。
+
+\paragraph{小例与反例。}
+甲将一般公开新闻发给境外友人；乙明知资料属于法定国家秘密而按境外组织要求非法提供。两案同有跨境信息流转，但规则25.4中的对象性质、接收方资格、违法行为与故意分别不同。不能从信息经过互联网或接收方在境外一个事实，直接推出第111条构成；对乙也必须通过定密、内容、行为与认识证据完成逐项证明。
+
+\section{跨讲计算与规范版本}
+
+\paragraph{补充规则20.A：民航中的其他危险方法需要精确事件条件。}
+2026年4月9日起施行的危害民航飞行安全解释，将地面依靠自身动力移动期间违规开启舱门并释放应急滑梯、足以发生火灾爆炸等危险，与空中飞行期间违规开启舱门分别列举。设$G$为地面自行动力移动，$F$为空中飞行，$O$为违规开启舱门，$S$为释放应急滑梯，$D$为法定火灾、爆炸等危险，则列举路径可写为
+\[
+\bigl[(G\land O\land S\land D)\lor(F\land O)\bigr]
+\Rightarrow\operatorname{OtherDangerMethod}_{2026}.
+\]
+这个式子只解释列举情形，不把它当作所有构成的充分条件，也不删除其他危险方法分支。地面静止、滑行与空中飞行不能互相替代；仅凭舱门打开的结果，也不能略去是否违规、当时阶段及相应危险的判断。同一过程中以暴力、威胁阻碍人民警察、机长、航空安全员依法履职，与另行成立袭警等犯罪的处罚连接，还应使用该解释的特别规则，不能把一般罪数口诀覆盖过去。\footnote{2026年民航飞行安全刑事解释，最高检公布：\url{https://www.spp.gov.cn/xwfbh/wsfbt/202604/t20260408_725512.shtml}。}
+
+\paragraph{补充规则21.A：多年度逃税不能直接平均比例。}
+以纳税年度$y$为索引，$E_y$为该年度各税种逃税总额，$B_y>0$为该年度应纳税总额，$\rho_y=E_y/B_y$。2024年税收刑事解释的关键计算结构，是存在一个年度同时满足数额与比例要求，而不是把数年的逃税总额除以数年的总应纳税额后平均：
+\[
+\begin{aligned}
+&\exists y\,[E_y\geq\theta_v\land\rho_y\geq0.10]
+\Rightarrow\operatorname{TaxAnnualThreshold},\\
+&E_{\rm total}=\sum_{y\in Y}E_y,\qquad
+\rho_{\rm selected}=\max_{y\in Y}\rho_y.
+\end{aligned}
+\]
+集合$Y$应限定于依法应追究且符合累计条件的年度，不能把已处理金额任意加回。纳税义务不足一个年度、不按年度确定纳税期等另有换算口径。例：两年度应纳税额悬殊时，总体平均比例可能低于10\%，但某年度自身已同时满足两个门槛；不能以平均后低于10\%否定该年度的入罪条件。反过来，某年比例高但金额未达门槛，也不能只看比例定案。\footnote{2024年税收刑事解释：\url{https://www.spp.gov.cn/xwfbh/wsfbt/202403/t20240318_649715.shtml}。}
+
+\paragraph{补充规则21.B：金额变量必须按法律口径分别计算。}
+为避免把营业额、货值、违法所得与损失混用，令$S$为销售金额，$U$为未售货值，$G$为违法所得，$L$为被害损失。这些变量并不存在一般恒等关系，下列连等式不能作为模型公理：
+\[
+\text{一般不能设 } S=U=G=L.
+\]
+以适用的2025年知识产权解释为例，销售金额关注出售侵权产品所得、应得的违法收入；违法所得对产品销售可涉及按规范扣除原材料或购进价款，对以服务费、会员费、广告费营利又有相应规定。因此即使账面收款总额相同，变量含义也不相同。设某项规范允许扣除的成本为$C_v$，只能在该规范允许的范围写$G=S-C_v$，不能把所有运营成本、人工工资或税费都任意加入$C_v$。未销售产品的价值也不能因尚未收款就取零。
+
+这个区分同样约束贪污受贿数额、毒品数量、污染物重量等计算：只有对象类型、计量单位、认定时点和法源口径均一致时才允许相加。两种不同纯度或不同种类毒品若需折算，应先找到适用折算规范，不得自创“危害系数”；按同一犯罪重复进出同一笔资金，也不能不分行为性质反复累计。
+
+\paragraph{补充规则22.A：上游事实存在不要求上游人员先被判刑。}
+设$C$为经查证属实的上游犯罪事实，$J$为上游犯罪人已经受到生效有罪裁判。2025年8月26日起施行的掩饰、隐瞒犯罪所得解释第10条体现的结构是
+\[
+\operatorname{ConcealProceedsReview}\Rightarrow C,
+\qquad C\nRightarrow J,
+\qquad\neg J\nRightarrow\neg C.
+\]
+上游犯罪人未到案、死亡或因责任能力等原因未被追究，并不自动否定相应所得的来源事实；但这不等于允许在来源事实尚未查证时直接推定是赃款。应分别证明物品或资金的犯罪来源、行为人的相关认识、掩饰隐瞒方式及依法应考虑的情节。上游身份不明与上游事实不成立，是两个不同命题。事前通谋与事后明知也必须按时间线区分，避免以事后查获的赃物反推行为人在此前必然通谋。\footnote{2025年掩饰、隐瞒犯罪所得解释：\url{https://www.spp.gov.cn/xwfbh/wsfbt/202508/t20250825_704537.shtml}。}
+
+\paragraph{补充规则22.B：生态修复的从宽属于规范后果。}
+2026年8月15日起施行的第二次修正后的环境污染刑事解释，将积极履行生态环境修复责任作为可以从宽处罚的因素。设$C$为已依法成立污染环境罪，$R$为积极履行生态修复责任，$W$为依法从宽处罚：
+\[
+C\land R\Rightarrow\mathsf{May}(W),\qquad
+C\land R\nRightarrow\mathsf{Must}(W),\qquad
+R\nRightarrow\neg C.
+\]
+犯罪情节轻微可以不起诉或免予刑事处罚，与情节显著轻微危害不大而不作为犯罪处理，还要分别记录。修复支出不应机械地从所有损失变量中扣除，也不能使已经发生的非法排污事实消失；具体损失、修复责任及量刑因素的作用路径不同。2026年第一次修正调整了重点管理排污主体、自动监测数据干扰的污染物范围及环境领域虚假证明文件规则，故模型中的版本$v$不能固定为未修正的2023年解释。\footnote{2026年环境污染解释修改决定及修正全文：\url{https://www.court.gov.cn/fabu/xiangqing/508011.html}。}
+
+\paragraph{补充规则23.A：数额档与情节档是并列或组合条件。}
+以贪污受贿量刑档次为例，设$M$为依法认定的数额，$\theta_{1,v},\theta_{2,v},\theta_{3,v}$为对应版本的一般数额门槛，$Q_{1,v},Q_{2,v},Q_{3,v}$为具有各档法定程度的其他情节。以“至少达到第$i$层门槛”记为$\operatorname{ALT}_i$，条件结构应保留
+\[
+\begin{aligned}
+\operatorname{ALT}_i(M,e,v)
+&\Leftarrow [M\geq\theta_{i,v}]\lor Q_{i,v}(M,e),\\
+Q_{i,v}(M,e)&\equiv\operatorname{AmountCondition}_{i,v}(M)
+\land\operatorname{ListedCircumstance}_{i,v}(e).
+\end{aligned}
+\]
+实际档次须在已经满足的层次中依规范确定，不能同时宣告互斥的几个法定刑档。第二行是把适用解释中“某数额区间并有列举情节”的路径展开，并非随意创造一个无需数额的兜底情节。不同档次的门槛与列举情节未必相同；不能为了排版便利给全部罪名和档次统一一个$Q$。多次未经处理的数额需要先解决行为归属、责任范围、币种换算及财物估价，再按法定累计规则计算，不能把个人分得额作为唯一总额。
+
+对单位受贿、对单位行贿、介绍贿赂和单位行贿，2026年解释（二）设置了各自门槛及条件，不能照抄个人受贿的一般门槛。第8条规定的其他所有制企业职务犯罪参照标准，也不等于将其主体、行为、财物归属条件同时改成贪污受贿构成。所谓“参照定罪量刑标准”，必须严格限制在规范所指范围内。
+
+\paragraph{补充规则23.B：个人占有与单位决定采用可反驳的证据审查。}
+公款用于行贿时，不能把“钱没有进入本人账户”定义为没有非法占有目的。应区别$a$把单位财物作为自己处分的利益，还是代表单位实施违法给付。设$F$为资金最终流向，$D$为谁决定，$B$为不正当利益归属，$A$为个人非法占有目的，则
+\[
+F\nRightarrow A,\qquad D\nRightarrow A,\qquad
+(F,D,B,\text{其他证据})\leadsto\operatorname{Assess}(A).
+\]
+符号$\leadsto$在此只表示证据审查任务，不是演绎有效的蕴涵。将证据线索写成结论本身，会产生循环：先把财物流向称为“私吞”，再用这个称呼证明私吞。形式化应保留原始转账、决定权限和利益内容，再说明为何支持相关主观事实，而不是把法律评价藏进事实名称。
+
+\paragraph{补充规则24.A：遗漏事实与反事实救助不能只靠事后印象。}
+在玩忽职守与不作为渎职案件中，令$e^*$为当时依法且现实可行的正确履职行为，$r$为实际重大损失。需要回答的是正确履职是否具有依法足以避免结果的作用，以及现实损失是否实现了该义务所防止的风险。可设置待证明命题
+\[
+\operatorname{Feasible}(e^*,t)\land\operatorname{DutyRequired}(e^*,t)
+\land\operatorname{AvoidRelevantResult}_v(e^*,r).
+\]
+这不是宣称法律因果关系等于一个自然科学实验。反事实需要基础事实、专家意见与经验法则支持，不能由“如果大家都更认真，事故大概不会发生”替代。若人员缺少法定权限或当时没有履行可能性，也不能把全知、全能的理想机关当成比较对象。该要求把职责分配、现实能力、保护目的和事故原因放回同一条可核对链条。
+
+\paragraph{核验日期与使用范围。}
+上述官方法源核验日期统一为2026年11月4日。文中$v$并非装饰性的日期：当行为时规范与审判时规范不同，须先依总则时间效力规则确定适用版本，再把该版本的对象、金额、情节和处罚规则带入。2027年教材的封面年份不能证明其覆盖此后尚未发生的全部立法、解释变化；本稿也不预测未来考试命题或创造官方答案。

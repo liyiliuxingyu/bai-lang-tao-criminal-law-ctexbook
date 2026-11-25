@@ -1,0 +1,7 @@
+刑法法考数学化研习册
+
+本目录的 main.tex 为 XeLaTeX 入口。上一级 README.md 给出运行命令。
+method.tex 说明通用符号、推导方法及复习步骤。
+chapters/ 按原书讲次保存二十五讲，输入次序由 lecture_inputs.tex 管理。
+combined_cases.tex 含跨讲训练，memory_index.tex 为闭卷提取表，
+rule_reference.tex 为逐讲扩展规则，sources.tex 列主要官方法源。

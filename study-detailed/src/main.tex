@@ -1,0 +1,51 @@
+\documentclass{ctexbook}
+\usepackage[inner=30mm,outer=25mm,top=28mm,bottom=28mm]{geometry}
+\usepackage{emptypage}
+\usepackage{amsmath,amssymb,mathtools,centernot,array,longtable,booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\definecolor{GuideGreen}{RGB}{36,120,106}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{xurl}
+\hypersetup{pdftitle={刑法法考数学化研习册},pdfsubject={二十五讲的条件推导与闭卷记忆}}
+\pdfstringdefDisableCommands{\def\quad{ }}
+\setcounter{secnumdepth}{-1}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks[1]
+\emergencystretch=3em
+\raggedbottom
+
+\begin{document}
+\pagenumbering{Alph}
+\begin{titlepage}
+ \thispagestyle{empty}
+ \centering
+ \vspace*{4\baselineskip}
+ {\large 依《2027精讲卷·刑法》讲次编排\par}
+ \vfill
+ {\fontsize{32}{44}\selectfont\heiti 刑法法考数学化研习册\par}
+ \vspace{\baselineskip}
+ {\color{GuideGreen}\rule{.6\linewidth}{1pt}\par}
+ \vspace{1.5\baselineskip}
+ {\Large 条件定义、逐步推导与闭卷记忆\par}
+ \vfill
+ {\large 2026年11月7日\par}
+ \vspace{3\baselineskip}
+\end{titlepage}
+\begingroup
+\let\cleardoublepage\clearpage
+\frontmatter
+\setcounter{page}{2}
+\pagestyle{plain}
+\tableofcontents
+\clearpage
+\endgroup
+\mainmatter
+\input{method.tex}
+\input{lecture_inputs.tex}
+\appendix
+\input{combined_cases.tex}
+\input{memory_index.tex}
+\input{rule_reference.tex}
+\input{sources.tex}
+\end{document}
